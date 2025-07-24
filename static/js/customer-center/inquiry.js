@@ -71,7 +71,6 @@ fileInput.addEventListener("change", (e) => {
     reader.addEventListener("load", (e) => {
         const path = file.name;
 
-        // li 태그 동적 생성
         const li = document.createElement("li");
         li.className = "upload-item";
         li.innerHTML = `
