@@ -3,18 +3,19 @@ const pw = document.getElementById("password");
 const pwText = document.getElementById("pwText");
 const show = document.querySelector(".main-13-3");
 const cancel = document.getElementById("cancel");
+console.log(show);
 
 pw.addEventListener("focus", (e) => {
     pw.classList.add("active");
     show.classList.add("active");
 });
 
-pw.addEventListener("blur", (e) => {
+pwText.addEventListener("blur", (e) => {
     pw.classList.remove("active");
     show.classList.remove("active");
 });
 
-pw.addEventListener("keyup", (e) => {
+pwText.addEventListener("keyup", (e) => {
     cancel.classList.toggle("active", e.target.value);
 });
 
@@ -29,11 +30,14 @@ cancel.addEventListener("click", (e) => {
 // });
 
 show.addEventListener("click", (e) => {
-    if ((pw.type = "password")) {
+    console.log("fdsg");
+    if (pw.type === "password") {
         pw.type = "text";
-        e.target.value = `숨김`;
-    } else {
+        console.log("들어옴");
+        e.target.innerText = "숨김";
+        console.log("fdnjgsji");
+    } else if (pw.type === "text") {
         pw.type = "password";
-        e.target.value = `표시`;
+        e.target.innerText = "표시";
     }
 });
