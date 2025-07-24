@@ -28,6 +28,10 @@ ol {
     unicode-bidi: isolate;
 }
 
+img {
+    border: 0;
+}
+
 form {
     display: block;
     margin-top: 0em;
@@ -237,6 +241,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-top: 30px;
 }
 
+body .notification {
+    display:none;
+}
+
+body .notification.active {
+    display: block;
+}
+
 .notification-inline.notification-error {
     background-color: #fff0f1;
     border: 1px solid #e35b66;
@@ -313,6 +325,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-top: 10px;
 }
 
+.upload-item .upload-remove {
+    color: #888;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 5px 0 15px;
+}
+
+.upload-item>a, .upload-item span {
+    position: relative;
+    z-index: 1;
+}
+
+.upload-remove::before {
+    content: "×";
+    font-family: "entypo";
+}
+
 .button-large, input[type="submit"] {
     background-color: rgba(99, 2, 251, 1);
     border: 0;
@@ -329,4 +358,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 button, html input[type=button], input[type=reset], input[type=submit] {
     width: auto;
     cursor: pointer;
+}
+
+.logo img {
+    max-height: 50px;
 }
