@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리바운드 관리자</title>
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAACXBIWXMAAAsSAAALEgHS3X78AAAEEklEQVRYw72YP0wbdxTHP3ZGnxMPlWNLiRoQ9oRUrKqNcQc7hVIJWzKbUQagStrBiajZQDGq2yQKsGCXxmoTWpGhbTK0Acl0aapiD85N/FHoUIygliLZcZXwz0goHdyBs2XjA9/xJ0/ycPK79/v83vve/d47TaFQQKnZHZ4OoANoAt6RcVkA5oFJMRmbVBpXUwvC7vAYgID0O4Ny2wDCQFhMxtYPDWF3eAJASOXicjABMRmbUAUh7X4C8HJ89kCCWa8JIQHM7FPzo9oC4NoLopVxPCkApLhVgtXuyUJYDYBe0DEyHMTtblUD4pTWqS6H3eFxAX+qAYhGh9ALOkwmIx+1+djKb6uBuSQmYzN7MzGhJoLFWo+loQ5B0AFgNp9VW5pQRTmkl9DbSu+2WuoZGQqSWl7l4aMpUsurRO/ewWqpV1sWV3kmetQARO/eIZPN4ff3M/79T/j9/WSyucOA9ABoLja7DcCaUg1YGupILa/i9/dXaEAv6Pju2xGMxrdKgAo0siEmYwatdA7UtGh0iPzWbtDR8L2qBbby2/z482MEQUd+a5todEhJ2DN2h8elBVxKSmBpqMNmawTA3S7/SL7/3u5+bLZGzCaj0tI0aZVqILW8iv/6AOHIfdztLQwG+yr8BoN9fNzmYuybH/BfH1CjEcOpc+etIeCCnAaa7e8yMhws1Tidfs7iX3+Tyea4euUyZvNZEgmRwWAf7vYWbt4O88uv02QyOZ78nsDpbKbT5yWdfs6rl2u8fv2fHERcc7HZPQM41YgQwO1uZfBGoHR983aY6eknqI0DfKmVzorK1A72YTYZyee3icefyqo8tbQCwNzcIgCzs8+qfLak+7PZHHpBRyDwmWw9ZDVR3JEg6HA6m9FLb8Vy8/m8bG7msdka2dzMc/XKZVk9dfq8mExGBEFHIvFUbrl1rdSOVRYpIdLa5qOruxezyVg6I8pF6G5vITI2jt3hITI2XiXWoqABurp7aW3zEU+IchDzp86dt2aBfrl/X75aQxRn6fR5+fDSB2Rf/EtPt68kwmLGUqmVCrFqgJHhIAD+awMspVb2fTTEZOwTTaFQwO7wTB7URVkt9XwduYXBcBqAcOQ+Dx9NVfl1+rwEPv+0dN3V3XsgADAlJmMdRU0c2BkvpVbY2dlhbm5xV6zyaS0JOLW8SjabqwVQOrm1UkomgPRB3qPhewh6Hf5rA2QyL9hP0NO//YFe0PHVrdFaAOniWFDe1HQAj3lzVt3USFQP3hBApAgg954ISB3xSdpCeVdVBSG14q4TBFHW8peBxI8ZIC4HoGQMDAFfHHHxDWkeDR1lIL4g1bD7kKNfSEzG/jnSVL5nPOyRSuXaZ0jekE7lSenzwPqxfBqoAdYEGIB1MRmbP2yc/wEm+tU03FWIvQAAAABJRU5ErkJggg==" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/admin-mainpage.css">
+</head>
+<body>
+    <div id="rebound">
+        <div id="rebound-notify-container"></div>
+        <div class="popup-manager" style="width: 0px;"></div>
+        <!-- 사이드 바 시작 부분 -->
+        <aside id="rebound-side">
+            <div class="d-flex flex-column" id="side-wrapper">
+                <div class="side-header">
+                    <div class="app-wrapper">
+                        <div class="provider-name hover-spin">
+                            <span class="comp-provider-name">
+                                <span class="pn-name">관리자 모드</span>
+                            </span>
+                        </div>
+                        <a class="app-name d-flex justify-content-between align-items-center">
+                            <span>관리자 이름</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="menu-wrapper flex-grow-1">
+                    <ul class="menu-list">
+                        <li class="menu menu-item d-flex flex-column">
+                            <a class="menu-btn d-flex w-100 collapsed" da>
+                                <i class="mdi mdi mdi-credit-card-plus-outline"></i>
+                                <span class="menu-name">회원 목록</span>
+                                <div class="icon-wrapper flex-grow-1 text-right">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </div>
+                            </a>
+                            <!-- 클릭 시 리스트 보이면 show 클래스가 만들어진다. -->
+                            <ul class="menu-sub-list collapse" id="menu-6109064136799700f1ebced6">
+                                <li class="submenu menu-item">
+                                    <a class="boot-link">
+                                        - 
+                                        일반 회원
+                                    </a>
+                                </li>
+                                <li class="submenu menu-item">
+                                    <a class="boot-link">
+                                        -  
+                                        상담사 회원
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- 사이드 바 끝 부분 -->
+        <div id="rebound-main" class="has-menu">
+            <div id="header-wrapper">
+                <div id="rebound-header" class="d-flex false">
+                    <div class="flex-grow-1"></div>
+                    <div>
+                        <div class="header-menu-group d-flex">
+                            <a href="" class="rebound-link mr-3">
+                                <div class="header-menu-btn">
+                                    <i class="mdi mdi-text-box-outline"></i>
+                                </div>
+                            </a>
+                            <a href="" class="rebound-link mr-3">
+                                <div class="header-menu-btn">
+                                    <i class="mdi mdi-bullhorn-variant-outline"></i>
+                                </div>
+                            </a>
+                            <div class="user-menu">
+                                <div class="user-menu-wrapper d-flex align-items-center cursor-pointer" id="user-menu-handler"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/admin-mainpage.js"></script>
+</html>
