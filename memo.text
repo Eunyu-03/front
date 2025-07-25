@@ -1,3 +1,8 @@
+로그인 - 이메일로 로그인, 카카오 로그인, 비밀번호 찾기, 이메일 확인, 새 비밀번호 
+회원가입 - 일반 회원, 상담사
+마이페이지 - 정보수정, 내가 쓴 게시글, 구독 상태 확인, 상담 이력, 상담 후기 작성 카카오 연동
+결제 결제
+
 *emil-login*
 
 .css-hrnbqo > main
@@ -54,3 +59,36 @@ app-body > main
 .css-70pyvo > main-9
 .css-hyxlzm > main-10
 .css-1rxphv6 > main-11
+
+-------------------------------------------------------
+
+*join*
+
+.css-4xq525 > main-1
+.css-1tmv6b > main-2
+.css-1rywip7 > main-3
+.css-7j9j8y > main-4
+.css-vkv7f1 > main-5
+.css-1tchs26 > main-6
+.css-oket1b > main-7
+.css-1t9sqkg > main-8
+.css-yrr088 > main-9
+.css-a5x0r1 > main-10
+.css-ej7a2z > main-11
+.css-1jke4yk > main-12
+.css-xs1il8 > main-13
+.css-19c57ap > main-14
+.css-1lahczz > main-15
+.css-140zrgu > main-16
+.css-1txxarw > main-17
+.css-i5k31w > main-18
+.css-13orjpu > main-19
+.css-1sb8vdm > main-20
+.css-44jj4s > main-21
+.css-1omog99 > main-22
+.css-w3k4lw > main-23
+.css-tdie7t > main-24
+.css-18ljl2p > main-25
+.css-j7qwjs > main-26
+.css-y78utz > main-27
+.css-k008qs > main-28
