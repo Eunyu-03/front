@@ -1,3 +1,8 @@
+로그인 - 이메일로 로그인, 카카오 로그인, 비밀번호 찾기, 이메일 확인, 새 비밀번호 
+회원가입 - 일반 회원, 상담사
+마이페이지 - 정보수정, 내가 쓴 게시글, 구독 상태 확인, 상담 이력, 상담 후기 작성 카카오 연동
+결제 결제
+
 *emil-login*
 
 .css-hrnbqo > main
@@ -54,3 +59,78 @@ app-body > main
 .css-70pyvo > main-9
 .css-hyxlzm > main-10
 .css-1rxphv6 > main-11
+
+-------------------------------------------------------
+
+*join*
+
+.css-4xq525 > main-1
+.css-1tmv6b > main-2
+.css-1rywip7 > main-3
+.css-7j9j8y > main-4
+.css-vkv7f1 > main-5
+.css-1tchs26 > main-6
+.css-oket1b > main-7
+.css-1t9sqkg > main-8
+.css-yrr088 > main-9
+.css-a5x0r1 > main-10
+.css-ej7a2z > main-11
+.css-1jke4yk > main-12
+.css-xs1il8 > main-13
+.css-19c57ap > main-14
+.css-1lahczz > main-15
+.css-140zrgu > main-16
+.css-1txxarw > main-17
+.css-i5k31w > main-18
+.css-13orjpu > main-19
+.css-1sb8vdm > main-20
+.css-44jj4s > main-21
+.css-1omog99 > main-22
+.css-w3k4lw > main-23
+.css-tdie7t > main-24
+.css-18ljl2p > main-25
+.css-j7qwjs > main-26
+.css-y78utz > main-27
+.css-k008qs > main-28
+.css-1wzncqu > main-29
+.css-1h1gftd > main-30
+.css-7yugnw > main-31
+.css-z8y606 > main-32
+.css-1ypznli > main-33
+.css-1nlqttw > main-34
+.css-1igejdt > main-35
+.css-1s65yuh > main-36
+.css-1pim3g6 > main-37
+.css-aubery > main-38
+.css-11u08og > main-39
+<<<<<<< HEAD
+
+--------------------------------------------------
+
+*new-fassword*
+
+.css-1jk96fn > main
+.css-c18jar > main-1
+.css-13tuojw > main-2
+.css-1km0bek > main-3
+.css-1h4tso5 > main-4
+.css-jsfdgy > main-5
+.css-g3x1x2 > main-6
+css-hyxlzm > main-7
+.css-1ab48c3 > main-8
+.css-1ga1alq > main-9
+.css-t71l3v > main-10
+.css-k008qs > log-1
+.css-1dm0ga1 > log-2
+.css-517hyg > log-3
+.css-tp6heg > log-4
+css-p0mtiy > log-5
+.css-13f88uv > log-6
+.css-1lugtsl > log-7
+.css-djwqx3 > log-8
+css-1j0bleu > log-9
+.css-1083r97 > log-10
+.css-xpbpr3 > log-11
+.
+=======
+>>>>>>> 1f4d7030b331b981af90e18f385b658b3096ec68
