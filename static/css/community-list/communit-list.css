@@ -1107,6 +1107,10 @@ section.item-wrapper .prisma-typography.body14\:regular {
 }
 
 .top-btn {
+    transition: transform .8s ease-in-out;
+}
+
+.top-btn {
     position: fixed;
     right: 1.5rem;
     bottom: 2rem;

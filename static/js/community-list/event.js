@@ -105,8 +105,6 @@ let reviewCount = 0;
 reviewPrevButton.style.visibility = "hidden";
 reviewNextButton.style.visibility = "visible";
 
-console.log(reviewNextButton);
-
 reviewPrevButton.addEventListener("click", (e) => {
     if (reviewCount > 0) {
         reviewCount--;
@@ -143,5 +141,26 @@ reviewNextButton.addEventListener("click", (e) => {
         reviewNextButton.style.visibility = "visible";
     } else {
         reviewNextButton.style.visibility = "hidden";
+    }
+});
+
+// 위로 가기 버튼 나타나기/숨기기
+const topButton = document.querySelector("a#top-btn.top-btn");
+
+topButton.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+topButton.style.opacity = 0;
+topButton.style.transform = "trnaslateY(20px)";
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY === 0) {
+        topButton.style.opacity = 0;
+        topButton.style.transform = "translateY(30px)";
+        setTimeout(() => {
+            topButton.style.visibility = "hidden";
+        }, 300);
+    } else {
+        topButton.style.visibility = "visible";
+        topButton.style.opacity = 1;
+        topButton.style.transform = "translateY(-20px)";
     }
 });
