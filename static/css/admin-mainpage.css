@@ -87,6 +87,10 @@ dl, ol, ul {
     margin-top: 0;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 svg {
     overflow: hidden;
 }
@@ -245,7 +249,22 @@ button.btn {
 .mdi-logout-variant:before {
     content: "\F05FD";
 }
-/* 폰트파일 안에 담긴 아이콘 가져오기 */
+
+.mdi-timer-outline:before {
+    content: "\F051B";
+}
+
+.mdi-file-send-outline:before {
+    content: "\F1039";
+}
+
+.mdi-timer-outline:before {
+    content: "\F051B";
+}
+
+.mdi-file-send-outline:before {
+    content: "\F1039";
+}
 
 body #rebound {
     height: 100%;
@@ -404,7 +423,6 @@ body #rebound {
     vertical-align: middle;
 }
 
-/* 메인 시작 */
 #rebound #rebound-main {
     flex: 1 1;
     overflow-y: auto;
@@ -638,10 +656,10 @@ body #rebound {
     }
 }
 
-@media (min-width: 1700px) {
-    .col-xl-8 {
-        flex: 0 0 66.66666667%;
-        max-width: 66.66666667%;
+@media (min-width: 1200px) {
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
 
@@ -649,6 +667,20 @@ body #rebound {
     .col-lg-6 {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+}
+
+@media (min-width: 1700px) {
+    .col-xl-8 {
+        flex: 0 0 66.66666667%;
+        max-width: 66.66666667%;
+    }
+}
+
+@media (min-width: 1700px) {
+    .col-xl-4 {
+        flex: 0 0 33.33333333%;
+        max-width: 33.33333333%;
     }
 }
 
@@ -788,3 +820,135 @@ body #rebound {
 }
 
 /* 메인 차트부분 시작 + col-12 디자인 부분은 위에 표기 */
+.chart-box {
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    box-shadow: 0 0 10px hsla(196, 7%, 71%, .1);
+    margin-bottom: 20px;
+}
+
+.chart-wrapper {
+    position: relative;
+}
+
+.rebound-chart {
+    display: inline-block;
+    height: 300px;
+    width: 100%;
+}
+
+.ana-user-index .access-data-list>.row {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.ana-user-index .access-data {
+    color: #292929;
+    text-align: center;
+}
+
+.ana-user-index .access-data.data-member-time, .ana-user-index .access-data.data-non-member-time {
+    color: #7366ff;
+}
+
+.ana-user-index .access-data .title {
+    color: #afb7ba;
+    font-weight: 700;
+}
+
+.ana-user-index .access-data .value {
+    font-size: 34px;
+    font-weight: 700;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+.ana-user-index .access-data .value span.icon {
+    font-size: 22px;
+    line-height: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.ana-user-index .access-data .value span.unit {
+    font-size: 20px;
+    line-height: 60px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.ana-user-index .access-data.data-member-page, .ana-user-index .access-data.data-non-member-page {
+    color: #f93;
+}
+
+.chart-box .box-header {
+    padding: 20px 20px 0;
+}
+
+.chart-box .box-header .box-title {
+    color: #292929;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.ana-user-index .user-price-box .box-body {
+    padding: 0 10px 10px;
+}
+
+.tab-box table.justify-table {
+    width: 100%;
+}
+
+.tab-box table.justify-table th {
+    padding: 10px 0;
+}
+
+.tab-box table.justify-table td, .tab-box table.justify-table th {
+    text-align: center;
+}
+
+.tab-box table.justify-table td {
+    background-color: #f5f6f7;
+    border-bottom: 1px solid #ededed;
+    padding: 14px 0;
+}
+
+.tab-box table.justify-table td.td-class {
+    background-color: #e9eaf0;
+    border-right: 2px solid #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 10px;
+    width: 40px;
+}
+
+.tab-box table.justify-table td.td-value {
+    font-size: 17px;
+}
+
+.tab-box table.justify-table td.td-value.value-new {
+    color: #fe657e;
+}
+
+.tab-box table.justify-table td.td-field {
+    color: rgba(43, 43, 43, .6);
+    font-size: 12px;
+}
+
+.tab-box table.justify-table td.td-value.value-revisit {
+    color: #40c8bc;
+}
+
+.tab-box table.justify-table td.td-value.value-total {
+    color: #8950fc;
+}
+
+.tab-box table.justify-table td.td-divider {
+    background-color: #fff;
+    border-bottom: none;
+    height: 10px;
+    line-height: 10px;
+    padding: 0;
+}
