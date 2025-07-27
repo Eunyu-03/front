@@ -1,6 +1,6 @@
 // 사이드 바 메인 메뉴 클릭 시 리스트 열고 닫기 + 아이콘
 // 사이드 바 서브 링크 클릭 시 이벤트 + 다른 리스트 닫기
-// 상단 tab-name 이벤트
+// 상단 tab바 이벤트
 const sideMenuButtons = document.querySelectorAll(".menu-btn");
 const sideSubLinks = document.querySelectorAll(".rebound-link");
 const sideSubLists = document.querySelectorAll(".menu-sub-list");
