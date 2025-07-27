@@ -9,6 +9,7 @@ const tabNames = document.querySelectorAll(".tab-name");
 sideMenuButtons.forEach((sideMenuButton) => {
     sideMenuButton.addEventListener("click", (e) => {
         e.preventDefault();
+        //기존(a 태그)의 이벤트를 멈추고 js로 직접 처리하기 위해 사용
 
         const targetId = sideMenuButton.getAttribute("aria-controls");
         // aria-controls와 같은 속성 가져올 땐 getAttribute();
@@ -77,12 +78,49 @@ sideSubLinks.forEach((sideSubLink) => {
     });
 });
 
+// 상단 tab-name 누르면 사이드 바 따라가는 이벤트
+tabNames.forEach((headerTabname) => {
+    headerTabname.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const tabText = headerTabname.textContent.trim();
+
+        // 상단 탭 active 초기화
+        tabNames.forEach((headerTab) => headerTab.classList.remove("active"));
+        headerTabname.classList.add("active");
+
+        // 사이드 링크 active 초기화 + 같은 텍스트만 active
+        sideSubLinks.forEach((subLink) => {
+            const linkText = subLink.textContent.trim().replace("-", "").trim();
+            if (linkText === tabText) {
+                subLink.classList.add("active");
+
+                // 메뉴도 열고 current 붙이기
+                const parentSubLink = subLink.parentElement.parentElement;
+                const parentSubBtton = document.querySelector(
+                    `.menu-btn[aria-controls="${parentSubLink.id}"]`
+                );
+                parentSubBtton.classList.add("current");
+                parentSubLink.classList.add("show");
+
+                const checkSubIcon =
+                    parentSubBtton.querySelector(".icon-wrapper i");
+                checkSubIcon.classList.remove("mdi-chevron-right");
+                checkSubIcon.classList.add("mdi-chevron-down");
+            } else {
+                subLink.classList.remove("active");
+            }
+        });
+    });
+});
+
 // 상단 오른쪽 관리자 이메일 클릭 시 리스트 출력
 // 출력된 리스트 다시 닫기
 const userMenuWrapper = document.querySelector(".user-menu-wrapper");
 const userMenuContent = document.querySelector(".user-menu-content");
 
 userMenuWrapper.addEventListener("click", (e) => {
+    e.preventDefault();
     if (userMenuContent.classList.contains("show")) {
         userMenuContent.classList.remove("show");
     } else {
@@ -91,6 +129,7 @@ userMenuWrapper.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
+    e.preventDefault();
     if (
         // userMenuContent 안넣어주면 안에 걸 눌러도 리스트가 닫힌다.
         !userMenuWrapper.contains(e.target) &&
