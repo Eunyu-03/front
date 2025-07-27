@@ -14,7 +14,7 @@ auto_login_checkbox.addEventListener("change", () => {
         : "none";
 });
 
-// 가입된 회원정보가 없거나 비밀번호가 잘못 입력 되었을 상황의 모달 창
+// 가입된 회원정보가 없거나 비밀번호가 잘못 입력 되었을 상황의 모달
 loginButton.addEventListener("click", (e) => {
     if (!email.value || !pw.value) {
         modal.classList.add("active");
