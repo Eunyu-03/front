@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../static/css/main-page/header.css">
     <link rel="" href="../../static/images/member/icon.png">
     <link rel="stylesheet" href="../../static/css/member/new-fassword.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    
 
 </head>
 <body>
@@ -72,9 +72,9 @@
                             </div>
                         </div>
                         <div class="right-section">
-                            <nav>
+                            <nav class="logo-13">
                                 <!-- 로그인시 변경 사항 -->
-                                <ul>
+                                <ul class="wrap">
                                     <li class="nav-item log-1">
                                         <a class="log-2" title="받은요청" href="">
                                             <div class="log-3">
@@ -99,16 +99,9 @@
                                         </a>
                                     </li>
                                     <li class="log-1">
-                                        <div class="log-6">
-                                            <a title="캐시 충전" class="log-7" href="">
-                                                <img alt="캐시 충전" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="https://assets.cdn.soomgo.com/next/c3b442a/_next/static/media/graphic_coin.3ec2260d.svg" style="color: transparent;">
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="log-1">
                                         <div class="log-8">
                                             <button type="button" aria-label="Open notification center" class="log-9">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" color="#1C242F">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" color="#1C242F" style="margin-top: 5px;">
                                                     <path fill="currentColor" fill-rule="evenodd" d="M12.001 2.06h-.002c-2.024.003-3.94.929-5.335 2.53-1.392 1.6-2.161 3.748-2.163 5.97v3.93a.25.25 0 0 1-.062.164L3.43 15.813A1.75 1.75 0 0 0 3 16.962v.349c0 .966.784 1.75 1.75 1.75h3.579c.147.707.5 1.362 1.024 1.879A3.77 3.77 0 0 0 12 22.024c.992 0 1.944-.389 2.648-1.084a3.7 3.7 0 0 0 1.024-1.88h3.578A1.75 1.75 0 0 0 21 17.31v-.348c0-.422-.153-.83-.43-1.15l-1.01-1.158a.25.25 0 0 1-.06-.164v-3.93c-.003-2.222-.772-4.37-2.164-5.97C15.94 2.99 14.025 2.064 12 2.06m2.115 17H9.884c.11.303.288.58.523.813.421.416.994.651 1.593.651.6 0 1.172-.235 1.593-.651a2.2 2.2 0 0 0 .523-.812M7.796 5.577C8.93 4.272 10.445 3.563 12 3.56c1.554.002 3.07.711 4.205 2.015 1.138 1.307 1.792 3.099 1.794 4.986v3.928c0 .422.153.83.43 1.15l1.01 1.158a.25.25 0 0 1 .061.164v.349a.25.25 0 0 1-.25.25H4.75a.25.25 0 0 1-.25-.25v-.349a.25.25 0 0 1 .061-.164l1.01-1.159A1.75 1.75 0 0 0 6 14.49v-3.928c.002-1.887.656-3.678 1.794-4.985" clip-rule="evenodd"></path>
                                                 </svg>
                                             </button>
@@ -117,7 +110,7 @@
                                     <li class="log-1">
                                         <div class="log-10">
                                             <button type="button" class="log-11">
-                                                <div class="css-jfnbqf eeerlbc0"><img alt="김신영" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" srcset="https://static.cdn.soomgo.com/upload/profile-default/soomgo_124.jpg?w=100&amp;q=75 1x, https://static.cdn.soomgo.com/upload/profile-default/soomgo_124.jpg?w=100&amp;q=75 2x" src="https://static.cdn.soomgo.com/upload/profile-default/soomgo_124.jpg?w=100&amp;q=75" style="color: transparent;">
+                                                <div class="logo-12"><img alt="김신영" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" srcset="https://static.cdn.soomgo.com/upload/profile-default/soomgo_124.jpg?w=100&amp;q=75 1x, https://static.cdn.soomgo.com/upload/profile-default/soomgo_124.jpg?w=100&amp;q=75 2x" src="https://static.cdn.soomgo.com/upload/profile-default/soomgo_124.jpg?w=100&amp;q=75" style="color: transparent;">
                                                 </div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
                                                     <g fill="none" fill-rule="evenodd">
@@ -141,10 +134,22 @@
                 <form class="main-3">
                     <div class="main-4">
                         <div>
+                            <!-- 
+                            기본
                             <div class="css-0">
                                 <label for="password" class="main-6">기존 비밀번호</label>
                                 <div class="main-7">
                                     <input id="password" class="main-8" placeholder="현재 비밀번호를 입력해주세요" name="password" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="">
+                                </div>
+                            </div> 
+                            -->
+                            <div class="css-0">
+                                <label for="password" class="main-6">기존 비밀번호</label>
+                                <div class="main-7">
+                                    <input id="password" class="main-8-1" placeholder="현재 비밀번호를 입력해주세요" name="password" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="">
+                                </div>
+                                <div class="main-8-2">
+                                    <p data-testid="password-error" class="main-8-3">비밀번호를 입력해 주세요.</p>
                                 </div>
                             </div>
                         </div>
@@ -294,4 +299,5 @@
         </footer>
     
 </body>
+<script src="../../static/js/member/new-fassword.js"></script>
 </html>
