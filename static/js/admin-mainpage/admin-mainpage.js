@@ -1,11 +1,35 @@
+const homeButton = document.getElementById("menu-home");
+const sideMenuButtons = document.querySelectorAll(".menu-btn");
+const sideSubLists = document.querySelectorAll(".menu-sub-list");
+const sideSubLinks = document.querySelectorAll(".rebound-link");
+const tabNames = document.querySelectorAll(".tab-name");
+const icons = document.querySelectorAll(".icon-wrapper i");
+
+// 홈 클릭 이벤트
+homeButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    sideMenuButtons.forEach((homeByButton) => {
+        homeByButton.classList.remove("current");
+    });
+    homeButton.classList.add("current");
+
+    sideSubLists.forEach((homeByList) => {
+        homeByList.classList.remove("show");
+    });
+
+    sideSubLinks.forEach((homeByLink) => {
+        homeByLink.classList.remove("active");
+    });
+
+    icons.forEach((homeByIcon) => {
+        homeByIcon.classList.remove("mdi-chevron-down");
+        homeByIcon.classList.add("mdi-chevron-right");
+    });
+});
+
 // 사이드 바 메인 메뉴 클릭 시 리스트 열고 닫기 + 아이콘
 // 사이드 바 서브 링크 클릭 시 이벤트 + 다른 리스트 닫기
 // 상단 tab바 이벤트
-const sideMenuButtons = document.querySelectorAll(".menu-btn");
-const sideSubLinks = document.querySelectorAll(".rebound-link");
-const sideSubLists = document.querySelectorAll(".menu-sub-list");
-const tabNames = document.querySelectorAll(".tab-name");
-
 sideMenuButtons.forEach((sideMenuButton) => {
     sideMenuButton.addEventListener("click", (e) => {
         e.preventDefault();
@@ -137,4 +161,15 @@ document.addEventListener("click", (e) => {
     ) {
         userMenuContent.classList.remove("show");
     }
+});
+
+// 1주 ,2주 ,1개월 버튼
+const btnGroup = document.querySelector(".btn-group");
+const buttons = btnGroup.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+    });
 });
