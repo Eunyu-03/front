@@ -1,0 +1,42 @@
+*mypage*
+
+.css-1jk96fn > main
+.css-3yp0at > main-1
+.css-1iq6djp > main-2
+.css-1edf35y > main-3
+.css-1lbtc8p > main-4
+.css-19kigfw > main-5
+.css-wp2nc5 > main-6
+.css-14lfoei > main-7
+.css-1luf1cz > main-8
+.css-ucvq9p > main-9
+.css-1634sda > main-10
+.css-12x49et > main-11
+.css-mb8ofy > main-12
+.css-1h5p4ow > main-13
+.css-70qvj9 > main-14
+.css-dc3ov7 > main-15
+.css-r4q9dn > main-16
+.css-19a4z2l > main-17
+.css-1iqn4x3 > main-18
+
+*mypage-set*
+
+.css-1jk96fn > main
+.css-1cqqgdj > main-1
+.css-1a82cel > main-2
+.css-1qln0nz > main-3
+.css-4e9k9x > main-4
+.css-j0azdm > main-5
+.css-79elbk > main-6
+.css-6lq6nl > main-7
+.css-1nov7zd > main-8
+.css-mtsjyv > main-9
+.css-8eoez6 > main-10
+.css-gquxbq > main-11
+.css-17t31ji > main-12
+.css-1x1mnyl > main-13
+.css-mwms91 > main-14
+.css-2w437u > main-15
+.css-ivmmsr > main-16
+.css-d6zs8p > main-17
