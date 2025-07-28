@@ -29,22 +29,29 @@
                 <div class="menu-wrapper flex-grow-1">
                     <ul class="menu-list">
                         <li class="menu menu-item d-flex flex-column">
-                            <a href="" class="menu-btn d-flex w-100 current" data-toggle="collapse" aria-expanded="true" aria-controls="menu-6109064136799700f1ebced6">
+                            <!-- 홈 버튼 추가를 위해 id="menu-home" 작성 -->
+                            <a href="" id="menu-home" class="menu-btn d-flex w-100 current" data-toggle="collapse" aria-expanded="true" aria-controls="">
+                                <i class="mdi mdi mdi-credit-card-plus-outline"></i>
+                                <span class="menu-name">HOME</span>
+                            </a>
+                        </li>
+                        <li class="menu menu-item d-flex flex-column">
+                            <a href="" class="menu-btn d-flex w-100" data-toggle="collapse" aria-expanded="true" aria-controls="menu-6109064136799700f1ebced6">
                                 <!-- aria-controls는 밑 ul태그의 id와 똑같다 -->
                                 <!-- 리스트가 열려있으면 menu-btn d-flex w-100 -->
                                 <!-- 닫혀있으면 클래스명 뒤에 collapsed와 aria-expanded="false", 현재 클릭 되어 있는 곳이면 클래스명 뒤에 current -->
                                 <i class="mdi mdi mdi-credit-card-plus-outline"></i>
                                 <span class="menu-name">회원 관리</span>
                                 <div class="icon-wrapper flex-grow-1 text-right">
-                                    <i class="mdi mdi-chevron-down"></i>
+                                    <i class="mdi mdi-chevron-right"></i>
                                     <!-- 리스트가 보이는 상태의 아이콘 i class="mdi mdi-chevron-down" -->
                                 </div>
                             </a>
                             <!-- 리스트가 보이는 상태 ul class="menu-sub-list collapse show" -->
-                            <ul class="menu-sub-list collapse show" id="menu-6109064136799700f1ebced6">
+                            <ul class="menu-sub-list collapse" id="menu-6109064136799700f1ebced6">
                                 <li class="submenu menu-item">
                                     <!-- 클릭 한 부분 active -->
-                                    <a href="" class="rebound-link active" data-param="0">
+                                    <a href="" class="rebound-link" data-param="0">
                                         - 
                                         일반 회원
                                     </a>
@@ -205,21 +212,13 @@
             </div>
             <div class="page ana-user-index wide-page">
                 <div class="page-header">
-                    <div class="page-title">회원 관리</div>
+                    <div class="page-title">HOME</div>
                     <div class="page-subtitle"></div>
                 </div>
                 <div class="page-body">
                     <div class="tab-box">
                         <div class="tab-row white-panel">
                             <div class="row">
-                                <div class="col col-auto">
-                                    <ul class="tab-name-list list-unstyled list-inline">
-                                        <!-- 클릭 한 부분은 active -->
-                                        <li class="tab-name active">일반 회원</li>
-                                        <li class="tab-name">멘토 회원</li>
-                                        <li class="tab-name">구독 회원</li>
-                                    </ul>
-                                </div>
                                 <div class="col-12 col-lg filter-col">
                                     <div class="rebound-chart-date">
                                         <div class="btn-group mr-1">
