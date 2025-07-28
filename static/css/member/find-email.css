@@ -157,3 +157,17 @@ main {
     height: 48px;
     resize: none;
 }
+.main-12{
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+.main-13{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(105, 59, 242);
+}
