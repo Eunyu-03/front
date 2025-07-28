@@ -11,7 +11,7 @@
 
 #app #app-header, #app #app-body {
     opacity: 1;
-    transition: opacity .3s ease-in;
+    /* transition: opacity .3s ease-in; */
 }
 
 #app-header.hide-border-bottom {
@@ -1830,11 +1830,11 @@ section.popular-provider div.slick-slider div.slick-list div.slick-track div.sli
     }
 }
 
-.popular-provider .slick-arrow.slick-prev.slick-disabled {
+/* .popular-provider .slick-arrow.slick-prev.slick-disabled {
     pointer-events: none;
     cursor: default;
     opacity: 0;
-}
+} */
 
 .popular-provider .slick-arrow.slick-prev {
     left: -1.3125rem;
