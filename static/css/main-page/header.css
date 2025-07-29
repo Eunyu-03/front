@@ -80,7 +80,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 992px) {
-    #app-header[data-v-0d53325b] {
+    #app-header {
         height: 4.5rem;
         border-bottom: .0625rem solid #EFF1F5;
     }
