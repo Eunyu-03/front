@@ -247,8 +247,16 @@ button.btn {
     text-align: right !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
 .text-dark {
     color: #4e5d6c !important;
+}
+
+.text-danger {
+    color: #fe657e !important;
 }
 
 .ml-1, .mr-1, .mx-1 {
@@ -259,12 +267,24 @@ button.btn {
     margin-right: .5rem !important;
 }
 
-.mr-3, .mx-3 {
-    margin-right: 1rem !important;
+.mt-5, .my-5 {
+    margin-top: 3rem !important;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
 }
 
 .pr-4, .px-4 {
     padding-right: 1.5rem !important;
+}
+
+.mr-3, .mx-3 {
+    margin-right: 1rem !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
 }
 
 .shadow-lg {
@@ -348,6 +368,10 @@ button.btn {
 
 .mdi-magnify:before {
     content: "\F0349";
+}
+
+.mdi-chevron-right:before {
+    content: "\F0142";
 }
 
 body #rebound {
@@ -479,7 +503,6 @@ body #rebound {
     padding: 0;
 }
 
-/* 주석 해제 시 리스트가 안보여진다. */
 .collapse:not(.show) {
     display: none;
 }
@@ -991,9 +1014,10 @@ button.btn .comp-icon {
     -moz-border-radius: 5px 0 0 5px;
 }
 
+/* 간격 조정을 위해 padding 수정 */
 .page-content .table-layout table.member-table thead th {
     box-shadow: inset 0 -2px 0 #f5f5f5;
-    padding: 16px 8px;
+    padding: 16px 30px;
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -1023,13 +1047,41 @@ button.btn .comp-icon {
     transition: background-color .2s;
 }
 
+.page-content .table-layout table.member-table tr:hover td {
+    background-color: #f7fafc;
+}
+
 .page-content .table-layout table.member-table td.td-name {
     max-width: 400px;
     min-width: 200px;
 }
 
+.badge {
+    border-radius: .25rem;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    padding: .25em .4em;
+    text-align: center;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    vertical-align: baseline;
+    white-space: nowrap;
+    line-height: 1.1;
+}
 
+.badge-label {
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 11px;
+    padding: 5px 10px 3px;
+    text-align: center;
+}
 
+.badge-label.text-danger {
+    background-color: rgba(254, 101, 126, .07);
+    background-image: radial-gradient(rgba(255, 243, 245, .349), rgba(254, 101, 126, .07));
+}
 
 .page-content .table-layout table.member-table td.td-name .member-id {
     color: #8b9298;
@@ -1046,4 +1098,101 @@ button.btn .comp-icon {
     font-weight: 700;
     margin-right: 5px;
     padding: 2px 2px 1px;
+}
+
+.page-content .table-layout table.member-table td.td-amount {
+    color: #507cf3;
+    max-width: 180px;
+    white-space: nowrap;
+}
+
+.page-content .table-layout table.member-table td.td-method {
+    color: #292929;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.page-content .table-layout table.member-table td.td-action {
+    width: 80px;
+}
+
+.page-content .table-layout table.member-table td.td-action .action-btn {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: background-color .2s, color .4s, border-color .3s;
+    width: 30px;
+}
+
+.page-content .table-layout table.member-table td.td-action .action-btn:hover {
+    background-color: #8baaff;
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 페이지 번호 */
+.rebound-pagination-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.pagination {
+    border-radius: .25rem;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.rebound-pagination-wrapper ul.rebound-pagination {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.rebound-pagination-wrapper ul.rebound-pagination>li.page-item {
+    padding: 2.5px;
+}
+
+.rebound-pagination-wrapper ul.rebound-pagination>li.page-item a {
+    border-color: transparent;
+    border-radius: 4px;
+    color: #8b9298;
+    font-size: 15px;
+    line-height: 15px;
+    min-width: 32px;
+    padding: 7px 10px;
+    text-align: center;
+}
+
+.rebound-pagination-wrapper ul.rebound-pagination>li.page-item.active>a {
+    color: #507cf3;
+    font-weight: 700;
+}
+
+.rebound-pagination-wrapper .pagination-desc {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-ignore {
+    color: #9fafb7;
+}
+
+.rebound-pagination-wrapper .des {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.rebound-pagination-wrapper .des .highlight {
+    color: #181c32;
+    font-weight: 700;
 }
