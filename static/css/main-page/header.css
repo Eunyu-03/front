@@ -2,6 +2,10 @@
     word-break: break-word;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
@@ -80,7 +84,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 992px) {
-    #app-header[data-v-0d53325b] {
+    #app-header {
         height: 4.5rem;
         border-bottom: .0625rem solid #EFF1F5;
     }
