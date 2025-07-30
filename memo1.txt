@@ -40,3 +40,16 @@
 .css-2w437u > main-15
 .css-ivmmsr > main-16
 .css-d6zs8p > main-17
+..css-lv6tpq > photo-1
+css-1uuk80x > photo-2
+css-frjdyo > photo-3
+.css-1ikipca > photo-4
+.css-1vvkl3y > phtop-5
+.css-15bdutn > photo-6
+.css-1uhr4qg > photo-7
+.css-44jj4s > photo-8
+.css-tehrh0 > photo-9
+.css-16hb6yj > photo-10
+.css-z1i2nd > name
+.css-1cxz489 > name-1
+.css-11vo3c2 > name-2
