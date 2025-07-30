@@ -60,7 +60,7 @@ input, button, select, optgroup, textarea {
     line-height: inherit;
 }
 
-#app {
+/* #app {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -73,7 +73,7 @@ input, button, select, optgroup, textarea {
 #app #app-header, #app #app-body {
     opacity: 1;
     transition: opacity .3s ease-in;
-}
+} */
 
 #app-header.hide-border-bottom {
     border-bottom: none;
