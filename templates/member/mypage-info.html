@@ -14,44 +14,66 @@
         <div class="main-1">
             <h1 class="main-2">개인 정보 관리</h1>
             <div class="main-3">
-                <form class="wrap">
+                <form class="wrap first">
                     <div class="main-4">전화번호
-                        <button type="button" class="main-5">수정</button>
+                        <button type="button" class="main-5 first">수정</button>
                     </div>
                     <div class="main-6">
                         <p class="main-7">010-1234-5678</p>
                     </div>
                 </form>
-                <form class="wrap">
+                <form class="sub first">
                     <div class="main-4">전화번호</div>
                     <div class="main-6">
-                        <input type="tel" class="main-7" value="010-1234-5678">
+                        <input id="insert1" type="text" class="main-7" value="010-1234-5678">
+                    </div>
+                    <div class="select-1">
+                        <button id="cancle1" type="button" class="select-2">취소</button>
+                        <button type="submit" disabled="" class="select-3">저장하기</button>
                     </div>
                 </form>
-                <form class="wrap">
+                <form class="wrap second">
                     <div class="main-4">이메일
-                        <button type="button" class="main-5">수정</button>
+                        <button type="button" class="main-5 second">수정</button>
                     </div>
                     <div class="main-6">
                         <p class="main-7">test1234@gmail.com</p>
                     </div>
                 </form>
-                <form class="wrap">
+                <form class="sub second">
+                    <div class="main-4">이메일</div>
+                    <div class="main-6">
+                        <input id="insert2" type="text" class="main-7" value="test1234@gmail.com">
+                    </div>
+                    <div class="select-1">
+                        <button id="cancle2" type="button" class="select-2">취소</button>
+                        <button type="submit" disabled="" class="select-3">저장하기</button>
+                    </div>
+                </form>
+                <form class="wrap third">
                     <div class="main-4">비밀번호
-                        <button type="button" class="main-5">수정</button>
+                        <button type="button" class="main-5 third">수정</button>
                     </div>
                     <div class="main-6">
                         <p class="main-7">*********</p>
                     </div>
-                    <div id="setName" class="info">
-                        <div class="info-1">
-                            <h4 class="info-2">기존 비밀번호</h4>
-                            <input type="text" class="info-3">
-                            <div class="info-4">
-                                <button id="cancle1" type="button" class="info-5">취소</button>
-                                <button type="submit" disabled="" class="info-6">저장하기</button>
-                            </div>
-                        </div>
+                </form>
+                <form class="sub third">
+                    <div class="main-4">기존 비밀번호</div>
+                    <div class="main-6">
+                        <input  type="password" class="main-7" value="">
+                    </div>
+                    <div class="main-4">새로운 비밀번호</div>
+                    <div class="main-6">
+                        <input  type="password" class="main-7" value="">
+                    </div>
+                    <div class="main-4">새로운 비밀번호 확인</div>
+                    <div class="main-6">
+                        <input  type="password" class="main-7" value="">
+                    </div>
+                    <div class="select-1">
+                        <button id="cancle3" type="button" class="select-2">취소</button>
+                        <button type="submit" disabled="" class="select-3">저장하기</button>
                     </div>
                 </form>
             </div>   
