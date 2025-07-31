@@ -1,3 +1,5 @@
+HTMLCollection.prototype.filter = Array.prototype.filter;
+HTMLCollection.prototype.forEach = Array.prototype.forEach;
 const button = document.querySelector("button[class=main-8]");
 const photo = document.querySelector("div[class=photo-1]");
 const cancle = document.querySelector("button[class=photo-10]");
@@ -17,4 +19,20 @@ set.addEventListener("click", (e) => {
 });
 cancleName.addEventListener("click", (e) => {
     infoName.classList.remove("active");
+});
+
+const set1 = document.getElementById("button");
+const general = document.getElementById("wrap");
+const hide = document.getElementById("sub");
+const cancle1 = document.getElementById("cancle1");
+
+set1.addEventListener("click", (e) => {
+    general.classList.add("active");
+    hide.classList.add("active");
+});
+
+cancle1.addEventListener("click", (e) => {
+    general.classList.remove("active");
+    hide.classList.remove("active");
+    set1.style.display = "block";
 });
