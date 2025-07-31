@@ -1164,7 +1164,7 @@ body .main-portfolio .header .title {
     margin: 0 -.5rem;
 }
 
-.main-portfolio .portfolio-list-slide .slick-arrow.slick-prev.slick-disabled {
+.slick-disabled {
     pointer-events: none;
     cursor: default;
     opacity: 0;
@@ -1767,6 +1767,7 @@ body .pro-signup-btn .btn {
     background-color: #f6f7f9;
     padding: 1rem 0 1.5rem;
     border-radius: 8px;
+    overflow: hidden;
 }
 
 body .main-pro-info .slick-arrow.slick-prev {
