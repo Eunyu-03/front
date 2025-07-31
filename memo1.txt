@@ -64,3 +64,5 @@ css-frjdyo > photo-3
 .css-173mlzb > main-6
 .css-6vw1tl > main-7
 .css-warpf9 > main-8
+.css-1is0qkf > main-9
+.css-2dnb9f > main-10
