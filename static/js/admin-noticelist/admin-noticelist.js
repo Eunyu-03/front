@@ -89,52 +89,6 @@ sideSubLinks.forEach((sideSubLink) => {
                 }
             }
         });
-
-        // 상단 tab-name 활성화
-        const linkText = sideSubLink.textContent.trim().replace("-", "").trim();
-        // 링크 이름에서 기호(-)랑 공백 제거한 텍스트
-        tabNames.forEach((tabName) => tabName.classList.remove("active"));
-        tabNames.forEach((tabNameCheck) => {
-            if (tabNameCheck.textContent.trim() === linkText) {
-                tabNameCheck.classList.add("active");
-            }
-        });
-    });
-});
-
-// 상단 tab-name 누르면 사이드 바 따라가는 이벤트
-tabNames.forEach((headerTabname) => {
-    headerTabname.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        const tabText = headerTabname.textContent.trim();
-
-        // 상단 탭 active 초기화
-        tabNames.forEach((headerTab) => headerTab.classList.remove("active"));
-        headerTabname.classList.add("active");
-
-        // 사이드 링크 active 초기화 + 같은 텍스트만 active
-        sideSubLinks.forEach((subLink) => {
-            const linkText = subLink.textContent.trim().replace("-", "").trim();
-            if (linkText === tabText) {
-                subLink.classList.add("active");
-
-                // 메뉴도 열고 current 붙이기
-                const parentSubLink = subLink.parentElement.parentElement;
-                const parentSubBtton = document.querySelector(
-                    `.menu-btn[aria-controls="${parentSubLink.id}"]`
-                );
-                parentSubBtton.classList.add("current");
-                parentSubLink.classList.add("show");
-
-                const checkSubIcon =
-                    parentSubBtton.querySelector(".icon-wrapper i");
-                checkSubIcon.classList.remove("mdi-chevron-right");
-                checkSubIcon.classList.add("mdi-chevron-down");
-            } else {
-                subLink.classList.remove("active");
-            }
-        });
     });
 });
 
@@ -177,53 +131,4 @@ pageItemNums.forEach((pageItemNum) => {
 
         pageItemNum.parentElement.classList.add("active");
     });
-});
-
-// 멘토회원 상세 모달 창 열고 닫는 이벤트
-const modal = document.querySelector(".member-modal");
-const actionButtons = document.querySelectorAll(".action-btn");
-const closeButtons = document.querySelectorAll(".close");
-const closeFooterButton = document.querySelector(".btn-close");
-
-actionButtons.forEach((actionButton) => {
-    actionButton.addEventListener("click", (e) => {
-        modal.style.display = "block";
-
-        setTimeout(() => {
-            modal.classList.add("show");
-            modal.style.background = "rgba(0,0,0,0.5)";
-            document.body.classList.add("modal-open");
-        }, 100);
-    });
-});
-
-closeButtons.forEach((closeButton) => {
-    closeButton.addEventListener("click", (e) => {
-        modal.classList.remove("show");
-        document.body.classList.remove("modal-open");
-
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 100);
-    });
-});
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("show");
-        document.body.classList.remove("modal-open");
-
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 100);
-    }
-});
-
-closeFooterButton.addEventListener("click", (e) => {
-    modal.classList.remove("show");
-    document.body.classList.remove("modal-open");
-
-    setTimeout(() => {
-        modal.style.display = "none";
-    }, 100);
 });

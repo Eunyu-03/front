@@ -329,6 +329,7 @@
                                             <th class="td-action">상세</th>
                                         </tr>
                                     </thead>
+                                    <!-- 회원 목록 페이지 당 10명 -->
                                     <!-- 첫 번째 회원 -->
                                     <tbody class="">
                                         <tr>
@@ -595,21 +596,166 @@
                                     </li>
                                 </ul>
                                 <div class="pagination-desc">
-                                    <div class="des text-ignore">
+                                    <!-- 회원이 1페이지(10명 미만)일 때 -->
+                                    <!-- <div class="des text-ignore">
                                         <span>
                                             <span class="highlight">last</span>
                                             of
                                             1
                                         </span>
                                         results
-                                    </div>
+                                    </div> -->
                                 </div>
                             </nav>
                         </div>
                     </div>
                 </div>
+                <!-- 멘토회원 상세 모달 창 -->
+                <!-- 모달 창이 떠 있을 때 -->
+                <!-- <div class="modal fade member-modal show" style="display: block;" aria-modal="true" role="dialog"> -->
+                <!-- 모달 창이 뜨지 않을 때 -->
                 <div class="modal fade member-modal" style="display: none;" aria-hidden="true">
-                    
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-title">
+                                    (TestId01) Test01
+                                    <span class="badge-label text-danger font-weight-bold ml-2">멘토회원</span>
+                                </div>
+                                <button class="close">
+                                    <i class="mdi mdi-close"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="divider">
+                                    <div class="tab-view">
+                                        <div class="tab-view-header"></div>
+                                        <div class="tab-view-body">
+                                            <div style="display: block;">
+                                                <div class="tab-inner tab-detail">
+                                                    <!-- 회원 기본정보 -->
+                                                    <div class="info-layout detail-info">
+                                                        <div class="info-title justify-content-between">
+                                                            <div class="flex-left d-flex">
+                                                                <div class="title">회원 기본정보</div>
+                                                            </div>
+                                                            <div class="flex-right"></div>
+                                                        </div>
+                                                        <div class="d-table w-100">
+                                                            <!-- 테이블 왼쪽 -->
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>이름</th>
+                                                                            <td>테스트01</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>핸드폰 번호</th>
+                                                                            <td>010-1234-5678</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>가입일</th>
+                                                                            <td>2025-06-12</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- 테이블 오른쪽 -->                                                        
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>회원ID</th>
+                                                                            <td>TestId01</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>이메일</th>
+                                                                            <td>test01@gmail.com</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>최근 접속일</th>
+                                                                            <td>2025-07-29</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 회원 상세정보 -->
+                                                    <div class="info-layout detail-info">
+                                                        <div class="info-title justify-content-between">
+                                                            <div class="flex-left d-flex">
+                                                                <div class="title">회원 상세정보</div>
+                                                            </div>
+                                                            <div class="flex-right"></div>
+                                                        </div>
+                                                        <div class="d-table w-100">
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>나이</th>
+                                                                            <td>20</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>성별</th>
+                                                                            <td>남</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>?</th>
+                                                                            <td>?</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn-close btn btn-outline-filter">닫기</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

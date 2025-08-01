@@ -93,10 +93,10 @@ input, button, select, optgroup, textarea {
     line-height: inherit;
 }
 
-/* svg {
+svg {
     overflow: hidden;
     vertical-align: middle;
-} */
+}
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -191,11 +191,11 @@ button {
     }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .service-area-filter .filter-btn .button-content .chevron.mobile {
         display: none;
     }
-}
+} */
 
 @media (min-width: 768px) {
     .service-area-filter .filter-btn .button-content .chevron.desktop {
@@ -330,10 +330,10 @@ button {
     font-weight: 400;
 }
 
-.btn:hover {
+/* .btn:hover {
     color: #293341;
     text-decoration: none;
-}
+} */
 
 .btn {
     font-weight: 500;
@@ -445,6 +445,60 @@ section.service-area-filter .sg-icon-v1 svg {
         display: block !important;
     }
 }
+
+/* --- */
+div.content aside.auto-quote-filter div.header.desktop h3 {
+    padding-left: .3125rem;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.search-pro-auto-quote-filter .let-choose-service h2 {
+    padding-left: .3125rem;
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+ul.dropdown-menu-right {
+    position: absolute;
+    transform: translate3d(-72px, 22px, 0px);
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+}
+
+ul.dropdown-menu-right {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #293341;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: .0625rem solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+}
+
+.dropdown-menu[x-placement^=top], 
+.dropdown-menu[x-placement^=right], 
+.dropdown-menu[x-placement^=bottom], 
+.dropdown-menu[x-placement^=left] {
+    right: auto;
+    bottom: auto;
+}
+/* --- */
 
 .search-pro-auto-quote-filter .let-choose-service h3 {
     padding-left: .3125rem;
@@ -758,8 +812,12 @@ ul.dropdown-menu-right {
     background-color: #fff;
     background-clip: padding-box;
     border: .0625rem solid #E0E5EB;
-    border-radius: .25rem;
+    /* border-radius: .25rem; */
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control::placeholder {
+    color: #ccd5dc;
 }
 
 .search-keyword-input-desktop .input-group-append {
@@ -834,7 +892,7 @@ ul.dropdown-menu-right {
 }
 
 @media (min-width: 768px) {
-    .list-header {
+    article.search-pro-list div.list-item div.list-header {
         padding-bottom: .5rem;
     }
 }
@@ -858,7 +916,7 @@ ul.dropdown-menu-right {
 }
 
 .list-header span {
-    font-size: .8125rem;
+    /* font-size: .8125rem; */
     font-weight: 500;
     color: #8f9aab;
 }
@@ -876,10 +934,38 @@ ul.dropdown-menu-right {
     margin-top: .0625rem;
 }
 
-.sg-icon-v1 svg {
+button.btn.btn-tooltip .sg-icon-v1 svg {
     width: 100%;
     height: 100%;
     color: #8F9AAB;
+}
+
+.tooltip-container .tooltip-info::before {
+    content: "";
+    position: absolute;
+    top: -1.15rem;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    border-style: solid;
+    border-width: .625rem .5rem;
+    border-color: transparent transparent #293341 transparent;
+}
+
+.tooltip-container .tooltip-info {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    z-index: 1;
+    max-width: 15.25rem;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #293341;
+    opacity: .9;
+    border-radius: 6px;
+    padding: .5rem .75rem;
+    color: #fff;
+    font-size: .875rem;
 }
 
 .search-pro-card {
@@ -998,10 +1084,6 @@ ul.dropdown-menu-right {
     border-radius: 4px;
 }
 
-.d-flex {
-    display: flex !important;
-}
-
 .soomgopay-chip span {
     font-size: .75rem;
     font-weight: 500;
@@ -1036,7 +1118,7 @@ ul.dropdown-menu-right {
     position: relative;
 }
 
-.user-profile-picture div.is-square {
+div.list-item div.pro-card div.user-profile-picture div.is-square {
     height: 100%;
     padding: 0;
     border-radius: .75rem;
