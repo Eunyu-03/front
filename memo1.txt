@@ -54,13 +54,30 @@ css-frjdyo > photo-3
 .css-1cxz489 > name-1
 .css-11vo3c2 > name-2
 
-*post*
+*mypage-post*
 
 .css-n9wwsy > main-1
 .css-xcc2xz > main-2
 .css-3lj2he > main-3
 .css-104gzyb> main-4
 .css-3phuca > main-5
+.css-173mlzb > main-6
+.css-6vw1tl > main-7
+.css-warpf9 > main-8
+.css-1is0qkf > main-9
+.css-2dnb9f > main-10
+.css-1y74zjb > main-11
+.css-6fbtix > main-12
+.css-1nu8ad8 > main-13
+.css-y1frci > main-14
+.css-1axarpy > main-15
+
+*mypage-reply*
+.css-n9wwsy > main-1
+.css-xcc2xz > main-2
+.css-3lj2he > main-3
+.css-3phuca > main-4
+.css-104gzyb> main-5
 .css-173mlzb > main-6
 .css-6vw1tl > main-7
 .css-warpf9 > main-8
