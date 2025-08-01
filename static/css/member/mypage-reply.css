@@ -125,3 +125,53 @@ main {
     margin-bottom: 8px;
     word-break: break-word;
 }
+.main-11{
+    text-align: center;
+    padding: 120px 0px;
+}
+@media (min-width: 768px) {
+    .main-11 {
+        padding: 180px 0px;
+    }
+}
+.main-12{
+    display: inline-block;
+    padding: 0px 48px;
+    text-align: center;
+}
+.main-13{
+    display: flex
+;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-top: 20px;
+    white-space: pre-line;
+}
+.main-14{
+    min-height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    color: rgb(106, 118, 133);
+    text-align: center;
+}
+.main-15{
+    min-height: 1.375rem;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    color: rgb(106, 118, 133);
+    text-align: center;
+}
+#view{
+    display: none;
+}
+#none{
+    display: none;
+}
