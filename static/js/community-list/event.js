@@ -46,7 +46,7 @@ hoverArea.addEventListener("mouseleave", (e) => {
     nextButton.style.visibility = "hidden";
 });
 
-// 버튼으로 숨고픽 이동
+// 버튼으로 숨고픽 좌우 이동
 const hotTopic = document.querySelector("div.slick-list.slick-pick");
 let topicCount = 0;
 
@@ -111,7 +111,6 @@ reviewPrevButton.addEventListener("click", (e) => {
         communityReview.style.transform = `translate(-${600 * reviewCount}px)`;
         communityReview.style.transition = `transform 0.5s`;
     }
-    console.log("들어옴");
 
     if (reviewCount > 0) {
         reviewPrevButton.style.visibility = "visible";
