@@ -27,7 +27,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="info-section-header">
-                                            <h1 data-testid="profile-nickname" class="nickname"> ⭐강트럭⭐(✔숨고 1위 용달ㆍ화물업체✔) </h1>
+                                            <h1 data-testid="profile-nickname" class="nickname"> 리바운드 상담사 </h1>
                                             <div class="icon-buttons">
                                                 <button type="button" class="btn share-button btn-none"></button>
                                                 <div role="button" class="heart">
@@ -42,8 +42,6 @@
                                         </div>
                                         <div class="info-section-sub-header">
                                             <div class="category">임상심리사</div>
-                                            <!-- 국가: 임상심리사/직업상담사/청소년상담사/   민간: 상담심리사/전문상담사 -->
-                                            <!-- <div class="address"> 경기 김포시 / 전국 이동가능 </div> -->
                                         </div>
                                         <div class="introduce">임상심리사 ㅇㅇㅇ입니다. 국가에서 발급하는 자격증에는 임상심리사, 직업상담사, 청소년 상담사가 있으며 민간에서 발급하는 자격증에는 상담심리사, 전문상담사가 있다.</div>
                                         <div class="detail-info">
@@ -112,6 +110,7 @@
                                                                 </span>
                                                             </span>
                                                             <span class="prisma-typography headline4 primary">리뷰 이벤트</span>
+                                                            <!-- tooltip-container -->
                                                             <div class="tooltip-container">
                                                                 <button type="button" class="btn btn-tooltip btn-none">
                                                                     <span class="sg-icon-v1 fill" style="width: 1rem; height: 1rem; --svg-color: #8F9AAB;">
@@ -140,9 +139,11 @@
 (예: 너무 친절하게 잘 이용했습니다:)
 😝 채팅창에 작성내역 캡쳐해서 보여주세요:)</p>
                                                             </div>
-                                                            <button type="button" class="btn collapse-toggle btn-none">
+                                                            <!-- <button type="button" class="btn collapse-toggle btn-none">
                                                                 <span class="prisma-typography body3:regular secondary">더보기</span>
-                                                            </button>
+                                                            </button> -->
+                                                            <!-- 이동 위치(상담사 정보) -->
+                                                            <div id="goCounselorInfo"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -152,7 +153,7 @@
                                 </div>
                                 <div class="background-block"></div>
                                 <ul class="sticky-nav">
-                                    <li tab-id="about" class="about active">
+                                    <li tab-id="about" class="about active" onclick="location.href='#goCounselorInfo'">
                                         <span>상담사 정보</span>
                                     </li>
                                     <!-- <li tab-id="reservation" class="reservation">
@@ -164,10 +165,10 @@
                                     <li tab-id="photos" class="photos">
                                         <span>사진/동영상</span>
                                     </li> -->
-                                    <li tab-id="reviews" class="reviews">
+                                    <li tab-id="reviews" class="reviews" onclick="location.href='#goReviews'">
                                         <span>리뷰 2,904</span>
                                     </li>
-                                    <li tab-id="FAQ" class="FAQ">
+                                    <li tab-id="FAQ" class="FAQ" onclick="location.href='#goFAQ'">
                                         <span>질문답변</span>
                                     </li>
                                     <!-- <li tab-id="community" class="community">
@@ -181,18 +182,14 @@
                                                 <h2>고수 정보</h2>
                                             </div>
                                             <ul>
-                                                <!-- <li class="business-size">직원수 10명</li> -->
                                                 <li class="active-time"> 연락 가능 시간 : 오전 9시 - 오후 6시 </li>
                                                 <li class="payment">숨고페이, 카드결제, 계좌이체, 현금결제 가능</li>
-                                                <!-- <li class="tax-invoice"> 세금계산서 발행 가능  -->
-                                                    <!-- <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='12'%20cy='12'%20r='9.5'%20stroke='%23E1E1E1'/%3e%3cpath%20fill='%23333'%20d='M10.88%2016.229c0-.444.343-.78.78-.78.444%200%20.78.335.78.78%200%20.437-.336.779-.78.779-.437%200-.78-.342-.78-.78m.179-2.762v-.19c0-.923.429-1.531%201.367-2.092.793-.485%201.1-.93%201.1-1.627%200-.89-.67-1.49-1.674-1.49-.91%200-1.512.458-1.737%201.278-.117.417-.267.547-.574.547-.35%200-.541-.205-.541-.56%200-.294.055-.527.178-.793.404-.971%201.408-1.54%202.72-1.54%201.696%200%202.899%201.034%202.899%202.497%200%201.073-.553%201.81-1.428%202.337-.87.513-1.115.896-1.115%201.614%200%20.43-.164.724-.588.724-.424%200-.607-.314-.607-.704'/%3e%3c/g%3e%3c/svg%3e" data-name="유의사항" alt="유의사항"> -->
-                                                </li>
                                             </ul>
                                         </div>
                                         <!-- 상담사 소개 -->
                                         <div class="profile-service-desc collapsed" style="margin-top: 60px;">
                                             <h2 data-v-2fb7d1a9="">상담사 소개</h2>
-                                            <div class="description"> ⭐강트럭⭐입니다
+                                            <div class="description"> 상담사 리바운드입니다
 (리뷰,고용횟수는 거짓말을 하지 않습니다)
 
 저희 강트럭은 고객님의 만족을 최우선으로 
@@ -201,221 +198,15 @@
 
 
 🚚오토바이.1톤 카고,윙바디,호로,2.5톤 3.5톤 5톤 11톤 25톤 전 차량 보유🚚
-
+                                                    <!-- 이동 위치(리뷰) -->
+                                                    <div id="goReviews"></div>
 
 
 
                                                 <div class="gradient"></div>
                                             </div>
                                         </div>
-                                        <!-- <div class="profile-service-list collapsed">
-                                            <h2>제공 서비스</h2>
-                                            <div class="view">
-                                                <ul>
-                                                    <li class="cursor-default"> 용달/화물 운송 </li>
-                                                    <li class="cursor-default"> 원룸/소형 이사 </li>
-                                                    <li class="cursor-default"> 무진동차량/냉동차량/냉장차량 </li>
-                                                    <li class="cursor-default"> 소형물건 배달 심부름 </li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-                                        <!-- <div class="profile-career">
-                                            <h2>경력</h2>
-                                            <div class="header">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon purple">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25002 5.99993C8.25469 4.55669 9.26882 3.31283 10.6826 3.01829L10.8306 2.98746C11.6019 2.82677 12.3981 2.82677 13.1694 2.98746L13.3174 3.01829C14.7312 3.31283 15.7453 4.55669 15.75 5.99993H20C21.1046 5.99993 22 6.89536 22 7.99993V17.9999C22 19.1045 21.1046 19.9999 20 19.9999H4C2.89543 19.9999 2 19.1045 2 17.9999V7.99993C2 6.89536 2.89543 5.99993 4 5.99993H8.25002ZM9.75003 5.99993C9.75469 5.26721 10.2703 4.63639 10.9886 4.48676L11.1365 4.45593C11.7061 4.33728 12.2939 4.33728 12.8635 4.45593L13.0114 4.48676C13.7297 4.63639 14.2453 5.26721 14.25 5.99993H9.75003ZM20 7.49993H4C3.72386 7.49993 3.5 7.72379 3.5 7.99993V11.9999H7.7002V11.7499C7.7002 11.3357 8.03598 10.9999 8.4502 10.9999C8.86441 10.9999 9.2002 11.3357 9.2002 11.7499V11.9999H14.7002V11.7499C14.7002 11.3357 15.036 10.9999 15.4502 10.9999C15.8644 10.9999 16.2002 11.3357 16.2002 11.7499V11.9999H20.5V7.99993C20.5 7.72379 20.2761 7.49993 20 7.49993ZM14.7002 13.4999V14.2499C14.7002 14.6641 15.036 14.9999 15.4502 14.9999C15.8644 14.9999 16.2002 14.6641 16.2002 14.2499V13.4999H20.5V17.9999C20.5 18.2761 20.2761 18.4999 20 18.4999H4C3.72386 18.4999 3.5 18.2761 3.5 17.9999V13.4999H7.7002V14.2499C7.7002 14.6641 8.03598 14.9999 8.4502 14.9999C8.86441 14.9999 9.2002 14.6641 9.2002 14.2499V13.4999H14.7002Z" fill="black"></path>
-                                                </svg>
-                                                <h3 class="title">총 경력 5년</h3>
-                                            </div>
-                                            <div class="profile-career-item-wrap">
-                                                <div class="career-list-item profile">
-                                                    <div class="contents">
-                                                        <h3 class="header"> 강트럭 </h3>
-                                                        <div class="date-info"> 2019년 7월 - 현재 · 6년 1개월 </div>
-                                                        <div class="description"> 만족도👍  </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
                                     </section>
-                                    <!-- <section data-observe="reservation" id="reservation">
-                                        <div class="profile-ip">
-                                            <h2>예약 가능 서비스</h2>
-                                            <ul class="row profile-ip-item-wrap">
-                                                <li class="col-4">
-                                                    <div>
-                                                        <a href="/market/products/64f6f11329219c37f2cb6393?from=profile" class="" target="_blank" title="[1시간이내배차] 프리미엄 1톤 용달 서비스">
-                                                            <div class="profile-ip-image">
-                                                                <img alt="[1시간이내배차] 프리미엄 1톤 용달 서비스" data-src="https://static.cdn.soomgo.com/upload/market/ec25657d-5df5-4642-9b8c-0119f35d3eb2.jpg?h=320&amp;w=480&amp;webp=1" src="https://static.cdn.soomgo.com/upload/market/ec25657d-5df5-4642-9b8c-0119f35d3eb2.jpg?h=320&amp;w=480&amp;webp=1" lazy="loaded">
-                                                            </div>
-                                                            <div class="profile-ip-title">
-                                                                <div class="collapsed">
-                                                                    <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
-                                                                        <h3>[1시간이내배차] 프리미엄 1톤 용달 서비스</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="profile-ip-price"> 55,000원 <span>~</span></h4>
-                                                        </a>
-                                                    </div>
-                                                    <a href="/market/products/64f6f11329219c37f2cb6393?from=profile&amp;is_reservation=true" class="" target="_blank" title="[1시간이내배차] 프리미엄 1톤 용달 서비스">
-                                                        <button type="button" class="btn reservation-button btn-outline-primary">
-                                                            <span class="sg-icon-v1 calendar fill" style="width: 1rem; height: 1rem; --svg-color: #693BF2;">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 3C8.16421 3 8.5 3.33579 8.5 3.75V5H16V3.75C16 3.33579 16.3358 3 16.75 3C17.1642 3 17.5 3.33579 17.5 3.75V5H19C20.1046 5 21 5.89543 21 7V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V7C3 5.89543 3.89543 5 5 5H7V3.75C7 3.33579 7.33579 3 7.75 3ZM16 6.5V7.25C16 7.66421 16.3358 8 16.75 8C17.1642 8 17.5 7.66421 17.5 7.25V6.5H19C19.2761 6.5 19.5 6.72386 19.5 7V10.5H4.5V7C4.5 6.72386 4.72386 6.5 5 6.5H7V7.25C7 7.66421 7.33579 8 7.75 8C8.16421 8 8.5 7.66421 8.5 7.25V6.5H16ZM4.5 12V19C4.5 19.2761 4.72386 19.5 5 19.5H19C19.2761 19.5 19.5 19.2761 19.5 19V12H4.5Z" fill="black"></path>
-                                                                </svg>
-                                                            </span> 예약 
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                                <li class="col-4">
-                                                    <div>
-                                                        <a href="/market/products/648f4a569e4095119ce994a5?from=profile" class="" target="_blank" title="[1시간이내배차]★프리미엄 에어컨 운송 서비스★ 포장-운반까지 특별 운송패키지">
-                                                            <div class="profile-ip-image">
-                                                                <img alt="[1시간이내배차]★프리미엄 에어컨 운송 서비스★ 포장-운반까지 특별 운송패키지" data-src="https://static.cdn.soomgo.com/upload/market/3279c882-ee8f-4d94-bdca-d8e9b5937741.jpg?h=320&amp;w=480&amp;webp=1" src="https://static.cdn.soomgo.com/upload/market/3279c882-ee8f-4d94-bdca-d8e9b5937741.jpg?h=320&amp;w=480&amp;webp=1" lazy="loaded">
-                                                            </div>
-                                                            <div class="profile-ip-title">
-                                                                <div class="collapsed clamped">
-                                                                    <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
-                                                                        <h3>[1시간이내배차]★프리미엄 에어컨 운송 서비스★ 포장-운반까지 특별 운송패키지</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="profile-ip-price"> 120,000원 <span>~</span></h4>
-                                                        </a>
-                                                    </div>
-                                                    <a href="/market/products/648f4a569e4095119ce994a5?from=profile&amp;is_reservation=true" class="" target="_blank" title="[1시간이내배차]★프리미엄 에어컨 운송 서비스★ 포장-운반까지 특별 운송패키지">
-                                                        <button type="button" class="btn reservation-button btn-outline-primary">
-                                                            <span class="sg-icon-v1 calendar fill" style="width: 1rem; height: 1rem; --svg-color: #693BF2;">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 3C8.16421 3 8.5 3.33579 8.5 3.75V5H16V3.75C16 3.33579 16.3358 3 16.75 3C17.1642 3 17.5 3.33579 17.5 3.75V5H19C20.1046 5 21 5.89543 21 7V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V7C3 5.89543 3.89543 5 5 5H7V3.75C7 3.33579 7.33579 3 7.75 3ZM16 6.5V7.25C16 7.66421 16.3358 8 16.75 8C17.1642 8 17.5 7.66421 17.5 7.25V6.5H19C19.2761 6.5 19.5 6.72386 19.5 7V10.5H4.5V7C4.5 6.72386 4.72386 6.5 5 6.5H7V7.25C7 7.66421 7.33579 8 7.75 8C8.16421 8 8.5 7.66421 8.5 7.25V6.5H16ZM4.5 12V19C4.5 19.2761 4.72386 19.5 5 19.5H19C19.2761 19.5 19.5 19.2761 19.5 19V12H4.5Z" fill="black"></path>
-                                                                </svg>
-                                                            </span> 예약 
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </section> -->
-                                    <!-- <section data-observe="portfolio" id="portfolio">
-                                        <div class="profile-portfolio profile-line-padding">
-                                            <h2>포트폴리오</h2>
-                                            <ul class="row profile-portfolio-item-wrap">
-                                                <li class="col-3">
-                                                    <a title="강트럭!!" class="profile-portfolio-item">
-                                                        <div class="profile-portfolio-image">
-                                                            <img alt="포트폴리오 이미지" data-src="https://static.cdn.soomgo.com/upload/portfolio/697dffc1-fc73-4761-8e3d-c4d3c2fc5513.png?h=320&amp;w=320&amp;webp=1" src="https://static.cdn.soomgo.com/upload/portfolio/697dffc1-fc73-4761-8e3d-c4d3c2fc5513.png?h=320&amp;w=320&amp;webp=1" lazy="loaded">
-                                                        </div>
-                                                        <div class="profile-portfolio-text-wrap">
-                                                            <h3 class="profile-portfolio-title prisma-typography body14:medium white"> 강트럭!! </h3>
-                                                            <p class="profile-portfolio-description prisma-typography body12:regular white"> 용달/화물 운송 </p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-3">
-                                                    <a title="친절1위 강트럭" class="profile-portfolio-item">
-                                                        <div class="profile-portfolio-image">
-                                                            <img alt="포트폴리오 이미지" data-src="https://static.cdn.soomgo.com/upload/portfolio/4a25056f-0a56-4f56-99bf-e5941e2e3b7c.jpg?h=320&amp;w=320&amp;webp=1" src="https://static.cdn.soomgo.com/upload/portfolio/4a25056f-0a56-4f56-99bf-e5941e2e3b7c.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded">
-                                                        </div>
-                                                        <div class="profile-portfolio-text-wrap">
-                                                            <h3 class="profile-portfolio-title prisma-typography body14:medium white"> 친절1위 강트럭 </h3>
-                                                            <p class="profile-portfolio-description prisma-typography body12:regular white"> 용달/화물 운송 </p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-3">
-                                                    <a title="원룸이사 꿀팁!!" class="profile-portfolio-item">
-                                                        <div class="profile-portfolio-image">
-                                                            <img alt="포트폴리오 이미지" data-src="https://static.cdn.soomgo.com/upload/portfolio/0c586eac-8e7b-42c9-8c49-4c5d9def3544.jpg?h=320&amp;w=320&amp;webp=1" src="https://static.cdn.soomgo.com/upload/portfolio/0c586eac-8e7b-42c9-8c49-4c5d9def3544.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded">
-                                                        </div>
-                                                        <div class="profile-portfolio-text-wrap">
-                                                            <h3 class="profile-portfolio-title prisma-typography body14:medium white"> 원룸이사 꿀팁!! </h3>
-                                                            <p class="profile-portfolio-description prisma-typography body12:regular white"> 용달/화물 운송 </p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </section> -->
-                                    <!-- <section data-observe="photos" id="photos">
-                                        <div class="profile-media">
-                                            <h2>사진 및 동영상</h2>
-                                            <div class="image-list-viewer view-list">
-                                                <ul class="row">
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/19c52a38-d8f8-41bd-96b2-d2b90c0a628d.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/19c52a38-d8f8-41bd-96b2-d2b90c0a628d.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/19c52a38-d8f8-41bd-96b2-d2b90c0a628d.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/19c52a38-d8f8-41bd-96b2-d2b90c0a628d.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/0962d182-64a7-4a94-bf7b-164b88b5aa50.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/0962d182-64a7-4a94-bf7b-164b88b5aa50.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/0962d182-64a7-4a94-bf7b-164b88b5aa50.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/0962d182-64a7-4a94-bf7b-164b88b5aa50.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/7a9dfa47-243d-439f-abfc-7e4f6db1e0ec.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/7a9dfa47-243d-439f-abfc-7e4f6db1e0ec.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/7a9dfa47-243d-439f-abfc-7e4f6db1e0ec.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/7a9dfa47-243d-439f-abfc-7e4f6db1e0ec.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/1a3d0163-ee4f-4f0a-b7ff-328dc2004d16.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/1a3d0163-ee4f-4f0a-b7ff-328dc2004d16.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/1a3d0163-ee4f-4f0a-b7ff-328dc2004d16.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/1a3d0163-ee4f-4f0a-b7ff-328dc2004d16.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/275dc588-abb6-4bac-827f-7808219b4a6b.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/275dc588-abb6-4bac-827f-7808219b4a6b.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/275dc588-abb6-4bac-827f-7808219b4a6b.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/275dc588-abb6-4bac-827f-7808219b4a6b.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/aedf61ff-af19-4412-98a8-c729165e49f8.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/aedf61ff-af19-4412-98a8-c729165e49f8.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/aedf61ff-af19-4412-98a8-c729165e49f8.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/aedf61ff-af19-4412-98a8-c729165e49f8.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/3390292a-cdcb-4b80-8cd0-b4c04c1040f4.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/3390292a-cdcb-4b80-8cd0-b4c04c1040f4.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/3390292a-cdcb-4b80-8cd0-b4c04c1040f4.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/3390292a-cdcb-4b80-8cd0-b4c04c1040f4.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/9007e81f-040d-4d7d-b7bb-e30d36e1fc96.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/9007e81f-040d-4d7d-b7bb-e30d36e1fc96.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/9007e81f-040d-4d7d-b7bb-e30d36e1fc96.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/9007e81f-040d-4d7d-b7bb-e30d36e1fc96.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/37d38224-71dc-47fd-878c-3c48388cc9ad.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/37d38224-71dc-47fd-878c-3c48388cc9ad.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/37d38224-71dc-47fd-878c-3c48388cc9ad.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/37d38224-71dc-47fd-878c-3c48388cc9ad.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/0b8f76f1-cc9e-471a-92f5-62efba704894.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/0b8f76f1-cc9e-471a-92f5-62efba704894.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/0b8f76f1-cc9e-471a-92f5-62efba704894.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/0b8f76f1-cc9e-471a-92f5-62efba704894.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/421bdae8-997b-4cb6-89d2-4e95ecc45417.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/421bdae8-997b-4cb6-89d2-4e95ecc45417.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/421bdae8-997b-4cb6-89d2-4e95ecc45417.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/421bdae8-997b-4cb6-89d2-4e95ecc45417.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/1128617f-bed1-44b2-a56e-dae3f6eb898d.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/1128617f-bed1-44b2-a56e-dae3f6eb898d.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/1128617f-bed1-44b2-a56e-dae3f6eb898d.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/1128617f-bed1-44b2-a56e-dae3f6eb898d.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/f7b65a14-134e-4364-aaa5-b1dd1f5dba46.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/f7b65a14-134e-4364-aaa5-b1dd1f5dba46.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/f7b65a14-134e-4364-aaa5-b1dd1f5dba46.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/f7b65a14-134e-4364-aaa5-b1dd1f5dba46.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/a7fbffce-344b-466f-8433-eabdc379fdb7.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/a7fbffce-344b-466f-8433-eabdc379fdb7.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/a7fbffce-344b-466f-8433-eabdc379fdb7.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/a7fbffce-344b-466f-8433-eabdc379fdb7.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/5788c838-96f5-4bef-adf5-e9563cd50094.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/5788c838-96f5-4bef-adf5-e9563cd50094.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/5788c838-96f5-4bef-adf5-e9563cd50094.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/media/5788c838-96f5-4bef-adf5-e9563cd50094.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/e22bd9e4-e98b-43b6-bf83-38c42090d293.jpg?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/e22bd9e4-e98b-43b6-bf83-38c42090d293.jpg?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3" style="display: none;">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/e22bd9e4-e98b-43b6-bf83-38c42090d293.jpg?h=320&amp;w=320&amp;webp=1" lazy="loading" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/50945d6d-28af-4c69-9eed-e493c54b5249.png?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/50945d6d-28af-4c69-9eed-e493c54b5249.png?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3" style="display: none;">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/50945d6d-28af-4c69-9eed-e493c54b5249.png?h=320&amp;w=320&amp;webp=1" lazy="loading" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/48ac85be-087e-4971-b6a0-6c53ea862611.png?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/48ac85be-087e-4971-b6a0-6c53ea862611.png?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3" style="display: none;">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/48ac85be-087e-4971-b6a0-6c53ea862611.png?h=320&amp;w=320&amp;webp=1" lazy="loading" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/81ba422c-de06-4fd9-9f51-19e26d4d6062.png?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/81ba422c-de06-4fd9-9f51-19e26d4d6062.png?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3" style="display: none;">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/81ba422c-de06-4fd9-9f51-19e26d4d6062.png?h=320&amp;w=320&amp;webp=1" lazy="loading" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot;);"></div>
-                                                    </li>
-                                                    <li data-type="lightGallery" data-src="https://static.cdn.soomgo.com/upload/media/d59cc052-695b-41ca-ac29-06e4fca7c6a1.png?webp=1" data-exthumbimage="https://static.cdn.soomgo.com/upload/media/d59cc052-695b-41ca-ac29-06e4fca7c6a1.png?h=320&amp;w=320&amp;webp=1" class="col-sm-2 col-md-2 col-lg-2 col-3" style="display: none;">
-                                                        <div data-name="thumbnail" data-src="https://static.cdn.soomgo.com/upload/media/d59cc052-695b-41ca-ac29-06e4fca7c6a1.png?h=320&amp;w=320&amp;webp=1" lazy="loading" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot;);"></div>
-                                                    </li>
-                                                </ul>
-                                                <div class="profile-more-button">
-                                                    <button type="button" class="btn btn-none more collapse"> 사진 및 동영상 더보기 
-                                                        <span class="sg-icon-v1 fill" style="width: 1rem; height: 1rem; --svg-color: #693BF2;">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section> -->
-                                    
                                     <!-- 리뷰 -->
                                     <section data-observe="reviews" id="reviews">
                                         <div class="profile-review" id="profile-link" style="margin-top: 60px;">
@@ -464,40 +255,26 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button type="button" class="btn btn-none keyword-toggle-button collapsed">
+                                                        <!-- <button type="button" class="btn btn-none keyword-toggle-button collapsed">
                                                             <span class="prisma-typography body14:medium secondary">더보기</span>
                                                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon secondary">
                                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
                                                             </svg>
-                                                        </button>
+                                                        </button> -->
                                                     </div>
                                                 </div>
                                                 <div class="profile-review-list-wrapper">
                                                     <div class="profile-review-list">
                                                         <div class="review-filter review-filter">
                                                             <div class="content-filter">
-                                                                <!-- <div class="filter-wrapper">
-                                                                    <li role="checkbox" class="selector-wrapper">
-                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon quaternary">
-                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 3.5H6C4.61929 3.5 3.5 4.61929 3.5 6V18C3.5 19.3807 4.61929 20.5 6 20.5H18C19.3807 20.5 20.5 19.3807 20.5 18V6C20.5 4.61929 19.3807 3.5 18 3.5ZM6 2C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V6C22 3.79086 20.2091 2 18 2H6Z" fill="black"></path>
-                                                                        </svg>
-                                                                        <span class="prisma-typography body14:medium primary"> 사진 리뷰</span>
-                                                                    </li>
-                                                                    <li role="checkbox" class="selector-wrapper">
-                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon quaternary">
-                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 3.5H6C4.61929 3.5 3.5 4.61929 3.5 6V18C3.5 19.3807 4.61929 20.5 6 20.5H18C19.3807 20.5 20.5 19.3807 20.5 18V6C20.5 4.61929 19.3807 3.5 18 3.5ZM6 2C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V6C22 3.79086 20.2091 2 18 2H6Z" fill="black"></path>
-                                                                        </svg>
-                                                                        <span class="prisma-typography body14:medium primary"> 거래인증 리뷰</span>
-                                                                    </li>
-                                                                </div> -->
                                                                 <div class="sort">
                                                                     <div class="sort-wrapper">
                                                                         <div class="dropdown b-dropdown sort-dropdown btn-group" id="__BVID__2117">
                                                                             <button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-link btn-sm dropdown-toggle-no-caret" id="__BVID__2117__BV_toggle_">
-                                                                                <span class="prisma-typography body14:medium primary">최신순</span>
-                                                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon primary">
+                                                                                <!-- <span class="prisma-typography body14:medium primary">최신순</span> -->
+                                                                                <!-- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon primary">
                                                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                                                                </svg>
+                                                                                </svg> -->
                                                                             </button>
                                                                             <ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__2117__BV_toggle_">
                                                                                 <li role="presentation" class="sort-item">
@@ -520,7 +297,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="service-filter-wrapper">
+                                                            <!-- 리뷰 필터 -->
+                                                            <!-- <div class="service-filter-wrapper">
                                                                 <ul class="service-filter">
                                                                     <li>
                                                                         <button type="button" class="chip action selected">
@@ -548,7 +326,7 @@
                                                                         </button>
                                                                     </li>
                                                                 </ul>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                         <ul class="review-list">
                                                             <li id="6889bd61502be181944d6154" class="review-item">
@@ -571,7 +349,7 @@
                                                                                     <time class="prisma-typography body12:regular secondary">1시간 전</time>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="item-control-box">
+                                                                            <!-- <div class="item-control-box">
                                                                                 <button type="button" class="btn btn-more">
                                                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
                                                                                         <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
@@ -579,7 +357,7 @@
                                                                                         <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
                                                                                     </svg>
                                                                                 </button>
-                                                                            </div>
+                                                                            </div> -->
                                                                         </div>
                                                                     </section>
                                                                     <section class="review-content">
@@ -628,10 +406,10 @@
                                                                             <article class="review-comment-item">
                                                                                 <div class="comment-header">
                                                                                     <div class="user-name">
-                                                                                        <span class="prisma-typography body14:semibold primary">⭐강트럭⭐(✔숨고 ...</span>
+                                                                                        <span class="prisma-typography body14:semibold primary">리바운드 상담사</span>
                                                                                         <span class="prisma-typography body14:regular secondary">57분 전</span>
                                                                                     </div>
-                                                                                    <div class="item-control-box">
+                                                                                    <!-- <div class="item-control-box">
                                                                                         <button type="button" class="btn btn-more">
                                                                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
                                                                                                 <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
@@ -639,7 +417,7 @@
                                                                                                 <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
                                                                                             </svg>
                                                                                         </button>
-                                                                                    </div>
+                                                                                    </div> -->
                                                                                 </div>
                                                                                 <span class="prisma-typography body14:regular primary">⭐강트럭입니다⭐ 이용해 주셔서 감사합니다 좀 더 노력하는 강트럭이 되겠습니다</span>
                                                                             </article>
@@ -664,7 +442,7 @@
                                                                                     <time class="prisma-typography body12:regular secondary">3시간 전</time>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="item-control-box">
+                                                                            <!-- <div class="item-control-box">
                                                                                 <button type="button" class="btn btn-more">
                                                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
                                                                                         <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
@@ -672,7 +450,7 @@
                                                                                         <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
                                                                                     </svg>
                                                                                 </button>
-                                                                            </div>
+                                                                            </div> -->
                                                                         </div>
                                                                     </section>
                                                                     <section class="review-content">
@@ -715,10 +493,10 @@
                                                                             <article class="review-comment-item">
                                                                                 <div class="comment-header">
                                                                                     <div class="user-name">
-                                                                                        <span class="prisma-typography body14:semibold primary">⭐강트럭⭐(✔숨고 ...</span>
+                                                                                        <span class="prisma-typography body14:semibold primary">리바운드 상담사</span>
                                                                                         <span class="prisma-typography body14:regular secondary">2시간 전</span>
                                                                                     </div>
-                                                                                    <div class="item-control-box">
+                                                                                    <!-- <div class="item-control-box">
                                                                                         <button type="button" class="btn btn-more">
                                                                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
                                                                                                 <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
@@ -726,7 +504,7 @@
                                                                                                 <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
                                                                                             </svg>
                                                                                         </button>
-                                                                                    </div>
+                                                                                    </div> -->
                                                                                 </div>
                                                                                 <span class="prisma-typography body14:regular primary">⭐강트럭입니다⭐ 이용해 주셔서 감사합니다 좀 더 노력하는 강트럭이 되겠습니다</span>
                                                                             </article>
@@ -751,7 +529,7 @@
                                                                                     <time class="prisma-typography body12:regular secondary">1일 전</time>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="item-control-box">
+                                                                            <!-- <div class="item-control-box">
                                                                                 <button type="button" class="btn btn-more">
                                                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
                                                                                         <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
@@ -759,7 +537,7 @@
                                                                                         <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
                                                                                     </svg>
                                                                                 </button>
-                                                                            </div>
+                                                                            </div> -->
                                                                         </div>
                                                                     </section>
                                                                     <section class="review-content">
@@ -813,10 +591,10 @@
                                                                             <article class="review-comment-item">
                                                                                 <div class="comment-header">
                                                                                     <div class="user-name">
-                                                                                        <span class="prisma-typography body14:semibold primary">⭐강트럭⭐(✔숨고 ...</span>
+                                                                                        <span class="prisma-typography body14:semibold primary">리바운드 상담사</span>
                                                                                         <span class="prisma-typography body14:regular secondary">2시간 전</span>
                                                                                     </div>
-                                                                                    <div class="item-control-box">
+                                                                                    <!-- <div class="item-control-box">
                                                                                         <button type="button" class="btn btn-more">
                                                                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
                                                                                                 <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
@@ -824,9 +602,11 @@
                                                                                                 <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
                                                                                             </svg>
                                                                                         </button>
-                                                                                    </div>
+                                                                                    </div> -->
                                                                                 </div>
                                                                                 <span class="prisma-typography body14:regular primary">⭐강트럭입니다⭐ 이용해 주셔서 감사합니다 좀 더 노력하는 강트럭이 되겠습니다</span>
+                                                                                <!-- 이동 위치(질문답변) -->
+                                                                                <div id="goFAQ"></div>
                                                                             </article>
                                                                         </div>
                                                                     </section>
@@ -834,12 +614,13 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <button type="button" class="btn more-button btn-none">
+                                                    <!-- 리뷰 더보기 -->
+                                                    <!-- <button type="button" class="btn more-button btn-none">
                                                         <span class="prisma-typography body14:regular secondary">리뷰 더보기</span>
                                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon secondary">
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
                                                         </svg>
-                                                    </button>
+                                                    </button> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -917,115 +698,6 @@
                                             </ul>
                                         </div>
                                     </section>
-                                    <!-- <section data-observe="community" class="is-last" id="community">
-                                        <div class="profile-knowhow">
-                                            <h2>고수노하우</h2>
-                                            <ul class="row profile-knowhow-item-wrap">
-                                                <li class="col-4">
-                                                    <div>
-                                                        <a href="/community/pro-knowhow/64d1cd74207c23ba67c93836" class="" target="_blank">
-                                                            <div title="라보 용달 정확하게 알고 이용하기!!" class="profile-knowhow-image">
-                                                                <img alt="라보 용달 정확하게 알고 이용하기!!" data-src="https://static.cdn.soomgo.com/upload/talkboard/1f1aa1f1-ff72-42d6-86ce-764d87c191a5.png?h=320&amp;w=480&amp;webp=1" src="https://static.cdn.soomgo.com/upload/talkboard/1f1aa1f1-ff72-42d6-86ce-764d87c191a5.png?h=320&amp;w=480&amp;webp=1" lazy="loaded">
-                                                            </div>
-                                                            <div class="profile-knowhow-service"> 용달/화물 운송 </div>
-                                                            <div class="profile-knowhow-title">
-                                                                <div class="collapsed">
-                                                                    <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
-                                                                        <h3>라보 용달 정확하게 알고 이용하기!!</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="col-4">
-                                                    <div>
-                                                        <a href="/community/pro-knowhow/64d1cd6c207c23ba67c937ff" class="" target="_blank">
-                                                            <div title="매트리스 용달 보내는 법!" class="profile-knowhow-image">
-                                                                <img alt="매트리스 용달 보내는 법!" data-src="https://static.cdn.soomgo.com/upload/talkboard/e6516541-71a4-4f33-b61f-073cba21255e.png?h=320&amp;w=480&amp;webp=1" src="https://static.cdn.soomgo.com/upload/talkboard/e6516541-71a4-4f33-b61f-073cba21255e.png?h=320&amp;w=480&amp;webp=1" lazy="loaded">
-                                                            </div>
-                                                            <div class="profile-knowhow-service"> 용달/화물 운송 </div>
-                                                            <div class="profile-knowhow-title">
-                                                                <div class="collapsed">
-                                                                    <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
-                                                                        <h3>매트리스 용달 보내는 법!</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="col-4">
-                                                    <div>
-                                                        <a href="/community/pro-knowhow/64d1cd38207c23ba67c936a9" class="" target="_blank">
-                                                            <div title="오토바이 탁송 어떻게 보내는걸까?" class="profile-knowhow-image">
-                                                                <img alt="오토바이 탁송 어떻게 보내는걸까?" data-src="https://static.cdn.soomgo.com/upload/talkboard/025963e1-d065-4007-820b-f8ec253a3b81.jpg?h=320&amp;w=480&amp;webp=1" src="https://static.cdn.soomgo.com/upload/talkboard/025963e1-d065-4007-820b-f8ec253a3b81.jpg?h=320&amp;w=480&amp;webp=1" lazy="loaded">
-                                                            </div>
-                                                            <div class="profile-knowhow-service"> 용달/화물 운송 </div>
-                                                            <div class="profile-knowhow-title">
-                                                                <div class="collapsed">
-                                                                    <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
-                                                                        <h3>오토바이 탁송 어떻게 보내는걸까?</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <div class="profile-more-button">
-                                                <button type="button" class="btn btn-none more collapse"> 더보기 
-                                                    <span class="sg-icon-v1 fill" style="width: 1rem; height: 1rem; --svg-color: #693BF2;">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                                        </svg>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div data-v-0e7c2ebe="" class="profile-community">
-                                            <h2 data-v-0e7c2ebe="">고수의 커뮤니티 활동</h2>
-                                            <ul data-v-0e7c2ebe="" class="profile-community-chips">
-                                                <li data-v-0e7c2ebe="" class="profile-community-chip-item">
-                                                    <button data-v-c2c37e59="" data-v-0e7c2ebe="" class="sg-chip">베스트 댓글</button>
-                                                </li>
-                                                <li data-v-0e7c2ebe="" class="profile-community-chip-item">
-                                                    <button data-v-c2c37e59="" data-v-0e7c2ebe="" class="sg-chip active">게시글</button>
-                                                </li>
-                                            </ul>
-                                            <div data-v-592943c0="" data-v-0e7c2ebe="" class="profile-community-post-list">
-                                                <ul data-v-592943c0="" class="row post-list-item-wrap">
-                                                    <li data-v-592943c0="" class="col">
-                                                        <a data-v-ccd5d000="" data-v-592943c0="" href="/community/soomgo-life/posts/6365d9599ca60a8191014058-%ED%99%94%EB%AC%BC-%EC%9A%B4%EC%86%A1%EC%97%85%EC%B2%B4-%EA%B0%95%ED%8A%B8%EB%9F%AD%EC%9E%85%EB%8B%88%EB%8B%A4?from=profile" class="profile-community-item-wrapper">
-                                                            <div data-v-ccd5d000="" class="profile-community-item-contents">
-                                                                <div data-v-ccd5d000="" class="contents">
-                                                                    <p data-v-ccd5d000="" class="community-topic">고수소식</p>
-                                                                    <div data-v-ccd5d000="" class="community-activity-title collapsed">
-                                                                        <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
-                                                                            <p data-v-ccd5d000="">화물 운송업체 강트럭입니다</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div data-v-ccd5d000="" class="community-activity-content collapsed">
-                                                                        <div class="line-clamp" style="line-height: 1.5; max-height: 1.5rem; -webkit-line-clamp: 1;">
-                                                                            <p data-v-ccd5d000="">⭐강트럭⭐입니다 (리뷰,고용횟수는 거짓말을 하지 않습니다)  저희 강트럭은 고객님의 만족을 최우선으로 안전 배송을 약속 지켜드리기 위해 최선을 다하고 있습니다   🚚오토바이.1톤 카고,윙바디,호로,2.5톤 3.5톤 5톤 11톤 25톤 전 차량 보유🚚</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <img data-v-ccd5d000="" alt="블로그 프로필 161x161px (1).jpg" class="cover-image" data-src="https://static.cdn.soomgo.com/upload/soomgo-life/9357b843-a8aa-41b3-9da2-07795faf2841.jpg?webp=1" src="https://static.cdn.soomgo.com/upload/soomgo-life/9357b843-a8aa-41b3-9da2-07795faf2841.jpg?webp=1" lazy="loaded">
-                                                            </div>
-                                                            <div data-v-ccd5d000="" class="profile-community-item-info">
-                                                                <div data-v-ccd5d000="" class="reactions">
-                                                                    <span data-v-ccd5d000="" class="like">0</span>
-                                                                    <span data-v-ccd5d000="" class="comment">19</span>
-                                                                </div>
-                                                                <span data-v-ccd5d000="" class="created-at">2022.11.05</span>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </section> -->
                                     <section data-observe="activity" style="display: none;" id="activity"></section>
                                     <section style="display: none;"></section>
                                 </div>
@@ -1035,7 +707,7 @@
                         <div class="aside-section col">
                             <aside class="user-profile-aside">
                                 <div class="target-request-banner">
-                                    <p>⭐강트럭⭐(✔숨고 1위 용달ㆍ화물업체✔) 고수에게 원하는 서비스의 견적을 받아보세요</p>
+                                    <p>리바운드 상담사에게 원하는 상담을 신청해보세요</p>
                                 </div>
                                 <div class="btn-wrapper">
                                     <!-- <button type="button" class="prisma-btn secondary large icon-primary reservation">

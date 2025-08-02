@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// 인기 고수 추천 이동
+// 인기 고수 추천 좌우 이동
 const prevButton = document.querySelector(
     "section.popular-provider div.slick-slider button.slick-prev"
 );
