@@ -396,6 +396,10 @@ button:not(:disabled) {
     content: "\F0156";
 }
 
+.mdi-menu-left:before {
+    content: "\F035E";
+}
+
 body #rebound {
     height: 100%;
 }
@@ -1503,4 +1507,8 @@ button.btn.btn-outline-filter {
 
 .modal>.modal-dialog>.modal-content>.modal-footer>button.btn {
     margin-left: 10px;
+}
+
+.info-detail:hover {
+    color: #007bff;
 }
