@@ -146,7 +146,7 @@ reviewNextButton.addEventListener("click", (e) => {
 // 위로 가기 버튼 나타나기/숨기기
 const topButton = document.querySelector("a#top-btn.top-btn");
 
-topButton.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+topButton.style.transition = "opacity 0.5s ease, transform 0.5s ease";
 topButton.style.opacity = 0;
 topButton.style.transform = "trnaslateY(20px)";
 
