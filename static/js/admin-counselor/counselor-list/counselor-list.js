@@ -162,3 +162,68 @@ document.addEventListener("click", (e) => {
         userMenuContent.classList.remove("show");
     }
 });
+
+// 페이지 번호 클릭 이벤트
+const pageNums = document.querySelectorAll(".page-num");
+const pageItemNums = document.querySelectorAll(".page-item-num");
+
+pageItemNums.forEach((pageItemNum) => {
+    pageItemNum.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        pageNums.forEach((pageNum) => {
+            pageNum.classList.remove("active");
+        });
+
+        pageItemNum.parentElement.classList.add("active");
+    });
+});
+
+// 상담사 상세 모달 창 열고 닫는 이벤트
+const modal = document.querySelector(".member-modal");
+const actionButtons = document.querySelectorAll(".action-btn");
+const closeButtons = document.querySelectorAll(".close");
+const closeFooterButton = document.querySelector(".btn-close");
+
+actionButtons.forEach((actionButton) => {
+    actionButton.addEventListener("click", (e) => {
+        modal.style.display = "block";
+
+        setTimeout(() => {
+            modal.classList.add("show");
+            modal.style.background = "rgba(0,0,0,0.5)";
+            document.body.classList.add("modal-open");
+        }, 100);
+    });
+});
+
+closeButtons.forEach((closeButton) => {
+    closeButton.addEventListener("click", (e) => {
+        modal.classList.remove("show");
+        document.body.classList.remove("modal-open");
+
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 100);
+    });
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("show");
+        document.body.classList.remove("modal-open");
+
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 100);
+    }
+});
+
+closeFooterButton.addEventListener("click", (e) => {
+    modal.classList.remove("show");
+    document.body.classList.remove("modal-open");
+
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 100);
+});
