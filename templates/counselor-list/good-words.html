@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link data-vue-meta="1" rel="shortcut icon" href="../../static/images/member/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="../../static/css/counselor-list/good-words.css">
+    <title>오늘의 좋은 말</title>
+</head>
+<body>
+    <div id="app-body">
+        <div class="community-container container">
+            <div class="pro-knowhow-container">
+                <section id="pro-knowhow" class="pro-knowhow">
+                    <div class="observer-container">
+                        <section data-observe="pro-knowhow-header" class="pro-knowhow-header" id="pro-knowhow-header">
+                            <h1 class="pro-knowhow-title">오늘의 좋은 말</h1>
+                            <div>
+                                <div class="write-button-desktop">
+                                    <div class="dropdown b-dropdown btn-group" id="__BVID__924">
+                                        <button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" id="__BVID__924__BV_toggle_">글쓰기</button>
+                                        <ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__924__BV_toggle_">
+                                            <li role="presentation">
+                                                <a role="menuitem" href="#" target="_self" class="dropdown-item">
+                                                    <div class="dropdown-menu-item">
+                                                        <div class="dropdown-menu-item-text">
+                                                            <span class="prisma-typography body14:medium primary">고수에게묻다</span>
+                                                            <span class="prisma-typography body12:regular tertiary"></span>
+                                                        </div>
+                                                        <i class="dropdown-menu-item-icon"></i>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a role="menuitem" href="#" target="_self" class="dropdown-item">
+                                                    <div class="dropdown-menu-item">
+                                                        <div class="dropdown-menu-item-text">
+                                                            <span class="prisma-typography body14:medium primary">함께해요</span>
+                                                            <span class="prisma-typography body12:regular tertiary"></span>
+                                                        </div>
+                                                        <i class="dropdown-menu-item-icon"></i>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <ul class="category">
+                            <!-- <li class="prisma-typography body14:semibold lg:headline16 primary selected">
+                                <a href="/community/soomgo-life/?from=web_gnb" class="link-text"> 숨고생활 </a>
+                            </li>
+                            <li class="prisma-typography body14:regular lg:body16:regular quaternary">
+                                <a href="/community/pro-center/?from=web_gnb" class="link-text"> 고수센터 </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <section class="topic-list-menu d-none d-sm-block">
+                        <ul>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </section>
+                    <div class="community-layout">
+                        <div class="community-content-layout" style="margin-left: 184.84px; margin-right: 184.84px;">
+                            <div class="topic-guide-banner-container pro-knowhow">
+                                <p class="guideline">리바운드의 상담사님들이 작성한 오늘의 좋은 말을 확인해보세요</p>
+                                <img src="data:image/svg+xml,%3csvg%20width='72'%20height='40'%20viewBox='0%200%2072%2040'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cpath%20d='M42.69%200h15.228c1.757%200%203.43.348%204.951.977C68.213%203.02%2072%208.074%2072%2013.999c0%207.092-5.418%2013.065-12.445%2013.986-1.021.134-1.937-.631-1.937-1.635v-1.645H42.69c-7.008%200-12.69-5.53-12.69-12.353C30%205.531%2035.682%200%2042.69%200'%20fill='%23FBADB1'/%3e%3cg%20transform='translate(41%2011)'%20fill='%23FFF'%3e%3ccircle%20cx='2'%20cy='2'%20r='2'/%3e%3ccircle%20cx='10'%20cy='2'%20r='2'/%3e%3ccircle%20cx='18'%20cy='2'%20r='2'/%3e%3c/g%3e%3cg%3e%3cpath%20d='M29.31%2012H14.082c-1.757%200-3.43.348-4.951.977C3.787%2015.02%200%2020.074%200%2025.999c0%207.092%205.418%2013.065%2012.445%2013.986%201.021.134%201.937-.631%201.937-1.635v-1.645H29.31c7.008%200%2012.69-5.53%2012.69-12.353C42%2017.531%2036.318%2012%2029.31%2012'%20fill='%23FF868D'/%3e%3cpath%20d='M15.667%2022.25h-.89c-.981%200-1.777.783-1.777%201.75v5.25c0%20.967.796%201.75%201.778%201.75h.889c.49%200%20.889-.392.889-.875v-7a.882.882%200%200%200-.89-.875m11.556%200h-4.444l.734-2.706a1.737%201.737%200%200%200-.738-1.88l-.787-.517a.897.897%200%200%200-1.288.337l-2.004%204.039a3.456%203.456%200%200%200-.361%201.536v6.191c0%20.967.795%201.75%201.777%201.75h6.044c.847%200%201.577-.589%201.743-1.407l1.067-5.25c.22-1.082-.622-2.093-1.743-2.093'%20fill='%23E5464F'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" class="guide-icon">
+                            </div>
+                            <article class="pro-knowhow-list">
+                                <ul class="feed-list card-list">
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">부동산으로 재테크 하는 법! 실거주시 확인절차</h3> -->
+                                                <p class="content-writer">분양남</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">사관학교, 수능 입시 전문 강사입니다</h3> -->
+                                                <p class="content-writer">조유현</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo03.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">생활폐기물처 기준</h3> -->
+                                                <p class="content-writer">성순리사이클링 생활폐기물 본사</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo04.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">개념서와 문제집은 다르다</h3> -->
+                                                <p class="content-writer">수학 오아리</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">화장실 타일시공</h3> -->
+                                                <p class="content-writer">Master of Tile</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">혼자 하다 실패한 녹취록 - 속기사 작업 비교!</h3> -->
+                                                <p class="content-writer">녹취속기사무소 전진</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo03.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">대회 경험과 공부를 바탕으로 여러분의 몸을 책임집니다.</h3> -->
+                                                <p class="content-writer">신정민</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo04.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">호남권,광주,전남 건강부터 저축까지 효율왕 설계사</h3> -->
+                                                <p class="content-writer">광주 김현비 보험 설계사</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">가족 간 갈등, 말로만 남기면 위험해요 – 유류분 소송</h3> -->
+                                                <p class="content-writer">녹취속기사무소 전진</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">검정고시 영어, 수학 전문 선생님 입니다</h3> -->
+                                                <p class="content-writer">Se0a</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo03.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">사진을 동영상으로 만드시고 싶은 분들!</h3> -->
+                                                <p class="content-writer">피플레이</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo04.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">[온라인마케팅 7년차, 고수의 전략] 3분만 읽어보세요</h3> -->
+                                                <p class="content-writer">라이즈</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">비즈니스 영어 바이블 무료배포</h3> -->
+                                                <p class="content-writer">Ivy</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">매일 매일 꾸준히하면 다르다~</h3> -->
+                                                <p class="content-writer">초등 문해력고수(국어 한국사 사회 세계사)</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo03.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">학원 인테리어 걱정 없이 진행 하는 방법:)</h3> -->
+                                                <p class="content-writer">화담아이디</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo04.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">비슷한 면접답변 속에서 빛나는✨ 나만의 디테일</h3> -->
+                                                <p class="content-writer">안종석</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">긴급히 증거 필요 할 때 – 당일 접수도 가능한 녹취록</h3> -->
+                                                <p class="content-writer">녹취속기사무소 전진</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">쇼핑몰&amp;마케팅 취업 완전 정복</h3> -->
+                                                <p class="content-writer">아이티윌부산</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo03.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">미국원어민 원장출신이 말하는 영어 '진짜' 잘하는방법</h3> -->
+                                                <p class="content-writer">원어민 영어 /미국원장출신 /한국어OK /10년 경력</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo04.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">내 노래, 들어보면 달라져요🪄 1:1 레코딩 보컬레슨</h3> -->
+                                                <p class="content-writer">봉예빈</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">Ai 헤어 모델 CTR 높이는 법</h3> -->
+                                                <p class="content-writer">리얼하이</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">벽걸이 세척으로 메인기판 나갔을때</h3> -->
+                                                <p class="content-writer">강호 홈케어</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo03.jpg" lazy="loading">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">고졸 검정고시 영어, 수학 고득점의 비결</h3> -->
+                                                <p class="content-writer">Se0a</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo04.jpg" lazy="loading">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">스드메 , 웨딩홀 가성비 있게 저렴하게 하는방법</h3> -->
+                                                <p class="content-writer">소개가 많은 대구 남자 웨딩플래너 최석환</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">통화 녹음만 됐으면 안심? 대화자 구분이 왜 중요할까?</h3> -->
+                                                <p class="content-writer">녹취속기사무소 전진</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">무더위에 도배장판시공 물을 충분히섭취건강하게안전하게시공</h3> -->
+                                                <p class="content-writer">인테리어도배장판방염벽지누수곰팡이신축도배공사무료견적</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo03.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">이사갈때,어린아이,애완동물,생애처음이면 꼭! 청소</h3> -->
+                                                <p class="content-writer">피엠텍 전북지사</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo04.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">영어를 배워온 이야기</h3> -->
+                                                <p class="content-writer">임진우</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo01.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">만든물건은품질의차이가큽니다(수명.단열)</h3> -->
+                                                <p class="content-writer">창호나라(안성진)</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                    <li data-testid="pro-knowhow-list-item" class="pro-knowhow-list-item">
+                                        <section class="item-wrapper">
+                                            <a href="">
+                                                <figure class="image-wrapper">
+                                                    <img alt="커버 이미지" class="content-image" src="../../static/images/goodWords/memo02.jpg" lazy="loaded">
+                                                    <div class="item-wrapper-text">오늘의 좋은 말 텍스트 예시입니다. 해당 공간에는 상담사님들이 작성한 내용이 게시되며, 페이지는 매일 새롭게 갱신됩니다.</div>
+                                                </figure>
+                                                <!-- <h3 class="content-title">마케팅과 세일즈의 구분</h3> -->
+                                                <p class="content-writer">황경수</p>
+                                            </a>
+                                        </section>
+                                    </li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <a id="top-btn" role="button" aria-label="위로 가기 버튼" class="top-btn" style="right: 892px;">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cg%3e%3cg%3e%3cg%3e%3cpath%20d='M0%200H24V24H0z'%20transform='translate(-323.000000,%20-680.000000)%20translate(311.000000,%20668.000000)%20translate(12.000000,%2012.000000)'/%3e%3cg%20stroke='%23B5B5B5'%20stroke-linecap='round'%20stroke-width='1.5'%3e%3cpath%20d='M7%200L7%2015'%20transform='translate(-323.000000,%20-680.000000)%20translate(311.000000,%20668.000000)%20translate(12.000000,%2012.000000)%20translate(5.000000,%204.500000)'/%3e%3cpath%20stroke-linejoin='round'%20d='M0%207L7%200%2014%207'%20transform='translate(-323.000000,%20-680.000000)%20translate(311.000000,%20668.000000)%20translate(12.000000,%2012.000000)%20translate(5.000000,%204.500000)'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="위로 가기">
+                    </a>
+                </section>
+            </div>
+            <div class="v-portal" style="display: none;"></div>
+        </div>
+    </div>
+</body>
+<script src="../../static/js/counselor-list/good-words.js"></script>
+</html>
