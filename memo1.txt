@@ -83,3 +83,22 @@ css-frjdyo > photo-3
 .css-warpf9 > main-8
 .css-1is0qkf > main-9
 .css-2dnb9f > main-10
+
+*psyment*
+
+.css-us7025 > main
+.css-1b8kgjr > main-1
+.css-6lg75 > main-2
+.css-hjlxc1 > main-3
+.css-dbtbg3 > main-4
+.css-44jj4s > main-5
+.css-3o96hm > main-6
+.css-1vnsv6l > main-7
+.css-uimbna > main-8
+css-cwqhu7 > main-9
+css-17nde7w > main-10
+.css-10whm10 > main-11
+.css-1qwrcy0 > main-12
+.css-1teuxpg > main-13
+.css-1fs9zns > main-14
+.css-1a1iizm > main-15
