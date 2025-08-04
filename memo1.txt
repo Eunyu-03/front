@@ -102,3 +102,37 @@ css-17nde7w > main-10
 .css-1teuxpg > main-13
 .css-1fs9zns > main-14
 .css-1a1iizm > main-15
+
+
+.received-requests > main
+.received-requests-list > main-1
+.received-requests-right > main-2
+.received-request-list-wrapper > main-3
+.received-request-list-title prisma-typography headline20 primary > main-4
+.tab-wrapper padding-wrapper > main-5
+.infinite-scroll-box > main-6
+.tab-menu > main-7
+.btn btn-none tab-item active > main-8
+.prisma-typography headline16 primary > main-19
+.received-request-list-col col-12 > main-10
+.request-item-card-wrapper focused > main-11
+.request-item-card-inner > main-12
+.request-item-card-inner .request-item-card-header > main-13
+.user-profile-left-container > main-14
+.user-avatar-wrapper > main-15
+.user-avatar is-anonymous > main-16
+.user-name prisma-typography body14:regular secondary > main-17
+.request-item-card-summary > main-18
+.request-view-summary > main-19
+.request-view-summary-upper > main-20
+.request-view-service-name prisma-typography body14:medium secondary > main-21
+.request-view-summary-datetime-container > main-22
+.request-view-summary-date prisma-typography headline16 primary > main-23
+.request-view-summary-time prisma-typography headline16 primary > main-24
+.request-item-card-buttons > main-25
+.btn btn-none > main-26
+.prisma-typography body16:semibold secondary > main-27
+.received-requests-detail > main-28
+.quote-send-container > main-29
+.quote-send-customer-name > main-30
+.prisma-typography headline18 primary > main-31
