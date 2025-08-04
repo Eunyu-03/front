@@ -186,7 +186,6 @@ html {
 
 body {
     margin: 0;
-    font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -340,8 +339,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 .soomgo-life-post-detail {
-    display: flex
-;
+    display: flex;
     flex-direction: column;
 }
 
@@ -357,7 +355,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     background-color: #fff;
 }
 
-/* 커뮤니티 > 고수에게 묻다 */
+/* 커뮤니티 > 상담 게시판 */
 .post-category-subject {
     margin: 2rem 0 1rem;
 }
@@ -766,7 +764,6 @@ button {
     align-items: center;
     width: 100%;
     margin-top: 0.5rem;
-    /* margin-left: 0.5rem; */
 }
 
 .post-react-state .post-react-item.like-btn {
@@ -806,8 +803,6 @@ button {
 section.overcome-review .profile-container {
     display: flex;
     flex-direction: column;
-    /* padding: 2rem 1rem 7.5rem 1rem; */
-
     flex-direction: column;
     border: 1px solid rgb(238, 238, 238);
     border-radius: 16px;
@@ -871,20 +866,16 @@ section.overcome-review .counselor-reply-contents {
 }
 
 section.overcome-review .profile-container .profile-desc {
-    /* display: -webkit-box; */
     min-height: 5.142em;
     line-height: 1.714;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     margin: 0;
     line-height: 1.5rem;
-    
     padding: 1rem 2.2rem 2.5rem 2.2rem;
     height: fit-content;
-    /* margin-bottom: 10px; */
     white-space: pre-wrap;
 }
-/* --- */
 
 /* 라인 */
 .soomgo-life-post-detail .hr-divider {
@@ -908,15 +899,9 @@ section.overcome-review .profile-container .profile-desc {
     margin-bottom: 1rem;
 }
 
-/* .counselor-reply {
-    margin-bottom: 2rem;
-} */
-
 section.counselor-reply .profile-container {
     display: flex;
     flex-direction: column;
-    /* padding: 2rem 1rem 7.5rem 1rem; */
-
     flex-direction: column;
     border: 1px solid rgb(238, 238, 238);
     border-radius: 16px;
@@ -1001,17 +986,14 @@ section.counselor-reply .profile-container .profile-info .profile-picture {
 }
 
 .profile-container .profile-desc {
-    /* display: -webkit-box; */
     min-height: 5.142em;
     line-height: 1.714;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     margin: 0;
     line-height: 1.5rem;
-    
     padding: 1rem 2.2rem 2.5rem 2.2rem;
     height: fit-content;
-    /* margin-bottom: 10px; */
     white-space: pre-wrap;
 }
 
@@ -1025,6 +1007,13 @@ section.counselor-reply .profile-container .profile-info .profile-picture {
     background-color: #fff;
     border: solid .0625rem #EFF1F5;
     border-radius: 8px;
+
+    resize: none; 
+    overflow: hidden; 
+}
+
+.comment-input::placeholder {
+    color: #bdc1c5;
 }
 
 .comment-input-box .attach-file-label {
@@ -1282,7 +1271,6 @@ textarea {
 }
 
 .post-comment-wrapper .comment-information .user-info .send-request-button {
-    width: 3.75rem;
     padding: .3125rem .5rem;
     margin-left: 2.25rem;
     color: #693bf2;
@@ -1364,10 +1352,6 @@ textarea {
     right: 0;
     left: auto;
 }
-
-/* ol ol, ul ul, ol ul, ul ol {
-    margin-bottom: 0;
-} */
 
 .dropdown-menu {
     position: absolute;
@@ -1563,7 +1547,7 @@ section.related-posts span.sg-icon-v1 svg path {
     color: #AAB4BF;
 }
 
-/* 인기 고수 추천 이벤트 스타일 */
+/* 인기 상담사 추천 이벤트 스타일 */
 section.popular-provider div.slick-slider div.slick-list-all {
     width: 600px;
     position: relative;
@@ -1581,9 +1565,7 @@ section.popular-provider div.slick-slider div.slick-list div.slick-track div.sli
     height: 218px;
 }
 
-/* --- */
-
-/* 인기 고수 추천 */
+/* 인기 상담사 추천 */
 @media (min-width: 768px) {
     .popular-provider {
         padding: 2.5rem 0 1.75rem;
@@ -1649,12 +1631,6 @@ section.popular-provider div.slick-slider div.slick-list div.slick-track div.sli
         display: block !important;
     }
 }
-
-/* .popular-provider .slick-arrow.slick-prev.slick-disabled {
-    pointer-events: none;
-    cursor: default;
-    opacity: 0;
-} */
 
 .popular-provider .slick-arrow.slick-prev {
     left: -1.3125rem;
@@ -1762,12 +1738,10 @@ section.popular-provider div.slick-slider div.slick-list div.slick-track div.sli
     display: block;
 }
 
-/* [data-v-471a5412] */
 .slick-slide {
     cursor: pointer;
 }
 
-/*       [data-v-e4caeaf8] */
 .slick-slide {
     display: none;
     float: left;
@@ -1886,25 +1860,7 @@ section.popular-provider div.slick-slider div.slick-list div.slick-track div.sli
     cursor: pointer;
 }
 
-
-/* 커뮤니티 인기 서비스 TOP 8 */
-.recommend-request {
-    position: relative;
-    padding: 2.5rem 0;
-}
-
-.recommend-request .recommend-request-heading {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 1.25rem;
-}
-
-.recommend-request .recommend-request-heading .recommend-request-title {
-    margin: 0;
-    white-space: pre-line;
-}
-
+/* 지금 가장 뜨거운 커뮤니티 게시글 */
 .recommend-request .recommend-request-popular-service .recommend-request-list {
     display: flex;
     flex-wrap: wrap;

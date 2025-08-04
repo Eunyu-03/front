@@ -11,7 +11,7 @@
 
 body {
     margin: 0;
-    font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    /* font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji"; */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -129,9 +129,7 @@ h3, .h3 {
 }
 
 
-
-
-
+/* body */
 .community-container {
     max-width: 100%;
 }
@@ -159,6 +157,7 @@ section.pro-knowhow {
     margin: auto;
 }
 
+/* body 헤더 */
 .pro-knowhow-header {
     display: flex;
     align-items: flex-end;
@@ -186,6 +185,7 @@ section.pro-knowhow {
     position: relative;
 }
 
+/* 글쓰기 버튼 */
 .write-button-desktop .b-dropdown button.btn.dropdown-toggle {
     display: flex;
     align-items: center;
@@ -388,6 +388,7 @@ button, [type=button],
     align-items: flex-start;
 }
 
+/* 헤더 밑줄 */
 ul.category {
     display: flex;
     gap: 1rem;
@@ -447,6 +448,7 @@ section.pro-knowhow .community-content-layout {
     padding-top: 1.5rem;
 }
 
+/* 최상단 텍스트 블록 */
 .topic-guide-banner-container.provider-square, 
 .topic-guide-banner-container.pro-knowhow {
     background-color: #fef6f6;
@@ -492,6 +494,7 @@ section.pro-knowhow .community-content-layout .pro-knowhow-list {
     padding-top: .625rem;
 }
 
+/* 오늘의 좋은 말 목록 */
 .pro-knowhow-list .feed-list.card-list {
     /* display: grid; */
     grid-template-columns: repeat(3, 1fr);
@@ -502,6 +505,7 @@ section.pro-knowhow .community-content-layout .pro-knowhow-list {
     margin: 0;
 }
 
+/* 오늘의 좋은 말 */
 .pro-knowhow-list .pro-knowhow-list-item {
     flex: 0 1 33.33%;
 }
@@ -512,12 +516,9 @@ section.pro-knowhow .community-content-layout .pro-knowhow-list {
 
 .pro-knowhow-list .image-wrapper {
     position: relative;
-    
     display: inline-block;
-
     width: 100%;
-    /* padding-bottom: 66.7%; */
-    margin-bottom: .75rem;
+    margin-bottom: 0;
     overflow: hidden;
     border: solid .0625rem rgba(0, 0, 0, .05);
     border-radius: 8px;
@@ -535,18 +536,22 @@ section.pro-knowhow .community-content-layout .pro-knowhow-list {
     display: block;
 }
 
-/* 이미지 텍스트 */
+/* 오늘의 좋은 말 텍스트 */
 .pro-knowhow-list .image-wrapper .item-wrapper-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(32, 30, 30);
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     width: 340px;
-    /* font-weight: bold; */
-    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); */
+}
+
+.pro-knowhow-list .image-wrapper .item-wrapper-text .text01 {
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 8px;
 }
 
 .pro-knowhow-list .content-title {
