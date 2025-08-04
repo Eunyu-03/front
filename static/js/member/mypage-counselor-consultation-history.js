@@ -10,6 +10,7 @@ button.forEach((data) => {
         view.classList.add("active");
     });
 });
+
 // remove.forEach((data) => {
 //     data.addEventListener("click", (e) => {
 //        삭제 이벤트

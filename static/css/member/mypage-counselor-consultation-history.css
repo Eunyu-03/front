@@ -175,7 +175,6 @@ div {
     display: -webkit-box;
     max-height: 1.5em;
     line-height: 1.5;
-    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: normal;
@@ -331,7 +330,6 @@ div {
     max-height: 1.5em;
     font-size: .875rem !important;
     line-height: 1.375rem !important;
-    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: normal;
