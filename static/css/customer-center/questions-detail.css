@@ -144,12 +144,10 @@ body .sub-nav input[type="search"] {
     height: 40px;
     padding-left: 40px;
     padding-right: 20px;
-    -webkit-appearance: none;
     width: 100%;
 }
 
 input[type=search] {
-    -webkit-appearance: textfield;
     box-sizing: content-box;
 }
 
@@ -302,12 +300,10 @@ h1 {
     height: 40px;
     padding-left: 40px;
     padding-right: 20px;
-    -webkit-appearance: none;
     width: 100%;
 }
 
 input[type=search] {
-    -webkit-appearance: textfield;
     box-sizing: content-box;
 }
 
@@ -407,7 +403,6 @@ footer a {
     font-family: "copenhagen-icons";
     font-style: normal;
     font-weight: normal;
-    speak: none;
     line-height: 1em;
     vertical-align: middle;
     -webkit-font-smoothing: antialiased;
