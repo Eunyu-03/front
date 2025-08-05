@@ -136,3 +136,36 @@ css-17nde7w > main-10
 .quote-send-container > main-29
 .quote-send-customer-name > main-30
 .prisma-typography headline18 primary > main-31
+.request-view > main-32
+.request-summary > main-33
+.request-view-summary-header > main-34
+.user-profile-left-container > main-35
+.user-avatar-wrapper > main-36
+.user-avatar is-anonymous > main-37
+.user-name prisma-typography body14:regular secondary > main-38
+.prisma-typography body14:regular secondary > main-39
+.request-view-summary > main-40
+.request-view-summary-upper > main-41
+.request-view-service-name prisma-typography body16:medium secondary > main-42
+.request-view-summary-datetime-container > main-43
+.request-view-summary-date prisma-typography headline18 primary > main-44
+request-view-summary-time prisma-typography headline18 primary > main-45
+.request-view-summary-address-container > main-46
+.request-view-summary-address > main-47
+.prisma-icon tertiary > main-48
+.prisma-typography body16:medium primary > main-49
+.request-view-divider > main-50
+.request-view-customer-profile > main-51
+.request-view-customer-profile-upper > main-52
+.prisma-typography headline18 primary > main-53
+.request-view-customer-profile-content > main-54
+.user-avatar-wrapper > main-55
+.user-avatar is-anonymous > main-56
+.prisma-typography body16:regular secondary > main-57
+.request-view-customer-profile-usage-info > main-58
+.prisma-typography body14:regular secondary > main-59
+.prisma-icon secondary > main-60
+.quote-wrap > main-61
+.quote-upper > main-62
+.description prisma-typography body14:regular tertiary > information-1
+.
