@@ -1,3 +1,29 @@
 
 
 css-n9wwsy > main-container
+css-1yado2t > container-div
+css-19g0uya > good-words-header
+css-13fcep1 > good-words
+css-ufwl35 > good-words-top
+
+css-16j9ykz > top-h2
+css-s3ljgk > good-words-body
+
+css-1gwf777 > body-header
+css-1oxufv8 > body-header-legend
+css-136tctf > body-header-input
+css-9yo8e6 > input-text-number
+css-1d8ukpo > input-text-check
+css-5sb3ar > text-number01
+css-esleyu > text-number02
+
+css-ngfpwr > body-content
+css-1oxufv8 > body-content-name
+css-15lzlob > body-content-text
+
+css-5oqau4 > check-box
+css-1l0infp > check-box-name
+css-1al63li > check-box-ul
+
+css-1uv9qgl > complete-button
+css-1musnfu > complete
