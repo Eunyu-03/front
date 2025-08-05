@@ -4,70 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link data-vue-meta="1" rel="shortcut icon" href="../../static/images/member/icon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    
+    <link rel="stylesheet" href="../../static/font/didactgothic.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/materialdesignicons-webfont-d5cba82059f88bfa469e.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-cyrillic-700-normal-d010f1f324e111a22e53.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-cyrillic-ext-700-normal-be4d02458ce53887dc37.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-greek-700-normal-50e795c1345353b0e996.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-greek-ext-700-normal-bd9854c751441ccc1a70.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-latin-700-normal-227c93190fe7f82de3f8.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-latin-ext-700-normal-ed67ad54b1a8f5d21150.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-vietnamese-700-normal-3425a701027d0699e369.woff2">
+
     <link rel="stylesheet" href="../../static/css/counselor-list/counselor-list.css">
     <title>상담사 목록</title>
 </head>
 <body class="search-pro-sort">
     <div id="app" data-browser="Chrome" data-is-loaded="true">
+        <div id="top"></div>
         <!-- body -->
         <div id="app-body">
             <div id="pro-list" data-testid="pro-list" class="search-pro container">
+                <!-- body 헤더 -->
                 <header class="search-pro-header-desktop">
                     <h1 class="heading-title">상담사 찾기</h1>
                     <section class="service-area-filter">
-                        <!-- <button data-testid="category-filter-btn" type="button" class="btn filter-btn btn-none">
-                            <span class="button-content"> 서비스 
-                                <span class="sg-icon-v1 chevron mobile fill" style="width: 1.25rem; height: 1.25rem; --svg-color: #6A7685;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                    </svg>
-                                </span>
-                                <span class="sg-icon-v1 chevron desktop fill" style="width: 1.25rem; height: 1.25rem; --svg-color: #6A7685;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                    </svg>
-                                </span>
-                            </span>
-                        </button>
-                        <button data-testid="service-area-filter-btn" type="button" class="btn filter-btn btn-none">
-                            <span class="button-content"> 지역 
-                                <span class="sg-icon-v1 chevron mobile fill" style="width: 1.25rem; height: 1.25rem; --svg-color: #6A7685;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                    </svg>
-                                </span>
-                                <span class="sg-icon-v1 chevron desktop fill" style="width: 1.25rem; height: 1.25rem; --svg-color: #6A7685;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                    </svg>
-                                </span>
-                            </span>
-                        </button> -->
                     </section>
                 </header>
                 <div class="content">
+                    <!-- 좌측 이벤트 박스 -->
                     <aside data-observe="auto-quote-filter-container" class="auto-quote-filter">
                         <div class="search-pro-auto-quote-filter search-pro-filter-nudge-wrap">
-                            <!-- <div class="header desktop">
-                                <span>필터</span>
-                                <div class="refresh">
-                                    <span>초기화</span>
-                                </div>
-                            </div> -->
                             <div class="header desktop" style="padding-top: 28px; padding-bottom: 0px;">
                                 <h3>리바운드의 특별한 이벤트</h3>
                             </div>
                             <div class="content">
                                 <div class="let-choose-service d-none d-lg-block d-xl-block">
-                                    <h2>사이트 이용이 처음인 분이라면</h2>
+                                    <h2>사이트 이용이 처음이라면</h2>
                                     <p>15% 할인 쿠폰을 발급해드립니다!<br>자세한 사항은 공지를 확인해주세요.</p>
                                 </div>
                             </div>
                         </div>
                     </aside>
+                    <!-- 우측 상담사 찾기 -->
                     <section class="search-pro-result">
                         <div class="search-pro-result-header">
+                            <!-- 예약/쿠폰 아이콘 -->
                             <div class="filter-chip-container">
                                 <div class="filter-chip-list-wrapper">
                                     <ul class="chip-filter-list">
@@ -90,6 +71,7 @@
                                     </ul>
                                 </div>
                             </div>
+                            <!-- 리뷰 많은 순/평점순/최근활동순 리스트 -->
                             <section class="search-pro-count-sort count-sort">
                                 <div class="sort-wrapper">
                                     <div class="dropdown b-dropdown sort-dropdown btn-group" id="__BVID__400">
@@ -106,17 +88,12 @@
                                             <li role="presentation" class="sort-item">
                                                 <a role="menuitem" href="#" target="_self" class="dropdown-item"> 최근활동순 </a>
                                             </li>
-                                            <!-- <li role="presentation" class="sort-item">
-                                                <a role="menuitem" href="#" target="_self" class="dropdown-item"> 평점순 </a>
-                                            </li>
-                                            <li role="presentation" class="sort-item">
-                                                <a role="menuitem" href="#" target="_self" class="dropdown-item"> 고용순 </a>
-                                            </li> -->
                                         </ul>
                                     </div>
                                 </div>
                             </section>
                         </div>
+                        <!-- 검색창 -->
                         <div class="search-pro-input-with-router-button">
                             <div class="search-keyword-input-desktop">
                                 <div role="group" class="input-group">
@@ -126,16 +103,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- 지도 버튼 -->
-                            <!-- <button class="btn-link">
-                                <i class="icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon primary" category="contents">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.25 5.57258V17.7169C21.25 18.4977 20.7327 19.1841 19.982 19.3992L15.6477 20.641C15.3287 20.7324 14.9903 20.7313 14.672 20.6376L9.01265 18.9734C8.9633 18.9589 8.91067 18.96 8.86195 18.9765L5.06119 20.2633C3.92652 20.6474 2.75 19.8036 2.75 18.6057V6.44955C2.75 5.68666 3.24421 5.01167 3.97148 4.78127L8.39965 3.37841C8.73568 3.27195 9.09602 3.26945 9.43349 3.37124L15.0845 5.07559C15.1324 5.09005 15.1836 5.08978 15.2313 5.07483L18.9773 3.90246C20.1043 3.54974 21.25 4.39165 21.25 5.57258ZM19.75 17.7169V5.57258C19.75 5.40388 19.5863 5.2836 19.4253 5.33399L15.8136 6.46434L15.8136 19.0332L19.5689 17.9572C19.6761 17.9265 19.75 17.8284 19.75 17.7169ZM14.3136 18.9687L9.62701 17.5906L9.62702 4.99634L14.3136 6.40983L14.3136 18.9687ZM8.12701 17.6417L8.12702 5.03825L4.4245 6.21123C4.3206 6.24414 4.25 6.34057 4.25 6.44955L4.25 18.6057C4.25 18.7768 4.41807 18.8974 4.58017 18.8425L8.12701 17.6417Z" fill="black"></path>
-                                    </svg>
-                                </i>
-                                <span>지도</span>
-                            </button> -->
                         </div>
+                        <!-- 바로 답변 가능한 상담사 -->
                         <article class="search-pro-list">
                             <div class="list-item">
                                 <div class="divider d-lg-none d-xl-none" style="display: none;"></div>
@@ -151,15 +120,19 @@
                                                 </svg>
                                             </span>
                                         </button>
+                                        <!-- tooltip-info -->
                                         <div class="tooltip-info"> 요청 즉시 상담을 받을 수 있습니다. </div>
                                     </div>
                                 </div>
                                 <a href="" id="pro-4375711">
+                                    <!-- 상담사 정보 -->
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">1등. 치워드림</h5>
+                                                <!-- 상담사 이름 -->
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -173,13 +146,11 @@
                                                 <span>2,940회 고용</span>
                                                 <span>경력 24년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">🥇숨고 종합 1등 청소/시공 전문🥇 
-★숨고 최초 리뷰 10,000개 달성 !! 가장 많은 선택을 받은 업체 ❤️ 신뢰에 보답하겠습니다!🫡</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다. </p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
                                                 <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -187,19 +158,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
                                             <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/83810ea7-bc86-4be4-b5ab-27fbe367d0a0.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/83810ea7-bc86-4be4-b5ab-27fbe367d0a0.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
                                 <a href="" id="pro-6914034">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">삐까뻔쩍홈케어 "저희 모든 고객님들은 저의 지인입니다"</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -213,13 +188,10 @@
                                                 <span>534회 고용</span>
                                                 <span>경력 20년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">리뷰 9000개이상 "고객님" 만족이 우선인 업체 
-확실한 A/S 및 사후 처리
-독일 친환경 세제로 건강한 공간을 만드는 사람들</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -227,19 +199,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
                                             <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
                                 <a href="" id="pro-6810668">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">청소다움 6800개이상 평점만점 확실한 사후관리</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -253,11 +229,11 @@
                                                 <span>786회 고용</span>
                                                 <span>경력 10년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">전국 청소업체 단 ! 하나의⭐️1점⭐ 리뷰도 없는 ⭐️청소다움⭐️ 6800개 이상 확실한 사후관리와 함께 청소다움에서 시작하세요 !</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
+                                                <span class="reservation-chip">예약</span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -265,19 +241,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
                                             <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
                                 <a href="" id="pro-173028">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">해방플러스(해충으로부터 해방)</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -291,13 +271,10 @@
                                                 <span>17,496회 고용</span>
                                                 <span>경력 18년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">고용수 17,000명  / 리뷰수 6,600 개
-서울 / 경기 / 인천 
-(일부지역제외)</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -305,19 +282,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
                                             <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-8619113">
+                                <a href="" id="pro-6914034">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">⭕️청소를부탁해⭕️입주청소,이사청소,거주청소쓰레기집청소</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -325,217 +306,16 @@
                                                             <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
                                                         </svg>
                                                     </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(3,642)</span>
+                                                    <span class="rate">4.9</span>
+                                                    <span>(9,340)</span>
                                                 </div>
-                                                <span>1,779회 고용</span>
-                                                <span>경력 8년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">⭕️대표 얼굴을 걸고 청소합니다.⭐평점5.0 
-✅️제가 직접 상담합니다
-직영⭕️하청❌️
-청라점,송도점,마곡점,수원점,마포점,일산점,성남점,김포점</p>
-                                            <div class="badges">
-                                                <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/888210ac-9bbd-4c9c-803f-57353115066d.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/888210ac-9bbd-4c9c-803f-57353115066d.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-10906924">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">청소홀릭⭐ 5.0 각종언론보도!! SBS방송출연!!</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(3,553)</span>
-                                                </div>
-                                                <span>450회 고용</span>
-                                                <span>경력 10년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">🥇숨고1위 평점⭐5.0 각종언론보도!!피톤치드 듬뿍❤️ 40호점돌파!!❤️ 서초점,의왕점,안산점,남양주점,김포점</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/ecc85c3a-c837-477e-b7fe-a80891b79d46.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/ecc85c3a-c837-477e-b7fe-a80891b79d46.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-7684953">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">1위.버블클린텍</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(3,357)</span>
-                                                </div>
-                                                <span>1,176회 고용</span>
-                                                <span>경력 10년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">👑청소플랫폼 고객만족도 1위 업체👑
-☺플랫폼1등 인증업체 숨고 입점 ☺
-💖종합청소업체 합리적인가격 높은퀄리티💖</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/8408bd57-d35c-43a4-8025-895ffc353b20.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/8408bd57-d35c-43a4-8025-895ffc353b20.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-5989590">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">⭐강트럭⭐(✔숨고 1위 용달ㆍ화물업체✔)</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">4.8</span>
-                                                    <span>(2,901)</span>
-                                                </div>
-                                                <span>1,574회 고용</span>
-                                                <span>경력 5년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">🥇숨고 용달ㆍ화물 전체1등🥇/⭐강트럭⭐❤용달/화물운송 🚀당일예약가능/화물ㆍ용달 </p>
-                                            <div class="badges">
-                                                <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/92ff4167-d2b7-4c29-bd0e-663a72f685c8.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/92ff4167-d2b7-4c29-bd0e-663a72f685c8.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-246964">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">새홈클린</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">4.8</span>
-                                                    <span>(2,150)</span>
-                                                </div>
-                                                <span>6,060회 고용</span>
-                                                <span>경력 10년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">🏆 숨고 압도적 1위🏆
-🎈SBS "성공의 정석 꾼 207회 출연"🎈
-🎖고용수 최다 5만회 이상 청소🎖
-✨️신뢰할수 있는 청소 퀄리티✨</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/b1c4edb7-dec1-40cb-8627-28fa50686b32.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/b1c4edb7-dec1-40cb-8627-28fa50686b32.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-1923346">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">디자인 1위 지구컴즈ㅣ로고ㅣ명함ㅣ리플렛ㅣ포스터ㅣ전단</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span><span>(2,108)</span>
-                                                </div>
-                                                <span>1,872회 고용</span>
+                                                <span>534회 고용</span>
                                                 <span>경력 20년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">로고 랭키1위 / 숨고 디자인 1위 / 한국소비자만족1위 / 로고 명함 카탈로그 브로슈어 리플렛 포스터 전단 배너 현수막 /정부지원사업전문</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -543,19 +323,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/c91e2924-0797-4d62-8806-5d0dfb8541bb.png?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/c91e2924-0797-4d62-8806-5d0dfb8541bb.png?webp=1&amp;h=320&amp;w=320&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-5732095">
+                                <a href="" id="pro-6810668">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">홈케어&amp;시스템(세척자격증보유)에어컨만전문적인업체입니다!</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -564,123 +348,16 @@
                                                         </svg>
                                                     </span>
                                                     <span class="rate">5.0</span>
-                                                    <span>(2,026)</span>
+                                                    <span>(6,806)</span>
                                                 </div>
-                                                <span>2,119회 고용</span>
+                                                <span>786회 고용</span>
                                                 <span>경력 10년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">에어컨"세척자격증보유"  완전분해청소 전문업체입니다
-에어컨만 전문적으로 완전분해 및 고압으로 종합세척을 약속드립니다^^</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/b100da71-36a4-497d-903b-41f8fc9017e4.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/b100da71-36a4-497d-903b-41f8fc9017e4.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-10083068">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">✅️이사in✅️ "명예의 전당,골든팀 출신 정직원"</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,781)</span>
-                                                </div>
-                                                <span>148회 고용</span>
-                                                <span>경력 16년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">✅️"정직함"과 "친절"을 약속드립니다🤙                              이사in 의 고객님으로 "로그in"해주세요💚</p>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/a3d4648d-035a-4dc0-816a-e19d501ef0dc.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/a3d4648d-035a-4dc0-816a-e19d501ef0dc.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-1959410">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">[리뷰'1위' 1,765건] I 취업서포터 신쌤</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,765)</span>
-                                                </div>
-                                                <span>1,719회 고용</span>
-                                                <span>경력 11년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">☑️[취업] 압도적 '1위' [☑️리뷰 '1,765건' ☑️고용 '1,719건']
-☑️[리뷰 평점 All 만점] 1,763건/5.0점</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/f5889a1d-aa49-44d2-8c52-e320b647e47d.jpeg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/f5889a1d-aa49-44d2-8c52-e320b647e47d.jpeg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-4385720">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">[자소서/이력서 숨고1위] 취업 비비</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,653)</span>
-                                                </div>
-                                                <span>1,091회 고용</span>
-                                                <span>경력 7년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">대기업 전현직 | 석박사 출신 | 서울 청년취업사관학교(SeSAC) 멘토 | 온라인강의플랫폼 C사 VOD 런칭 | 평점 5.0 | 리뷰1600+</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
                                                 <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -688,19 +365,64 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/84791ef9-5996-46dc-9dc9-9223d1c23244.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/84791ef9-5996-46dc-9dc9-9223d1c23244.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-4205554">
+                                <a href="" id="pro-173028">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">독고다이</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
+                                            <div class="pro-statistics">
+                                                <div class="review-rate">
+                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
+                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="rate">5.0</span>
+                                                    <span>(6,757)</span>
+                                                </div>
+                                                <span>17,496회 고용</span>
+                                                <span>경력 18년</span>
+                                            </div>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
+                                            <div class="badges">
+                                                <span class="pro-badge">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
+                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
+                                                    </svg> 로켓응답 
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- 프로필 이미지 -->
+                                        <div class="user-profile-picture pro-profile-picture">
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 상담사 정보 -->
+                            <div class="list-item">
+                                <a href="" id="pro-6914034">
+                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
+                                        <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
+                                            <div class="pro-info-name-wrapper">
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
+                                            </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -709,18 +431,15 @@
                                                         </svg>
                                                     </span>
                                                     <span class="rate">4.9</span>
-                                                    <span>(1,550)</span>
+                                                    <span>(9,340)</span>
                                                 </div>
-                                                <span>2,176회 고용</span>
-                                                <span>경력 30년</span>
+                                                <span>534회 고용</span>
+                                                <span>경력 20년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">[숨고]대한민국 자동차분야 고용,리뷰 1위[독고다이]
-블랙박스/안드로이드/카플레이설치
-서울 경기 인천 충청 강원 지역 항시 출장 장착가능합니다</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -728,19 +447,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/49572b2c-5376-44d1-b438-e7d256bd0563.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/49572b2c-5376-44d1-b438-e7d256bd0563.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-1971426">
+                                <a href="" id="pro-6810668">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">좋은우리클린❤️ 5.0</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -749,96 +472,16 @@
                                                         </svg>
                                                     </span>
                                                     <span class="rate">5.0</span>
-                                                    <span>(1,427)</span>
+                                                    <span>(6,806)</span>
                                                 </div>
-                                                <span>322회 고용</span>
-                                                <span>경력 5년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">⭐숨고 고객만족도1위, 7일 무상 A/S 및 사후처리 ✅️경험 많은 마스터 팀장님이 방문하여 높은 만족도를 제공합니다❤️</p>
-                                            <div class="badges">
-                                                <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/386d192f-c557-4bf2-99b6-fc2de9e062ff.png?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/386d192f-c557-4bf2-99b6-fc2de9e062ff.png?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-7688293">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">윤아디자인(디자인분야 상위 1%)</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,390)</span>
-                                                </div>
-                                                <span>525회 고용</span>
-                                                <span>경력 7년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">🏆 숨고 디자인부문 상위 1% | 저렴한 가격으로 승부하려는 곳과 비교하지 마세요 | 차별화된 로고를 만들어 보실분은 문의 주세요! </p>
-                                            <div class="badges">
-                                                <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/f1f4ee58-5e26-4f0a-9705-5af9dd23ea7d.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/f1f4ee58-5e26-4f0a-9705-5af9dd23ea7d.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-12757082">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">{리뷰 1위}{상위1%} 충청도에어컨청소 화이트크리닉</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,286)</span>
-                                                </div>
-                                                <span>451회 고용</span>
+                                                <span>786회 고용</span>
                                                 <span>경력 10년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">✨전문성은 기본, 꼼꼼함은 필수✨ 입점 2년만에 상위 1% 등극🎉
-🚗대전, 세종, 청주, 천안, 평택 전지역 서비스 가능 합니다</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
                                                 <span class="reservation-chip">예약</span>
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -846,19 +489,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/b00fd06e-7a04-429d-a35d-4e5ad95ad3f4.png?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/b00fd06e-7a04-429d-a35d-4e5ad95ad3f4.png?webp=1&amp;h=320&amp;w=320&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-3068787">
+                                <a href="" id="pro-173028">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">홈수리</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -867,21 +514,15 @@
                                                         </svg>
                                                     </span>
                                                     <span class="rate">5.0</span>
-                                                    <span>(1,285)</span>
+                                                    <span>(6,757)</span>
                                                 </div>
-                                                <span>436회 고용</span>
-                                                <span>경력 7년</span>
+                                                <span>17,496회 고용</span>
+                                                <span>경력 18년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">대구 6년 연속 ☆1등 리뷰 &amp; 고용  업체  ☆
-        방충망 설치 
-        비둘기퇴치 시공 전문입니다
-
-
-                                            </p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -889,19 +530,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/4d0f36d2-3a50-4454-ac7f-7069fa0429f7.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/4d0f36d2-3a50-4454-ac7f-7069fa0429f7.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-4321401">
+                                <a href="" id="pro-6914034">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">천성정보통신_정보통신설비기술사</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -909,20 +554,16 @@
                                                             <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
                                                         </svg>
                                                     </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,240)</span>
+                                                    <span class="rate">4.9</span>
+                                                    <span>(9,340)</span>
                                                 </div>
-                                                <span>1,031회 고용</span>
+                                                <span>534회 고용</span>
                                                 <span>경력 20년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">🔈무타공벽걸이TV 설치후기/리뷰 전국1위업체🚩
-(특허청승인제품)
-★ 인터넷+IPTV 신규가입시★
-★ 현금사은품+무타공 시공비용 무상시공★</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -930,58 +571,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/95f39275-2000-469b-94da-aa827bc684ff.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/95f39275-2000-469b-94da-aa827bc684ff.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/a40ecdbb-c7d0-4468-b93a-553cc4b35f69.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-11203626">
+                                <a href="" id="pro-6810668">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">✔️이담✔️- ✅친절·신속·정확·화물·용달✅</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">4.9</span>
-                                                    <span>(1,188)</span>
-                                                </div>
-                                                <span>144회 고용</span>
-                                                <span>경력 4년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">✔️전국·어디서·어디든✔️당일접수✔️당일예약✔️당일배차 가능✔️
-🚛오토바이·다마스·라보~모든 화물 전차종 배차 가능🚚</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/1f9e5833-7c8f-49cf-a9a1-4e17e7f9b522.png?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/1f9e5833-7c8f-49cf-a9a1-4e17e7f9b522.png?webp=1&amp;h=320&amp;w=320&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-1821871">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">‼️벽걸이TV 압도적(전국1위) JHTV‼️</h5>
-                                            </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -990,20 +596,16 @@
                                                         </svg>
                                                     </span>
                                                     <span class="rate">5.0</span>
-                                                    <span>(1,173)</span>
+                                                    <span>(6,806)</span>
                                                 </div>
-                                                <span>3,260회 고용</span>
-                                                <span>경력 8년</span>
+                                                <span>786회 고용</span>
+                                                <span>경력 10년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">‼️고용횟수2️⃣8️⃣0️⃣0️⃣ 회 달성 
-‼️선택된 1% 고객만이전국1위업체의차별화된서비스를 받아볼수있습니다기회를 잡으세요‼️
-
-    
-</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
+                                                <span class="reservation-chip">예약</span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -1011,19 +613,23 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/a808abbe-9a4e-4d05-99fd-19a12d0aa221.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/41b0d768-17fd-44ad-addf-becc734909a5.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+                            <!-- 상담사 정보 -->
                             <div class="list-item">
-                                <a href="" id="pro-4979972">
+                                <a href="" id="pro-173028">
                                     <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
                                         <div class="pro-info text-truncate">
+                                            <!-- 상담사 이름 -->
                                             <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">스탑벅스 종합방역</h5>
+                                                <h5 class="pro-name text-truncate">상담사 이름</h5>
                                             </div>
+                                            <!-- 별점/고용/경력 -->
                                             <div class="pro-statistics">
                                                 <div class="review-rate">
                                                     <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
@@ -1032,18 +638,15 @@
                                                         </svg>
                                                     </span>
                                                     <span class="rate">5.0</span>
-                                                    <span>(1,166)</span>
+                                                    <span>(6,757)</span>
                                                 </div>
-                                                <span>2,290회 고용</span>
-                                                <span>경력 5년</span>
+                                                <span>17,496회 고용</span>
+                                                <span>경력 18년</span>
                                             </div>
-                                            <p class="pro-introduction text-truncate">'방역완벽주의' 스탑벅스 종합방역 입니다
-상세한 설명과 꼼꼼한 작업!
-각종 해충과 유해바이러스들을 효과적으로 제거하고 관리해드립니다!</p>
+                                            <!-- 상담사 설명 -->
+                                            <p class="pro-introduction text-truncate">상담사에 대한 설명이 들어가는 부분입니다. 한 줄로 출력되며, 공간을 넘어가는 글은 ...으로 숨겨집니다.</p>
+                                            <!-- 예약/로켓응답 아이콘 -->
                                             <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
                                                 <span class="pro-badge">
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
                                                         <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
@@ -1051,345 +654,9 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 프로필 이미지 -->
                                         <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/9b528a77-fc15-40be-a834-a775a91cce7a.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-1042112">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">김기도</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,124)</span>
-                                                </div>
-                                                <span>1,130회 고용</span>
-                                                <span>경력 8년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">안녕하세요. 숨고 이사 리뷰 1등
-용달빠르기도 대표 김기도입니다.
-</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/d2251c28-fdf7-4413-87ca-091bee09fa1f.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-10808199">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">방스클린&amp;줄눈&amp;에어컨 *리뷰만점*</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,109)</span>
-                                                </div>
-                                                <span>277회 고용</span>
-                                                <span>경력 7년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">수도권 전문 실력검증된 두팀만운영                                        
-방스클린 하청❎직영❎️</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/2bed607a-8a9d-4fe8-8972-c05130e0ca21.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-8695845">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate"> 왕창이사(왕창크린)</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">4.9</span>
-                                                    <span>(1,083)</span>
-                                                </div>
-                                                <span>103회 고용</span>
-                                                <span>경력 25년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">🏅25년 현장 노하우로 가정이사/사무실이사/보관이사/입주청소(서울,인천,경기,천안,아산 가능)의 전문 서비스를 제공합니다.🏅</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/cea82797-4a3b-4801-9b0c-e883c00c2db3.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-11370341">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">⚡힘트럭⚡  (✔)화물•운송(✔)용달•이사(✔)</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(1,074)</span>
-                                                </div>
-                                                <span>2회 고용</span>
-                                                <span>경력 8년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">💪☺️👍365일 전국 어디든 🥇당일배차•예약•접수가능🚀 🏆화물•운송•트럭•용달•이사 오토바이부터~전 차량 보유🚚</p>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/546b2a78-75a5-45e6-96e5-2b11b543d9af.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-5679340">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">❇️ 강필구 디자이너 ❇️</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(893)</span>
-                                                </div>
-                                                <span>495회 고용</span>
-                                                <span>경력 5년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">상담은 친구처럼 , 디자인은 디자이너처럼.</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/46c01781-4291-46f9-81fd-1dc71ced502a.png?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-9527925">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">HUN MIX</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(883)</span>
-                                                </div>
-                                                <span>1,292회 고용</span>
-                                                <span>경력 12년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">MIXING &amp; MASTERING, 음악 편집 및 제작, BGM/사운드 제작 미디 전문 레슨 서비스를 전문적으로 하고 있는  HUNMIX 입니다</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/fd391a60-3ed4-435d-8af8-ac298d1b7e3d.jpeg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-318479">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">최건희</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">4.9</span>
-                                                    <span>(871)</span>
-                                                </div>
-                                                <span>2,399회 고용</span>
-                                                <span>경력 11년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">숨고에서만 이천분 넘께 작업해드렸습니다
-믹싱 엔지니어 / 작곡가 최건희 입니다</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/a1e2b89a-7f5b-4828-aa91-a03b270405e0.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-411136">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">이정민</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">5.0</span>
-                                                    <span>(859)</span>
-                                                </div>
-                                                <span>2,456회 고용</span>
-                                                <span>경력 8년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">🌟숨고 전국 1위🌟
-        많이 찾아주시는데는 이유가 있습니다!
-        아이가 스스로 선택하는 교육
-        four command
-        상세 서비스 읽어주세요!</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/0e59ec9e-c668-4f9e-bdbb-7f7f46ae4a57.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-item">
-                                <a href="" id="pro-619484">
-                                    <div data-testid="pro-card" class="pro-card d-flex search-pro-card">
-                                        <div class="pro-info text-truncate">
-                                            <div class="pro-info-name-wrapper">
-                                                <h5 class="pro-name text-truncate">이레나키친 인테리어전문가 박요셉 어드바이저</h5>
-                                            </div>
-                                            <div class="pro-statistics">
-                                                <div class="review-rate">
-                                                    <span class="sg-icon-v1 icon" style="width: 0.875rem; height: 0.875rem; --svg-color: #293341;">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="m7.496 1.596 1.407 2.742 3.145.44c.91.127 1.275 1.204.615 1.822l-2.276 2.134.538 3.015c.155.872-.797 1.538-1.612 1.126L6.5 11.452l-2.813 1.423c-.815.412-1.767-.254-1.612-1.126l.538-3.015L.337 6.6c-.66-.618-.296-1.695.615-1.822l3.145-.44 1.407-2.742C5.912.8 7.088.8 7.496 1.596" fill="#FFCE21" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="rate">4.8</span>
-                                                    <span>(837)</span>
-                                                </div>
-                                                <span>548회 고용</span>
-                                                <span>경력 20년</span>
-                                            </div>
-                                            <p class="pro-introduction text-truncate">씽크대 리뷰1위
-리뷰 834개 돌파
-
-주방인테리어 전문가
-
-씽크대,붙박이장,타일,
-신발장,욕실,필름,
-샷시,중문설치,뭐든지 가능합니다</p>
-                                            <div class="badges">
-                                                <span class="soomgopay-chip d-flex">
-                                                    <span>숨고페이</span>
-                                                </span>
-                                                <span class="pro-badge">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon blue">
-                                                        <path d="M17.8309 19.025C18.0002 18.8557 18.0939 18.6253 18.0909 18.3859L18.0381 14.1821L19.421 12.7993C20.1879 12.0323 20.688 11.0016 20.7329 9.93423C20.7871 8.6344 20.4066 6.05284 20.1673 4.60837C20.1044 4.22904 19.8134 3.93073 19.4341 3.86768C17.9906 3.6277 15.481 3.32548 14.1937 3.39512C13.1278 3.45342 12.0956 3.94008 11.3287 4.707L9.9429 6.08685L5.5639 6.1844C5.3353 6.18949 5.11747 6.28258 4.95578 6.44426L3.06629 8.33376C2.70089 8.69916 2.70089 9.29159 3.06629 9.65699L6.68148 13.2722C6.13411 13.8195 5.25214 15.3176 5.5436 17.8477C5.58809 18.2339 5.89251 18.5387 6.27869 18.5835C8.80669 18.877 10.3085 17.9938 10.8558 17.4465L14.471 21.0617C14.8364 21.4271 15.4288 21.4271 15.7942 21.0617L17.8309 19.025ZM11.6696 12.4569C10.7112 11.4985 10.7135 9.943 11.6747 8.98175C12.636 8.02049 14.1914 8.01821 15.1499 8.97663C16.1083 9.93506 16.106 11.4905 15.1447 12.4518C14.1835 13.413 12.628 13.4153 11.6696 12.4569Z" fill="black"></path>
-                                                    </svg> 로켓응답 
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="user-profile-picture pro-profile-picture">
-                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/e63021d0-e451-4fa3-a8cb-f0d7e3cc4640.jpg?webp=1&amp;h=320&amp;w=320" lazy="loading" style="background-image: url(&quot;data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2655_48096)'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='%23C7CED6'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M52.5676%2032.5667C52.5676%2039.5071%2046.9413%2045.1334%2040.0009%2045.1334C33.0605%2045.1334%2027.4342%2039.5071%2027.4342%2032.5667C27.4342%2025.6263%2033.0605%2020%2040.0009%2020C46.9413%2020%2052.5676%2025.6263%2052.5676%2032.5667ZM33.0334%2050.8008C20.8172%2050.8008%2010.2399%2059.2855%207.58986%2071.2109C4.93978%2083.1363%207.5901%2081.7521%207.5901%2081.7521H72.4095C72.4095%2081.7521%2075.0596%2083.1363%2072.4095%2071.2109C69.7594%2059.2855%2059.1822%2050.8008%2046.9659%2050.8008H33.0334Z'%20fill='%23F6F7F9'/%3e%3c/g%3e%3crect%20x='0.5'%20y='0.5'%20width='79'%20height='79'%20rx='39.5'%20stroke='black'%20stroke-opacity='0.05'/%3e%3cdefs%3e%3cclipPath%20id='clip0_2655_48096'%3e%3crect%20width='80'%20height='80'%20rx='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e&quot;);"></div>
+                                            <div data-name="image" class="is-square" data-src="https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/9dc93ed6-3a1a-45f5-8c8b-33a4d0f5e18b.jpg?webp=1&amp;h=320&amp;w=320&quot;);"></div>
                                         </div>
                                     </div>
                                 </a>
@@ -1397,15 +664,10 @@
                         </article>
                     </section>
                 </div>
-                <a id="top-btn" role="button" aria-label="위로 가기 버튼" class="top-btn" style="right: 657px; display: none;">
+                <!-- 위로 가기 버튼 -->
+                <a href="#top" id="top-btn" role="button" aria-label="위로 가기 버튼" class="top-btn" style="right: 657px;">
                     <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cg%3e%3cg%3e%3cg%3e%3cpath%20d='M0%200H24V24H0z'%20transform='translate(-323.000000,%20-680.000000)%20translate(311.000000,%20668.000000)%20translate(12.000000,%2012.000000)'/%3e%3cg%20stroke='%23B5B5B5'%20stroke-linecap='round'%20stroke-width='1.5'%3e%3cpath%20d='M7%200L7%2015'%20transform='translate(-323.000000,%20-680.000000)%20translate(311.000000,%20668.000000)%20translate(12.000000,%2012.000000)%20translate(5.000000,%204.500000)'/%3e%3cpath%20stroke-linejoin='round'%20d='M0%207L7%200%2014%207'%20transform='translate(-323.000000,%20-680.000000)%20translate(311.000000,%20668.000000)%20translate(12.000000,%2012.000000)%20translate(5.000000,%204.500000)'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="위로 가기">
                 </a>
-                <div class="pro-bucket-button-wrapper">
-                    <button type="button" class="btn pro-bucket-btn btn-secondary">
-                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20width='24px'%20height='24px'%20viewBox='0%200%2024%2024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ctitle%3eIcon_heart%3c/title%3e%3cg%20id='🔖1057-롤백-후-변경된-UI-(찜한고수)'%20stroke='none'%20stroke-width='1'%20fill='none'%20fill-rule='evenodd'%3e%3cg%20id='아이콘_CTA-아이콘-변경'%20transform='translate(-23.000000,%20-431.000000)'%20fill='%23FFFFFF'%3e%3cg%20id='Icon_heart'%20transform='translate(23.000000,%20431.000000)'%3e%3cpath%20d='M19.6120318,5.68796822%20C18.7237702,4.79928955%2017.5187786,4.3%2016.262292,4.3%20C15.0058055,4.3%2013.8008138,4.79928955%2012.9125522,5.68796822%20L11.9997697,6.60075078%20L11.0869871,5.68796822%20C9.23697693,3.83795808%206.23751781,3.8379581%204.38750764,5.68796827%20C2.53749747,7.53797844%202.53749745,10.5374376%204.38750759,12.3874478%20L5.30029015,13.3002303%20L11.9997697,19.9997098%20L18.6992492,13.3002303%20L19.6120318,12.3874478%20C20.5007104,11.4991862%2021,10.2941945%2021,9.03770799%20C21,7.78122144%2020.5007104,6.57622982%2019.6120318,5.68796822%20Z'%20id='Path'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="pro bucket" class="cart-icon">
-                        <span data-v-3d3020cf="" class="btn-text">찜한 고수</span>
-                    </button>
-                </div>
             </div>
         </div>
     </div>

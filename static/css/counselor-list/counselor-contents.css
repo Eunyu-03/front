@@ -76,6 +76,7 @@ body.profile>#app {
     flex-grow: 1;
 }
 
+/* 프로필 헤더 */
 .profile-header {
     height: 8.5rem;
     margin-right: -1.25rem;
@@ -124,6 +125,7 @@ body.profile>#app {
     margin-left: 0;
 }
 
+/* 좌측 프로필 상세 */
 div.container div.row div.profile-section {
     flex: 1 1 auto;
     max-width: 40.625rem;
@@ -188,6 +190,7 @@ div.container div.row div.profile-section {
     width: 100%;
 }
 
+/* 상담사 이름 */
 .profile-overview .info .info-section-header .nickname {
     width: 75%;
     margin-bottom: 0;
@@ -231,6 +234,7 @@ h2, .h2 {
     margin-left: 1.25rem;
 }
 
+/* 공유 아이콘 */
 .profile-overview .info .info-section-header .share-button {
     background: url("data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cpath%20d='M0%200h24v24H0z'/%3e%3cpath%20d='M4.08%2015.6V21h15.84v-5.4M6.24%208.575%2012%203l5.76%205.575M12%2015.6V3.002'%20stroke='%23323232'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3c/g%3e%3c/svg%3e") no-repeat center / contain;
 }
@@ -246,12 +250,6 @@ button:not(:disabled),
     font-weight: 500;
     transition: opacity .2s ease-in-out;
 }
-
-/* @media (prefers-reduced-motion: reduce) {
-    .btn {
-        transition: none;
-    }
-} */
 
 .btn {
     display: inline-block;
@@ -295,6 +293,7 @@ button {
     border-radius: 0;
 }
 
+/* 하트 아이콘 */
 .profile-overview .heart {
     position: relative;
     display: inline-flex;
@@ -318,6 +317,7 @@ div.heart span.sg-icon-v1.fill svg path {
     fill: currentColor;
 }
 
+/* 소지한 자격증 */
 .profile-overview .info .info-section-sub-header {
     display: flex;
     align-items: center;
@@ -355,6 +355,7 @@ div.heart span.sg-icon-v1.fill svg path {
     background-image: url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cpath%20d='M0%2020h20V0H0z'/%3e%3cg%20stroke='%23737373'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%3e%3cpath%20d='M16.218%207.274c0%204.943-5.833%2010.226-5.833%2010.226S4.55%2012.542%204.55%207.274c0-3.097%202.612-5.607%205.834-5.607%203.221%200%205.833%202.51%205.833%205.607z'/%3e%3cpath%20d='M12.628%207.917a2.084%202.084%200%201%201-4.167-.001%202.084%202.084%200%200%201%204.167%200z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
 }
 
+/* 상담사 자기소개 */
 .profile-overview .info .introduce {
     width: 37.5rem;
     margin-top: 1.25rem;
@@ -583,6 +584,7 @@ span.soomgopay-chip svg.prisma-icon path {
     font-weight: 700;
 }
 
+/* 리뷰 이벤트 */
 .profile-overview .info .promotion-button-wrapper, .profile-overview .info .review-event-wrapper {
     margin-top: 1rem;
 }
@@ -664,13 +666,6 @@ div.review-event-title .sg-icon-v1 svg {
     border: none;
     display: flex;
     margin-top: .0625rem;
-}
-
-button:not(:disabled), 
-[type=button]:not(:disabled), 
-[type=reset]:not(:disabled), 
-[type=submit]:not(:disabled) {
-    cursor: pointer;
 }
 
 div.tooltip-container span.sg-icon-v1 svg {
@@ -785,6 +780,7 @@ div.line-clamp p.prisma-typography.primary {
     display: none;
 }
 
+/* 상담사 정보/리뷰/질문답변 리스트 */
 .sticky-nav {
     position: sticky;
     top: 4.5rem;
@@ -796,12 +792,6 @@ div.line-clamp p.prisma-typography.primary {
     background-color: #fff;
     border-bottom: .0625rem solid #EFF1F5;
 }
-
-/* .sticky-nav .active {
-    font-weight: 700;
-    color: #293341;
-    border-bottom: .125rem solid #293341;
-} */
 
 .sticky-nav>li {
     display: inline-block;
@@ -825,23 +815,11 @@ ul li {
     margin-top: 0;
 }
 
-/* .profile-body section {
-    margin-top: 3.75rem;
-} */
-
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
-/* .profile-body section:first-child>div:first-child {
-    margin-top: 2.5rem;
-} */
-
-/* .profile-body section>div {
-    width: 100%;
-    margin-top: 3.75rem;
-} */
-
+/* 상담사 정보 */
 .profile-provider-info .profile-provider-info-title {
     display: flex;
     align-items: center;
@@ -910,7 +888,6 @@ ol, ul, dl {
     background-image: url("data:image/svg+xml,%3csvg%20width='20'%20height='20'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cpath%20d='M0%200h20v20H0z'/%3e%3cg%20stroke='%23737373'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%3e%3cpath%20d='m4.166%2018.083%202.834-2%203%202%203-2%202.832%202V2.917H4.166zM6.61%206.799h6.67M6.608%209.855h6.667M6.608%2012.528h2.22'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
 }
 
-/* 상담사 소개 */
 .profile-service-desc.collapsed .description {
     max-height: 25rem;
     overflow: hidden;
@@ -923,15 +900,6 @@ ol, ul, dl {
     color: #6a7685;
     letter-spacing: -.0125rem;
     white-space: pre-line;
-}
-
-/* .profile-body section:not(:first-child) {
-    border-top: .0625rem solid rgba(0, 0, 0, .1);
-} */
-
-.profile-body section#FAQ {
-    border-top: .0625rem solid rgba(0, 0, 0, .1);
-    margin-bottom: 60px;
 }
 
 /* 리뷰 */
@@ -955,6 +923,7 @@ ol, ul, dl {
     gap: 1.5rem;
 }
 
+/* 리뷰 그래프 */
 .profile-review-summary {
     margin-bottom: 1.25rem;
 }
@@ -1058,7 +1027,6 @@ div.profile-review-summary div.review-keyword {
     width: 100%;
     height: 4rem;
     content: "";
-    /* background: linear-gradient(to bottom, #fff0, #fff); */
 }
 
 .keyword-wrapper {
@@ -1362,6 +1330,7 @@ button.chip {
     align-items: center;
 }
 
+/* 유저 프로필 이미지 */
 .review-user .user-avatar .user-profile-picture {
     width: 2.5rem;
     height: 2.5rem;
@@ -1382,6 +1351,7 @@ button.chip {
     background-position: 50% 50%;
 }
 
+/* 유저 닉네임 */
 .review-user .user-info {
     display: flex;
     flex-direction: column;
@@ -1423,11 +1393,13 @@ div.item-control-box svg.prisma-icon path {
     gap: .375rem;
 }
 
+/* 받은 서비스 종류 */
 .service-info {
     display: flex;
     gap: .5rem;
 }
 
+/* 별점 */
 .prisma-rating.small {
     height: 1.375rem;
 }
@@ -1453,6 +1425,7 @@ div.prisma-rating.small img {
     height: 100%;
 }
 
+/* 리뷰 내용 */
 .review-content-wrapper {
     position: relative;
     display: flex;
@@ -1462,6 +1435,7 @@ div.prisma-rating.small img {
     white-space: pre-wrap;
 }
 
+/* 선택 키워드 */
 @media (min-width: 768px) {
     div.review-content-item ul.review-keyword {
         gap: .25rem;
@@ -1597,6 +1571,11 @@ ul.review-keyword div.badge {
 }
 
 /* 질문답변 */
+.profile-body section#FAQ {
+    border-top: .0625rem solid rgba(0, 0, 0, .1);
+    margin-bottom: 60px;
+}
+
 .profile-qna ul {
     display: inline-block;
     width: 100%;
@@ -1612,7 +1591,7 @@ ul.review-keyword div.badge {
 
 .profile-qna ul li .question {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.5;
     letter-spacing: -.01875rem;
     color: #293341;
@@ -1630,6 +1609,7 @@ ul.review-keyword div.badge {
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-all;
+    margin-bottom: 20px;
 }
 
 .profile-qna ul li .answer .wrapper p {
@@ -1678,12 +1658,6 @@ div.aside-section.col {
     max-width: 20rem;
     padding-left: 2.5rem;
 }
-
-/* --- */
-/* .col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-} */
 
 .col, .modal .modal-footer .btn {
     flex-basis: 0;

@@ -1132,7 +1132,7 @@ button.btn .comp-icon {
     white-space: nowrap;
 }
 
-.page-content .table-layout table.member-table td.td-method {
+.page-content .table-layout table.member-table td.td-email, td.td-phone, td.td-start, td.td-recent {
     color: #292929;
     font-size: 13px;
     text-align: center;

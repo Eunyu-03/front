@@ -46,7 +46,7 @@
 
 body {
     margin: 0;
-    font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    /* font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji"; */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -184,20 +184,6 @@ button {
 }
 
 @media (min-width: 768px) {
-    header.search-pro-header-desktop .service-area-filter .filter-btn {
-        height: 2.5rem;
-        padding: .4375rem 1rem .5625rem;
-        font-size: 1rem;
-    }
-}
-
-/* @media (min-width: 768px) {
-    .service-area-filter .filter-btn .button-content .chevron.mobile {
-        display: none;
-    }
-} */
-
-@media (min-width: 768px) {
     .service-area-filter .filter-btn .button-content .chevron.desktop {
         display: inline-flex;
     }
@@ -231,7 +217,6 @@ button {
     }
 }
 
-/*  */
 .__cov-progress {
     opacity: 1;
     z-index: 999999;
@@ -267,12 +252,6 @@ button {
     }
 }
 
-/* @media (min-width: 992px) {
-    .container-lg, .container-md, .container-sm, .container {
-        max-width: 60rem;
-    }
-} */
-
 .prisma-toast-container {
     position: fixed;
     top: 4.375rem;
@@ -291,18 +270,12 @@ button {
     -webkit-transform: translateX(-50%);
     transform: translate(-50%);
 }
-/*  */
 
 #app-header {
     position: sticky;
     top: 0;
     height: 3.625rem;
     background-color: #fff;
-}
-
-.global-header {
-    z-index: 1020;
-    display: block;
 }
 
 .search-pro {
@@ -312,28 +285,6 @@ button {
 .container-lg, .container-md, .container-sm, .container {
     max-width: 62.5rem;
 }
-
-.service-area-filter .filter-btn:first-child {
-    margin-right: .375rem;
-}
-
-.service-area-filter .filter-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    padding: 5x .625rem .4375rem .75rem;
-    border: .0625rem solid #E0E5EB;
-    border-radius: 28px;
-    color: #6a7685;
-    font-size: .875rem;
-    font-weight: 400;
-}
-
-/* .btn:hover {
-    color: #293341;
-    text-decoration: none;
-} */
 
 .btn {
     font-weight: 500;
@@ -386,27 +337,28 @@ section.service-area-filter .sg-icon-v1 svg {
     display: none;
 }
 
+/* body 헤더 */
+@media (min-width: 768px) {
+    header.search-pro-header-desktop .service-area-filter .filter-btn {
+        height: 2.5rem;
+        padding: .4375rem 1rem .5625rem;
+        font-size: 1rem;
+    }
+}
+
 .content {
     position: relative;
-    /* padding-top: 7.25rem; */
     background-color: #fff;
     transition: .5s;
 }
 
-.search-pro-filter-nudge-wrap {
-    position: relative;
-}
-
+/* 좌측 이벤트 박스 */
 .search-pro-auto-quote-filter {
     padding: 0 1rem .75rem;
     margin: 0 -1rem;
     visibility: visible;
     background: #fff;
 }
-
-/* .search-pro-auto-quote-filter .header.desktop {
-    display: none;
-} */
 
 @media (min-width: 768px) {
     .search-pro-auto-quote-filter .header.desktop .refresh {
@@ -446,7 +398,6 @@ section.service-area-filter .sg-icon-v1 svg {
     }
 }
 
-/* --- */
 div.content aside.auto-quote-filter div.header.desktop h3 {
     padding-left: .3125rem;
     margin-bottom: .5rem;
@@ -498,7 +449,6 @@ ul.dropdown-menu-right {
     right: auto;
     bottom: auto;
 }
-/* --- */
 
 .search-pro-auto-quote-filter .let-choose-service h3 {
     padding-left: .3125rem;
@@ -516,6 +466,7 @@ ul.dropdown-menu-right {
     letter-spacing: -.01875rem;
 }
 
+/* 우측 상담사 찾기 */
 @media (min-width: 768px) {
     .search-pro-result {
         width: 39.375rem;
@@ -536,6 +487,7 @@ ul.dropdown-menu-right {
     border: none;
 }
 
+/* 예약/쿠폰 아이콘 */
 .search-pro-result .search-pro-result-header .filter-chip-container {
     position: relative;
     width: 100%;
@@ -627,6 +579,7 @@ button.chip {
     background: linear-gradient(90deg, #fff0, #fff);
 }
 
+/* 리뷰 많은 순/평점순/최근활동순 리스트 */
 .count-sort {
     margin-top: .3125rem;
 }
@@ -744,6 +697,7 @@ ul.dropdown-menu-right {
     border: 0;
 }
 
+/* 검색창 */
 .search-pro-input-with-router-button {
     display: flex;
     gap: .5rem;
@@ -767,7 +721,6 @@ ul.dropdown-menu-right {
     width: 100%;
 }
 
-/* --- */
 .input-group>.form-control:not:last-child, .input-group>.custom-select:not:last-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -842,28 +795,12 @@ ul.dropdown-menu-right {
     cursor: pointer;
 }
 
-/* 지도 버튼 
-.btn-link {
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    width: 5.375rem;
-    height: 100%;
-    min-height: 2.75rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #293341;
-    background-color: #eff1f5;
-    border: none;
-    border-radius: 6px;
-} */
-
 .btn-link .icon {
     display: inline-flex;
     margin-right: .25rem;
 }
 
+/* 바로 답변 가능한 상담사 */
 .search-pro-list {
     position: relative;
 }
@@ -916,7 +853,6 @@ ul.dropdown-menu-right {
 }
 
 .list-header span {
-    /* font-size: .8125rem; */
     font-weight: 500;
     color: #8f9aab;
 }
@@ -940,6 +876,7 @@ button.btn.btn-tooltip .sg-icon-v1 svg {
     color: #8F9AAB;
 }
 
+/* tooltip-info */
 .tooltip-container .tooltip-info::before {
     content: "";
     position: absolute;
@@ -968,6 +905,7 @@ button.btn.btn-tooltip .sg-icon-v1 svg {
     font-size: .875rem;
 }
 
+/* 상담사 정보 */
 .search-pro-card {
     padding: 1rem 0;
 }
@@ -994,6 +932,7 @@ button.btn.btn-tooltip .sg-icon-v1 svg {
     margin-bottom: .25rem;
 }
 
+/* 상담사 이름 */
 .pro-name {
     margin-bottom: 0;
     font-weight: 700;
@@ -1005,6 +944,7 @@ button.btn.btn-tooltip .sg-icon-v1 svg {
     white-space: nowrap;
 }
 
+/* 별점/고용/경력 */
 .pro-statistics {
     margin-bottom: .5rem;
 }
@@ -1046,6 +986,7 @@ button.btn.btn-tooltip .sg-icon-v1 svg {
     margin: 0 .25rem;
 }
 
+/* 상담사 설명 */
 .pro-introduction {
     margin: 0;
     font-size: .75rem;
@@ -1058,6 +999,7 @@ button.btn.btn-tooltip .sg-icon-v1 svg {
     white-space: nowrap;
 }
 
+/* 예약/로켓응답 아이콘 */
 .badges {
     display: flex;
     gap: .25rem;
@@ -1108,6 +1050,7 @@ button.btn.btn-tooltip .sg-icon-v1 svg {
     color: #0087ff;
 }
 
+/* 프로필 이미지 */
 .pro-profile-picture {
     width: 4rem;
     height: 4rem;

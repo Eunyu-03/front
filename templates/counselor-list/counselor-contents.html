@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link data-vue-meta="1" rel="shortcut icon" href="../../static/images/member/icon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    
+    <link rel="stylesheet" href="../../static/font/didactgothic.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/materialdesignicons-webfont-d5cba82059f88bfa469e.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-cyrillic-700-normal-d010f1f324e111a22e53.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-cyrillic-ext-700-normal-be4d02458ce53887dc37.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-greek-700-normal-50e795c1345353b0e996.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-greek-ext-700-normal-bd9854c751441ccc1a70.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-latin-700-normal-227c93190fe7f82de3f8.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-latin-ext-700-normal-ed67ad54b1a8f5d21150.woff2">
+    <link rel="stylesheet" href="../../static/fonts/admin-login-fonts/roboto-vietnamese-700-normal-3425a701027d0699e369.woff2">
+
     <link rel="stylesheet" href="../../static/css/counselor-list/counselor-contents.css">
     <title>상담사 상세 정보</title>
 </head>
@@ -12,11 +22,13 @@
     <div id="app">
         <div id="app-body">
             <div class="provider-profile">
+                <!-- 프로필 헤더 -->
                 <div class="profile-header" data-src="https://static.cdn.soomgo.com/upload/profile/92ff4167-d2b7-4c29-bd0e-663a72f685c8.jpg?webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/92ff4167-d2b7-4c29-bd0e-663a72f685c8.jpg?webp=1&quot;);">
                     <div class="backdrop"></div>
                 </div>
                 <div class="container">
                     <div class="row no-gutters">
+                        <!-- 좌측 프로필 상세 -->
                         <div data-testid="profile-section" class="profile-section col-lg-auto col-12">
                             <div class="profile-body">
                                 <div class="profile-overview">
@@ -27,9 +39,12 @@
                                     </div>
                                     <div class="info">
                                         <div class="info-section-header">
+                                            <!-- 상담사 이름 -->
                                             <h1 data-testid="profile-nickname" class="nickname"> 리바운드 상담사 </h1>
                                             <div class="icon-buttons">
+                                                <!-- 공유 아이콘 -->
                                                 <button type="button" class="btn share-button btn-none"></button>
+                                                <!-- 하트 아이콘 -->
                                                 <div role="button" class="heart">
                                                     <span class="sg-icon-v1 fill" style="width: 1.5rem; height: 1.5rem; --svg-color: #293341;">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,9 +55,11 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- 소지한 자격증 -->
                                         <div class="info-section-sub-header">
                                             <div class="category">임상심리사</div>
                                         </div>
+                                        <!-- 상담사 자기소개 -->
                                         <div class="introduce">임상심리사 ㅇㅇㅇ입니다. 국가에서 발급하는 자격증에는 임상심리사, 직업상담사, 청소년 상담사가 있으며 민간에서 발급하는 자격증에는 상담심리사, 전문상담사가 있다.</div>
                                         <div class="detail-info">
                                             <div class="badges">
@@ -53,14 +70,6 @@
                                                 </span>
                                                 <span class="badge-item">
                                                     <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%207.625%206.88%2011%2012%205'%20stroke='%232DC261'%20stroke-width='2'%20fill='none'%20fill-rule='evenodd'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Self cert"> 본인인증 
-                                                </span>
-                                                <span title="숨고페이 거래 중 문제 발생 시 최대 1,000만 원까지 보상받을 수 있어요" role="button" tabindex="1">
-                                                    <span class="soomgopay-chip d-flex">
-                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon purple">
-                                                            <path d="M12 2C6.47697 2 2 6.47696 2 12C2 17.523 6.47697 22 12 22C17.523 22 22 17.523 22 12C22 6.47696 17.523 2 12 2ZM14.445 15.6613L12.5044 10.5015H11.5579C12.2636 12.8863 11.4023 15.8501 7.0685 15.8501H5.98299L5.21502 12.3549C5.38107 12.3632 5.61145 12.3757 5.91241 12.3757C6.59111 12.3757 7.44833 12.4193 7.98383 11.9419C8.87839 11.1449 8.60647 9.71482 8.19551 7.80739H15.0386L18.7725 15.6633H14.445V15.6613Z" fill="black"></path>
-                                                        </svg>
-                                                        <span data-v-9c177e04="">숨고페이</span>
-                                                    </span>
                                                 </span>
                                             </div>
                                             <div class="statistics-info">
@@ -81,6 +90,7 @@
                                                     <div class="statistics-info-item-contents">5년</div>
                                                 </div>
                                             </div>
+                                            <!-- 리뷰 이벤트 -->
                                             <div class="review-event-wrapper">
                                                 <div class="profile-review-event">
                                                     <div class="review-event-header">
@@ -110,7 +120,6 @@
                                                                 </span>
                                                             </span>
                                                             <span class="prisma-typography headline4 primary">리뷰 이벤트</span>
-                                                            <!-- tooltip-container -->
                                                             <div class="tooltip-container">
                                                                 <button type="button" class="btn btn-tooltip btn-none">
                                                                     <span class="sg-icon-v1 fill" style="width: 1rem; height: 1rem; --svg-color: #8F9AAB;">
@@ -121,17 +130,11 @@
                                                                         </svg>
                                                                     </span>
                                                                 </button>
-                                                                <div class="tooltip-info"> 고수가 자체적으로 운영하는 이벤트로 숨고와는 무관합니다 </div>
+                                                                <div class="tooltip-info"> 상담사가 자체적으로 운영하는 이벤트로 리바운드와는 무관합니다 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="line-clamp collapsed clamped">
-                                                        <!-- <div class="line-clamp" style="line-height: 1.375; max-height: 2.75rem; -webkit-line-clamp: 2;"><p class="prisma-typography body3:regular primary">✅예약확정 이벤트 (예약 주신 분에 한함)✅
-(리뷰이벤트)☕리뷰 작성해주시면 100% 커피쿠폰 드려요:)
-※별 5개리뷰에 한함
-(예: 너무 친절하게 잘 이용했습니다:)
-😝 채팅창에 작성내역 캡쳐해서 보여주세요:)</p>
-                                                        </div> -->
                                                         <div class="line-clamp">
                                                             <div class="line-clamp" style="line-height: 1.375;"><p class="prisma-typography body3:regular primary">✅예약확정 이벤트 (예약 주신 분에 한함)✅
 (리뷰이벤트)☕리뷰 작성해주시면 100% 커피쿠폰 드려요:)
@@ -139,10 +142,6 @@
 (예: 너무 친절하게 잘 이용했습니다:)
 😝 채팅창에 작성내역 캡쳐해서 보여주세요:)</p>
                                                             </div>
-                                                            <!-- <button type="button" class="btn collapse-toggle btn-none">
-                                                                <span class="prisma-typography body3:regular secondary">더보기</span>
-                                                            </button> -->
-                                                            <!-- 이동 위치(상담사 정보) -->
                                                             <div id="goCounselorInfo"></div>
                                                         </div>
                                                     </div>
@@ -152,41 +151,30 @@
                                     </div>
                                 </div>
                                 <div class="background-block"></div>
+                                <!-- 상담사 정보/리뷰/질문답변 리스트 -->
                                 <ul class="sticky-nav">
                                     <li tab-id="about" class="about active" onclick="location.href='#goCounselorInfo'">
                                         <span>상담사 정보</span>
                                     </li>
-                                    <!-- <li tab-id="reservation" class="reservation">
-                                        <span>예약</span>
-                                    </li>
-                                    <li tab-id="portfolio" class="portfolio">
-                                        <span>포트폴리오</span>
-                                    </li>
-                                    <li tab-id="photos" class="photos">
-                                        <span>사진/동영상</span>
-                                    </li> -->
                                     <li tab-id="reviews" class="reviews" onclick="location.href='#goReviews'">
                                         <span>리뷰 2,904</span>
                                     </li>
                                     <li tab-id="FAQ" class="FAQ" onclick="location.href='#goFAQ'">
                                         <span>질문답변</span>
                                     </li>
-                                    <!-- <li tab-id="community" class="community">
-                                        <span>커뮤니티</span>
-                                    </li> -->
                                 </ul>
-                                <div class="observer-container observer-container">
+                                <!-- 상담사 정보 -->
+                                <div class="observer-container">
                                     <section data-observe="about" id="about">
                                         <div class="profile-provider-info" style="margin-top: 40px;">
                                             <div class="profile-provider-info-title">
-                                                <h2>고수 정보</h2>
+                                                <h2>상담사 정보</h2>
                                             </div>
                                             <ul>
                                                 <li class="active-time"> 연락 가능 시간 : 오전 9시 - 오후 6시 </li>
                                                 <li class="payment">숨고페이, 카드결제, 계좌이체, 현금결제 가능</li>
                                             </ul>
                                         </div>
-                                        <!-- 상담사 소개 -->
                                         <div class="profile-service-desc collapsed" style="margin-top: 60px;">
                                             <h2 data-v-2fb7d1a9="">상담사 소개</h2>
                                             <div class="description"> 상담사 리바운드입니다
@@ -201,8 +189,6 @@
                                                     <!-- 이동 위치(리뷰) -->
                                                     <div id="goReviews"></div>
 
-
-
                                                 <div class="gradient"></div>
                                             </div>
                                         </div>
@@ -212,6 +198,7 @@
                                         <div class="profile-review" id="profile-link" style="margin-top: 60px;">
                                             <h2 class="review-title prisma-typography headline20 primary">리뷰</h2>
                                             <div class="review-wrapper">
+                                                <!-- 리뷰 그래프 -->
                                                 <div class="profile-review-summary">
                                                     <div class="rating prisma-rating large">
                                                         <div class="star-rate">
@@ -255,116 +242,41 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- <button type="button" class="btn btn-none keyword-toggle-button collapsed">
-                                                            <span class="prisma-typography body14:medium secondary">더보기</span>
-                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon secondary">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                                            </svg>
-                                                        </button> -->
                                                     </div>
                                                 </div>
                                                 <div class="profile-review-list-wrapper">
                                                     <div class="profile-review-list">
-                                                        <div class="review-filter review-filter">
-                                                            <div class="content-filter">
-                                                                <div class="sort">
-                                                                    <div class="sort-wrapper">
-                                                                        <div class="dropdown b-dropdown sort-dropdown btn-group" id="__BVID__2117">
-                                                                            <button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-link btn-sm dropdown-toggle-no-caret" id="__BVID__2117__BV_toggle_">
-                                                                                <!-- <span class="prisma-typography body14:medium primary">최신순</span> -->
-                                                                                <!-- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon primary">
-                                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                                                                </svg> -->
-                                                                            </button>
-                                                                            <ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right" aria-labelledby="__BVID__2117__BV_toggle_">
-                                                                                <li role="presentation" class="sort-item">
-                                                                                    <a role="menuitem" href="#" target="_self" class="dropdown-item active">
-                                                                                        <span class="prisma-typography body14:regular primary"> 최신순 </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li role="presentation" class="sort-item">
-                                                                                    <a role="menuitem" href="#" target="_self" class="dropdown-item">
-                                                                                        <span class="prisma-typography body14:regular primary"> 별점 높은 순 </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li role="presentation" class="sort-item">
-                                                                                    <a role="menuitem" href="#" target="_self" class="dropdown-item">
-                                                                                        <span class="prisma-typography body14:regular primary"> 별점 낮은 순 </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- 리뷰 필터 -->
-                                                            <!-- <div class="service-filter-wrapper">
-                                                                <ul class="service-filter">
-                                                                    <li>
-                                                                        <button type="button" class="chip action selected">
-                                                                            <span class="prisma-typography chip white">전체</span>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button type="button" class="chip action">
-                                                                            <span class="prisma-typography chip primary">용달/화물 운송</span>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button type="button" class="chip action">
-                                                                            <span class="prisma-typography chip primary">무진동차량/냉동차량/냉장차량</span>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button type="button" class="chip action">
-                                                                            <span class="prisma-typography chip primary">소형물건 배달 심부름</span>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button type="button" class="chip action">
-                                                                            <span class="prisma-typography chip primary">원룸/소형 이사</span>
-                                                                        </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div> -->
-                                                        </div>
+                                                        <div class="review-filter review-filter"></div>
+                                                        <!-- 사용자 리뷰 -->
                                                         <ul class="review-list">
                                                             <li id="6889bd61502be181944d6154" class="review-item">
                                                                 <article class="profile-review-item">
                                                                     <section class="review-header-wrapper">
                                                                         <div class="review-header">
                                                                             <div class="review-user">
+                                                                                <!-- 유저 프로필 이미지 -->
                                                                                 <div class="user-avatar">
                                                                                     <div class="user-profile-picture">
                                                                                         <div data-name="image" data-src="https://static.cdn.soomgo.com/upload/profile/7a3717b2-8470-4614-aa74-ac43309a2b55.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/7a3717b2-8470-4614-aa74-ac43309a2b55.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
                                                                                     </div>
                                                                                 </div>
+                                                                                <!-- 유저 닉네임/작성 시간 -->
                                                                                 <div class="user-info">
                                                                                     <div class="user-name">
                                                                                         <span class="prisma-typography body14:semibold primary">여**</span>
-                                                                                        <div class="badge event">
-                                                                                            <span class="prisma-typography body12:medium blue">숨고페이 거래 인증</span>
-                                                                                        </div>
                                                                                     </div>
                                                                                     <time class="prisma-typography body12:regular secondary">1시간 전</time>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- <div class="item-control-box">
-                                                                                <button type="button" class="btn btn-more">
-                                                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
-                                                                                        <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
-                                                                                        <path d="M12 10.25C12.9665 10.25 13.75 11.0335 13.75 12C13.75 12.9665 12.9665 13.75 12 13.75C11.0335 13.75 10.25 12.9665 10.25 12C10.25 11.0335 11.0335 10.25 12 10.25Z" fill="black"></path>
-                                                                                        <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
-                                                                                    </svg>
-                                                                                </button>
-                                                                            </div> -->
                                                                         </div>
                                                                     </section>
                                                                     <section class="review-content">
                                                                         <div class="review-content-item">
                                                                             <div class="service-info-wrapper">
                                                                                 <div class="service-info">
+                                                                                    <!-- 받은 서비스 종류 -->
                                                                                     <span class="prisma-typography body16:semibold primary">용달/화물 운송</span>
+                                                                                    <!-- 별점 -->
                                                                                     <div class="prisma-rating small">
                                                                                         <div class="star-rate">
                                                                                             <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='variants=full'%3e%3cpath%20id='vector'%20d='M11.4463%202.46771C10.8425%201.28854%209.15728%201.28855%208.5535%202.46771L6.6302%206.22383L2.39751%206.81664C1.0461%207.00591%200.515692%208.67586%201.51022%209.61024L4.53361%2012.4508L3.81285%2016.5011C3.57804%2017.8207%204.95167%2018.8412%206.14722%2018.2354L9.99991%2016.2831L13.8526%2018.2354C15.0481%2018.8412%2016.4218%2017.8207%2016.187%2016.5011L15.4662%2012.4507L18.4896%209.61024C19.4841%208.67587%2018.9537%207.00591%2017.6023%206.81664L13.3696%206.22383L11.4463%202.46771Z'%20fill='%23FFC300'/%3e%3c/g%3e%3c/svg%3e" alt="별점">
@@ -373,9 +285,11 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            <!-- 리뷰 내용 -->
                                                                             <div class="review-content-wrapper">
                                                                                 <span class="prisma-typography body14:regular primary review-content">배당되어 오신기사님이 너무친절하고 좋으셨어요  알아서척척 해주시고 담에또 이용할일있으면 여기로하겠습니다</span>
                                                                             </div>
+                                                                            <!-- 선택 키워드 -->
                                                                             <ul class="review-keyword">
                                                                                 <li>
                                                                                     <div class="badge informative">
@@ -409,15 +323,6 @@
                                                                                         <span class="prisma-typography body14:semibold primary">리바운드 상담사</span>
                                                                                         <span class="prisma-typography body14:regular secondary">57분 전</span>
                                                                                     </div>
-                                                                                    <!-- <div class="item-control-box">
-                                                                                        <button type="button" class="btn btn-more">
-                                                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
-                                                                                                <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
-                                                                                                <path d="M12 10.25C12.9665 10.25 13.75 11.0335 13.75 12C13.75 12.9665 12.9665 13.75 12 13.75C11.0335 13.75 10.25 12.9665 10.25 12C10.25 11.0335 11.0335 10.25 12 10.25Z" fill="black"></path>
-                                                                                                <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
-                                                                                            </svg>
-                                                                                        </button>
-                                                                                    </div> -->
                                                                                 </div>
                                                                                 <span class="prisma-typography body14:regular primary">⭐강트럭입니다⭐ 이용해 주셔서 감사합니다 좀 더 노력하는 강트럭이 되겠습니다</span>
                                                                             </article>
@@ -430,11 +335,13 @@
                                                                     <section class="review-header-wrapper">
                                                                         <div class="review-header">
                                                                             <div class="review-user">
+                                                                                <!-- 유저 프로필 이미지 -->
                                                                                 <div class="user-avatar">
                                                                                     <div class="user-profile-picture">
                                                                                         <div data-name="image" class="" data-src="https://static.cdn.soomgo.com/upload/profile/d7d12c13-5659-4613-9ef6-030c053646f2.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/d7d12c13-5659-4613-9ef6-030c053646f2.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
                                                                                     </div>
                                                                                 </div>
+                                                                                <!-- 유저 닉네임/작성 시간 -->
                                                                                 <div class="user-info">
                                                                                     <div class="user-name">
                                                                                         <span class="prisma-typography body14:semibold primary">정**</span>
@@ -442,33 +349,28 @@
                                                                                     <time class="prisma-typography body12:regular secondary">3시간 전</time>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- <div class="item-control-box">
-                                                                                <button type="button" class="btn btn-more">
-                                                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
-                                                                                        <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
-                                                                                        <path d="M12 10.25C12.9665 10.25 13.75 11.0335 13.75 12C13.75 12.9665 12.9665 13.75 12 13.75C11.0335 13.75 10.25 12.9665 10.25 12C10.25 11.0335 11.0335 10.25 12 10.25Z" fill="black"></path>
-                                                                                        <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
-                                                                                    </svg>
-                                                                                </button>
-                                                                            </div> -->
                                                                         </div>
                                                                     </section>
                                                                     <section class="review-content">
                                                                         <div class="review-content-item">
                                                                             <div class="service-info-wrapper">
                                                                                 <div class="service-info">
+                                                                                    <!-- 받은 서비스 종류 -->
                                                                                     <span class="prisma-typography body16:semibold primary">용달/화물 운송</span>
                                                                                     <div class="prisma-rating small">
                                                                                         <div class="star-rate">
                                                                                             <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='variants=full'%3e%3cpath%20id='vector'%20d='M11.4463%202.46771C10.8425%201.28854%209.15728%201.28855%208.5535%202.46771L6.6302%206.22383L2.39751%206.81664C1.0461%207.00591%200.515692%208.67586%201.51022%209.61024L4.53361%2012.4508L3.81285%2016.5011C3.57804%2017.8207%204.95167%2018.8412%206.14722%2018.2354L9.99991%2016.2831L13.8526%2018.2354C15.0481%2018.8412%2016.4218%2017.8207%2016.187%2016.5011L15.4662%2012.4507L18.4896%209.61024C19.4841%208.67587%2018.9537%207.00591%2017.6023%206.81664L13.3696%206.22383L11.4463%202.46771Z'%20fill='%23FFC300'/%3e%3c/g%3e%3c/svg%3e" alt="별점">
                                                                                         </div>
+                                                                                        <!-- 별점 -->
                                                                                         <span class="prisma-typography body16:semibold primary">5.0</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            <!-- 리뷰 내용 -->
                                                                             <div class="review-content-wrapper">
                                                                                 <span class="prisma-typography body14:regular primary review-content">너무 친절하게 작업해주세요!!!</span>
                                                                             </div>
+                                                                            <!-- 선택 키워드 -->
                                                                             <ul class="review-keyword">
                                                                                 <li>
                                                                                     <div class="badge informative">
@@ -488,6 +390,7 @@
                                                                             </ul>
                                                                         </div>
                                                                     </section>
+                                                                    <!-- 리뷰 답변 -->
                                                                     <section class="review-comment">
                                                                         <div>
                                                                             <article class="review-comment-item">
@@ -496,15 +399,6 @@
                                                                                         <span class="prisma-typography body14:semibold primary">리바운드 상담사</span>
                                                                                         <span class="prisma-typography body14:regular secondary">2시간 전</span>
                                                                                     </div>
-                                                                                    <!-- <div class="item-control-box">
-                                                                                        <button type="button" class="btn btn-more">
-                                                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
-                                                                                                <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
-                                                                                                <path d="M12 10.25C12.9665 10.25 13.75 11.0335 13.75 12C13.75 12.9665 12.9665 13.75 12 13.75C11.0335 13.75 10.25 12.9665 10.25 12C10.25 11.0335 11.0335 10.25 12 10.25Z" fill="black"></path>
-                                                                                                <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
-                                                                                            </svg>
-                                                                                        </button>
-                                                                                    </div> -->
                                                                                 </div>
                                                                                 <span class="prisma-typography body14:regular primary">⭐강트럭입니다⭐ 이용해 주셔서 감사합니다 좀 더 노력하는 강트럭이 되겠습니다</span>
                                                                             </article>
@@ -517,11 +411,13 @@
                                                                     <section class="review-header-wrapper">
                                                                         <div class="review-header">
                                                                             <div class="review-user">
+                                                                                <!-- 유저 프로필 이미지 -->
                                                                                 <div class="user-avatar">
                                                                                     <div class="user-profile-picture">
                                                                                         <div data-name="image" class="" data-src="https://static.cdn.soomgo.com/upload/profile/19f7b85c-034c-411c-ba19-28a2deb68342.jpg?h=320&amp;w=320&amp;webp=1" lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/profile/19f7b85c-034c-411c-ba19-28a2deb68342.jpg?h=320&amp;w=320&amp;webp=1&quot;);"></div>
                                                                                     </div>
                                                                                 </div>
+                                                                                <!-- 유저 닉네임/작성 시간 -->
                                                                                 <div class="user-info">
                                                                                     <div class="user-name">
                                                                                         <span class="prisma-typography body14:semibold primary">강**</span>
@@ -529,34 +425,29 @@
                                                                                     <time class="prisma-typography body12:regular secondary">1일 전</time>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- <div class="item-control-box">
-                                                                                <button type="button" class="btn btn-more">
-                                                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
-                                                                                        <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
-                                                                                        <path d="M12 10.25C12.9665 10.25 13.75 11.0335 13.75 12C13.75 12.9665 12.9665 13.75 12 13.75C11.0335 13.75 10.25 12.9665 10.25 12C10.25 11.0335 11.0335 10.25 12 10.25Z" fill="black"></path>
-                                                                                        <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
-                                                                                    </svg>
-                                                                                </button>
-                                                                            </div> -->
                                                                         </div>
                                                                     </section>
                                                                     <section class="review-content">
                                                                         <div class="review-content-item">
                                                                             <div class="service-info-wrapper">
                                                                                 <div class="service-info">
+                                                                                    <!-- 받은 서비스 종류 -->
                                                                                     <span class="prisma-typography body16:semibold primary">용달/화물 운송</span>
                                                                                     <div class="prisma-rating small">
                                                                                         <div class="star-rate">
                                                                                             <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='variants=full'%3e%3cpath%20id='vector'%20d='M11.4463%202.46771C10.8425%201.28854%209.15728%201.28855%208.5535%202.46771L6.6302%206.22383L2.39751%206.81664C1.0461%207.00591%200.515692%208.67586%201.51022%209.61024L4.53361%2012.4508L3.81285%2016.5011C3.57804%2017.8207%204.95167%2018.8412%206.14722%2018.2354L9.99991%2016.2831L13.8526%2018.2354C15.0481%2018.8412%2016.4218%2017.8207%2016.187%2016.5011L15.4662%2012.4507L18.4896%209.61024C19.4841%208.67587%2018.9537%207.00591%2017.6023%206.81664L13.3696%206.22383L11.4463%202.46771Z'%20fill='%23FFC300'/%3e%3c/g%3e%3c/svg%3e" alt="별점">
                                                                                         </div>
+                                                                                        <!-- 별점 -->
                                                                                         <span class="prisma-typography body16:semibold primary">5.0</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            <!-- 리뷰 내용 -->
                                                                             <div class="review-content-wrapper">
                                                                                 <span class="prisma-typography body14:regular primary review-content">잘 해 주시고 추가 요구도 잘 들어주셨어요
 감사합니다</span>
                                                                             </div>
+                                                                            <!-- 선택 키워드 -->
                                                                             <ul class="review-keyword">
                                                                                 <li>
                                                                                     <div class="badge informative">
@@ -586,6 +477,7 @@
                                                                             </ul>
                                                                         </div>
                                                                     </section>
+                                                                    <!-- 리뷰 답변 -->
                                                                     <section class="review-comment">
                                                                         <div>
                                                                             <article class="review-comment-item">
@@ -594,15 +486,6 @@
                                                                                         <span class="prisma-typography body14:semibold primary">리바운드 상담사</span>
                                                                                         <span class="prisma-typography body14:regular secondary">2시간 전</span>
                                                                                     </div>
-                                                                                    <!-- <div class="item-control-box">
-                                                                                        <button type="button" class="btn btn-more">
-                                                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon tertiary">
-                                                                                                <path d="M4.75 10.25C5.7165 10.25 6.5 11.0335 6.5 12C6.5 12.9665 5.7165 13.75 4.75 13.75C3.7835 13.75 3 12.9665 3 12C3 11.0335 3.7835 10.25 4.75 10.25Z" fill="black"></path>
-                                                                                                <path d="M12 10.25C12.9665 10.25 13.75 11.0335 13.75 12C13.75 12.9665 12.9665 13.75 12 13.75C11.0335 13.75 10.25 12.9665 10.25 12C10.25 11.0335 11.0335 10.25 12 10.25Z" fill="black"></path>
-                                                                                                <path d="M21 12C21 11.0335 20.2165 10.25 19.25 10.25C18.2835 10.25 17.5 11.0335 17.5 12C17.5 12.9665 18.2835 13.75 19.25 13.75C20.2165 13.75 21 12.9665 21 12Z" fill="black"></path>
-                                                                                            </svg>
-                                                                                        </button>
-                                                                                    </div> -->
                                                                                 </div>
                                                                                 <span class="prisma-typography body14:regular primary">⭐강트럭입니다⭐ 이용해 주셔서 감사합니다 좀 더 노력하는 강트럭이 되겠습니다</span>
                                                                                 <!-- 이동 위치(질문답변) -->
@@ -614,13 +497,6 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <!-- 리뷰 더보기 -->
-                                                    <!-- <button type="button" class="btn more-button btn-none">
-                                                        <span class="prisma-typography body14:regular secondary">리뷰 더보기</span>
-                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="prisma-icon secondary">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0791 17.3C12.278 17.2991 12.4684 17.2191 12.6084 17.0778L20.3326 9.27778C20.6241 8.98346 20.6218 8.5086 20.3274 8.21714C20.0331 7.92568 19.5583 7.92799 19.2668 8.22231L12.0703 15.4894L4.72747 8.21716C4.43316 7.92569 3.95829 7.92799 3.66682 8.22229C3.37535 8.5166 3.37764 8.99146 3.67195 9.28294L11.5477 17.0829C11.6891 17.2229 11.8802 17.301 12.0791 17.3Z" fill="black"></path>
-                                                        </svg>
-                                                    </button> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -634,15 +510,12 @@
                                                     <div class="question">Q. 서비스가 시작되기 전 어떤 절차로 진행하나요?</div>
                                                     <div class="answer">
                                                         <div class="collapsed-text-line collapsed">
-                                                            <div class="wrapper" style="height: 96px;">
-                                                                <p>🤩먼저 고객 님이 원하시는 서비스가 어떤 서비스 인지를 채팅을 통해 말씀해 주세요<br><br>🤩보내드린 견적이 만족스러우시면 추가 적으로 원하시는 서비스가 있는지 말씀 주세요<br><br>🤩고객님이 예약 주신 시간 날짜에 맞춰서 고수가 추천 드린 기사 님이  들어가실꺼에요</p>
+                                                            <div class="wrapper">
+                                                                <p>먼저 고객 님이 원하시는 서비스가 어떤 서비스 인지를 채팅을 통해 말씀해 주세요
+                                                                    <br>보내드린 견적이 만족스러우시면 추가 적으로 원하시는 서비스가 있는지 말씀 주세요
+                                                                    <br>고객님이 예약 주신 시간 날짜에 맞춰서 고수가 추천 드린 기사 님이  들어가실꺼에요
+                                                                </p>
                                                             </div>
-                                                            <!-- <div class="collapse-button">
-                                                                <div class="view-more-button">
-                                                                    <span role="button">더보기</span>
-                                                                    <span role="button" style="display: none;">접기</span>
-                                                                </div>
-                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </li>
@@ -651,9 +524,11 @@
                                                     <div class="answer">
                                                         <div class="collapsed-text-line">
                                                             <div class="wrapper">
-                                                                <p>🤩화물 용달,화물 운송을 전문적으로 하고 있습니다<br><br>🤩원룸 이사,전문적인 화물 건을 쉽고 빠르게 처리해 드리고 있습니다<br></p>
+                                                                <p>화물 용달,화물 운송을 전문적으로 하고 있습니다
+                                                                    <br>원룸 이사,전문적인 화물 건을 쉽고 빠르게 처리해 드리고 있습니다
+                                                                    <br>
+                                                                </p>
                                                             </div>
-                                                            <div class="collapse-button" style="display: none;"></div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -661,26 +536,13 @@
                                                     <div class="question">Q. 서비스의 견적은 어떤 방식으로 산정 되나요?</div>
                                                     <div class="answer">
                                                         <div class="collapsed-text-line collapsed">
-                                                            <div class="wrapper" style="height: 96px;">
-                                                                <p>🤩거리당 금액<br><br>🤩기사님의 수작업 유무<br><br>🤩엘베 유무<br><br>🤩같이 도와주실분이 계신지의 유무<br><br>이렇게 예상 견적을 유추해서 견적서를 보내드립니다👍</p>
-                                                            </div>
-                                                            <!-- <div class="collapse-button">
-                                                                <div class="view-more-button">
-                                                                    <span role="button">더보기</span>
-                                                                    <span role="button" style="display: none;">접기</span>
-                                                                </div>
-                                                            </div> -->
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li style="display: none;">
-                                                    <div class="question">Q. 완료한 서비스 중 대표적인 서비스는 무엇인가요? 소요 시간은 얼마나 소요 되었나요?</div>
-                                                    <div class="answer">
-                                                        <div class="collapsed-text-line">
                                                             <div class="wrapper">
-                                                                <p></p>
+                                                                <p>거리당 금액
+                                                                    <br>기사님의 수작업 유무
+                                                                    <br>엘베 유무
+                                                                    <br>이렇게 예상 견적을 유추해서 견적서를 보내드립니다
+                                                                </p>
                                                             </div>
-                                                            <div class="collapse-button" style="display: none;"></div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -689,9 +551,10 @@
                                                     <div class="answer">
                                                         <div class="collapsed-text-line">
                                                             <div class="wrapper">
-                                                                <p>🤩기본적인 운송 중 파손 손상의 대해서는 화물 보험 현금 지원 A/S 비용 등<br><br>🤩고객 님이 만족하시는 사후 처리를 약속드립니다👍</p>
+                                                                <p>기본적인 운송 중 파손 손상의 대해서는 화물 보험 현금 지원 A/S 비용 등
+                                                                    <br>고객 님이 만족하시는 사후 처리를 약속드립니다
+                                                                </p>
                                                             </div>
-                                                            <div class="collapse-button" style="display: none;"></div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -703,21 +566,13 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 오른쪽 컨트롤러 -->
+                        <!-- 우측 컨트롤러 -->
                         <div class="aside-section col">
                             <aside class="user-profile-aside">
                                 <div class="target-request-banner">
                                     <p>리바운드 상담사에게 원하는 상담을 신청해보세요</p>
                                 </div>
                                 <div class="btn-wrapper">
-                                    <!-- <button type="button" class="prisma-btn secondary large icon-primary reservation">
-                                        <span class="btn-container">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-icon prisma-icon primary">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 3.75C8.5 3.33579 8.16421 3 7.75 3C7.33579 3 7 3.33579 7 3.75V5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H17.5V3.75C17.5 3.33579 17.1642 3 16.75 3C16.3358 3 16 3.33579 16 3.75V5H8.5V3.75ZM4.5 12H19.5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V12Z" fill="black"></path>
-                                            </svg>
-                                            <span class="prisma-typography body16:semibold primary non-transition"> 예약하기 </span>
-                                        </span>
-                                    </button> -->
                                     <button type="button" class="btn btn-primary reservation">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-icon prisma-icon primary">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 3.75C8.5 3.33579 8.16421 3 7.75 3C7.33579 3 7 3.33579 7 3.75V5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H17.5V3.75C17.5 3.33579 17.1642 3 16.75 3C16.3358 3 16 3.33579 16 3.75V5H8.5V3.75ZM4.5 12H19.5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V12Z" fill="black"></path>
