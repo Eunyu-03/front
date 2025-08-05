@@ -76,6 +76,7 @@ ol, ul {
     list-style: none;
 }
 
+/* 상단 */
 .main-container {
     position: relative;
     max-width: calc(1002px);
@@ -89,11 +90,11 @@ main {
     width: 100%;
 }
 
-.css-1yado2t {
+.container-div {
     margin-bottom: 80px;
 }
 
-.css-19g0uya {
+.good-words-header {
     margin: 48px 0px 24px;
     font-size: 34px;
     font-weight: 500;
@@ -101,23 +102,23 @@ main {
     line-height: normal;
 }
 
-.css-13fcep1 {
+.good-words {
     display: flex;
     gap: 85px;
 }
 
-.css-ufwl35 {
+.good-words-top {
     width: 600px;
     margin: auto;
 }
 
-.css-16j9ykz {
+.top-h2 {
     position: relative;
     margin-bottom: 48px;
     font-size: 20px;
 }
 
-.css-16j9ykz::after {
+.top-h2::after {
     content: "*필수";
     position: absolute;
     top: calc(50% - 9px);
@@ -127,33 +128,34 @@ main {
     font-weight: 400;
 }
 
-.css-s3ljgk {
+.good-words-body {
     padding-top: 48px;
     border-top: 1px solid rgb(239, 241, 245);
 }
 
-.css-1gwf777 {
+/* 본문 머리글 */
+.body-header {
     margin-bottom: 48px;
 }
 
-.css-15lzlob::placeholder {
+.body-content-text::placeholder {
     color: #afb4be;
 }
 
-.css-1oxufv8::after {
+.body-header-legend::after {
     content: "*";
     margin-left: 2px;
     color: rgb(234, 22, 35);
 }
 
-.css-1oxufv8 {
+.body-header-legend {
     margin-bottom: 8px;
     width: 100%;
     font-size: 16px;
     font-weight: 500;
 }
 
-.css-136tctf {
+.body-header-input {
     padding: 12px;
     width: 100%;
     border: 1px solid rgb(224, 229, 235);
@@ -162,11 +164,11 @@ main {
     font-size: 16px;
 }
 
-.css-136tctf::placeholder {
+.body-header-input::placeholder {
     color: #afb4be; 
 }
 
-.css-9yo8e6 {
+.input-text-number {
     display: flex;
     -webkit-box-pack: end;
     justify-content: flex-end;
@@ -174,20 +176,21 @@ main {
     font-size: 12px;
 }
 
-.css-5sb3ar {
+.text-number01 {
     color: rgb(170, 180, 191);
     font-size: 12px;
 }
 
-.css-esleyu {
+.text-number02 {
     color: rgb(170, 180, 191);
 }
 
-.css-ngfpwr {
+/* 본문 내용 */
+.body-content {
     margin-bottom: 32px;
 }
 
-.css-15lzlob {
+.body-content-text {
     padding: 12px;
     width: 100%;
     border: 1px solid rgb(224, 229, 235);
@@ -198,7 +201,7 @@ main {
     outline: none;
 }
 
-.css-9yo8e6 {
+.input-text-number {
     display: flex;
     -webkit-box-pack: end;
     justify-content: flex-end;
@@ -206,19 +209,29 @@ main {
     font-size: 12px;
 }
 
-.css-5oqau4 {
+.input-text-number:has(:nth-of-type(2)) {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.input-text-check {
+    color: rgb(234, 22, 35);
+}
+
+/* 확인 내용 */
+.check-box {
     padding: 32px 20px;
     background-color: rgb(246, 247, 249);
     border-radius: 8px;
 }
 
-.css-1l0infp {
+.check-box-name {
     margin-bottom: 16px;
     font-size: 16px;
     font-weight: 700;
 }
 
-.css-1al63li {
+.check-box-ul {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -228,12 +241,12 @@ main {
     line-height: 1.5;
 }
 
-.css-1al63li li {
+.check-box-ul li {
     position: relative;
     padding-left: 12px;
 }
 
-.css-1al63li li::before {
+.check-box-ul li::before {
     content: "";
     position: absolute;
     top: 8px;
@@ -244,7 +257,8 @@ main {
     background-color: rgb(106, 118, 133);
 }
 
-.css-1uv9qgl {
+/* 작성 완료 버튼 */
+.complete-button {
     display: flex;
     -webkit-box-pack: end;
     justify-content: flex-end;
@@ -253,18 +267,18 @@ main {
     width: 100%;
 }
 
-.css-1musnfu:disabled {
+.complete:disabled {
     border: none;
     background-color: rgb(170, 180, 191);
 }
 
-.css-1musnfu:disabled, .css-1musnfu[disabled] {
+.complete:disabled, .complete[disabled] {
     background-color: rgb(170, 180, 191);
     border-color: rgb(170, 180, 191);
     cursor: not-allowed;
 }
 
-.css-1musnfu {
+.complete {
     display: inline-block;
     font-weight: 500;
     text-align: center;
