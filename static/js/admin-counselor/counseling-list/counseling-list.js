@@ -164,25 +164,84 @@ document.addEventListener("click", (e) => {
 });
 
 // 상담상태선택 이벤트
-const popCheckBox = document.querySelector(".rebound-pop-checkbox");
+const btnFilterStatus = document.getElementById("btn-filter-status");
 const btPopMenuBack = document.querySelector(".bt-pop-menu-back");
 const btPopMenuContext = document.querySelector(".bt-pop-menu-context");
-const reboundCheckBoxes = document.querySelectorAll(".rebound-check-box");
 const selectAllBtn = document.getElementById("btn-select-all");
-const deselectAllBtn = document.getElementById("btn-deselect-all");
+const deselectAllIcon = document.getElementById("btn-deselect-all");
+const confirmBtn = btPopMenuContext.querySelector("button.btn-outline-primary");
+const reboundChecks = document.querySelectorAll(".rebound-check");
+const reboundCheckBoxes = document.querySelectorAll(".rebound-check-box");
 
-popCheckBox.addEventListener("click", () => {
+// 팝업 열기/닫기
+btnFilterStatus.addEventListener("click", (e) => {
+    e.stopPropagation();
+    // 이벤트 버블링 방지, 다른 곳의 클릭 이벤트로 닫히지 않도록 함
     btPopMenuBack.classList.toggle("show");
     btPopMenuContext.classList.toggle("show");
 });
 
+// 배경 클릭 시 닫기
 btPopMenuBack.addEventListener("click", () => {
     btPopMenuBack.classList.remove("show");
     btPopMenuContext.classList.remove("show");
 });
 
+// 팝업 내부 클릭 시 닫힘 방지
 btPopMenuContext.addEventListener("click", (e) => {
     e.stopPropagation();
+    // 내부 클릭은 배경 클릭 이벤트로 전파되지 않게 막음
+});
+
+// 확인 버튼 클릭 시 닫기
+confirmBtn.addEventListener("click", () => {
+    btPopMenuBack.classList.remove("show");
+    btPopMenuContext.classList.remove("show");
+});
+
+// 전체선택
+selectAllBtn.addEventListener("click", () => {
+    reboundCheckBoxes.forEach((box) => {
+        const check = box.closest(".rebound-check");
+        const item = box.closest(".list-item");
+        const icon = box.querySelector(".mdi-check");
+
+        check.classList.add("checked");
+        box.classList.add("checked");
+        item.classList.add("active");
+        icon.style.display = "inline-block";
+    });
+});
+
+// 선택취소
+deselectAllIcon.closest("button").addEventListener("click", () => {
+    reboundCheckBoxes.forEach((box) => {
+        const check = box.closest(".rebound-check");
+        const item = box.closest(".list-item");
+        const icon = box.querySelector(".mdi-check");
+
+        check.classList.remove("checked");
+        box.classList.remove("checked");
+        item.classList.remove("active");
+        icon.style.display = "none";
+    });
+});
+
+// 개별 항목 클릭 시 토글 + 전체선택 상태 해제
+reboundChecks.forEach((check) => {
+    check.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const box = check.querySelector(".rebound-check-box");
+        const icon = box.querySelector(".mdi-check");
+        const item = check.closest(".list-item");
+
+        const nowChecked = box.classList.toggle("checked");
+
+        check.classList.toggle("checked");
+        item.classList.toggle("active");
+        icon.style.display = nowChecked ? "inline-block" : "none";
+    });
 });
 
 // 페이지 번호 클릭 이벤트
