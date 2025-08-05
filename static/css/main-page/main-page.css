@@ -1164,6 +1164,10 @@ body .main-portfolio .header .title {
     margin: 0 -.5rem;
 }
 
+div.displaynone {
+    display: none !important;
+}
+
 .slick-disabled {
     pointer-events: none;
     cursor: default;
