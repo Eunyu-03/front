@@ -31,13 +31,9 @@ main {
     unicode-bidi: isolate;
 }
 .main{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(246, 247, 249);
 }
-@media (min-width: 768px) {
-    .main {
-        background-color: rgb(246, 247, 249);
-    }
-}
+
 
 .main-1{
     position: relative;
@@ -53,42 +49,29 @@ main {
     gap: 40px;
     -webkit-box-align: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-@media (min-width: 768px) {
-    .main-2 {
-        gap: 40px;
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-}
+
 
 
 .main-3{
     color: rgb(41, 51, 65);
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 500;
-    align-self: flex-start;
+    align-self: center;
 }
-@media (min-width: 768px) {
-    .main-3{
-        align-self: center;
-        font-size: 34px;
-    }
-}
+
 .main-4{
     width: 100%;
     background: rgb(255, 255, 255);
     padding-bottom: 80px;
+    padding: 40px;
+    border: 1px solid rgb(239, 241, 245);
+    border-radius: 8px;
 }
-@media (min-width: 768px) {
-    .main-4 {
-        padding: 40px;
-        border-radius: 8px;
-        border: 1px solid rgb(239, 241, 245);
-    }
-}
+
 
 .main-6{
     display: inline-block;

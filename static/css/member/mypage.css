@@ -123,12 +123,7 @@ html, body, #__next {
 }
 .log-10{
     position: relative;
-    display: none;
-}
-@media (min-width: 768px) {
-    .log-10 {
-        display: block;
-    }
+    display: block;
 }
 .log-11{
     font-weight: 500;
@@ -164,15 +159,13 @@ html, body, #__next {
     max-width: 32px;
     max-height: 32px;
 }
-@media (min-width: 768px) {
-    .logo-13 > ul {
-        display: flex
+
+.logo-13 > ul {
+    display: flex
 ;
-        /* -webkit-box-align: center; */
-        /* align-items: center; */
-        gap: 16px;
-    }
+    gap: 16px;
 }
+
 .main{
     position: relative;
     max-width: calc(632px);
