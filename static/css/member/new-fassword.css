@@ -69,13 +69,8 @@ main {
 }
 .main-2{
     margin: 48px 0px;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 500;
-}
-@media (min-width: 768px) {
-    .main-2 {
-        font-size: 34px;
-    }
 }
 .main-4{
     display: flex
@@ -155,15 +150,9 @@ main {
     padding: 11px 12px;
     font-size: 16px;
     border-radius: 4px;
-    width: initial;
-    flex: 1 1 0%;
+    flex: 0 0 auto;
+    width: 142px;
     border: 1px solid rgb(224, 229, 235);
-}
-@media (min-width: 768px) {
-    .main-9 {
-        flex: 0 0 auto;
-        width: 142px;
-    }
 }
 .main-10{
     display: inline-block;
@@ -182,14 +171,8 @@ main {
     padding: 11px 12px;
     font-size: 16px;
     border-radius: 4px;
-    width: initial;
-    flex: 1 1 0%;
-}
-@media (min-width: 768px) {
-    .main-10 {
-        flex: 0 0 auto;
-        width: 142px;
-    }
+    width: 142px;
+    flex: 0 0 auto;
 }
 .log-1{
     display: flex
@@ -275,12 +258,7 @@ main {
 }
 .log-10{
     position: relative;
-    display: none;
-}
-@media (min-width: 768px) {
-    .log-10 {
-        display: block;
-    }
+    display: block;
 }
 .log-11{
     font-weight: 500;
@@ -316,12 +294,9 @@ main {
     max-width: 32px;
     max-height: 32px;
 }
-@media (min-width: 768px) {
-    .logo-13 > ul {
-        display: flex
+
+.logo-13 > ul {
+    display: flex
 ;
-        /* -webkit-box-align: center; */
-        /* align-items: center; */
-        gap: 16px;
-    }
+    gap: 16px;
 }
