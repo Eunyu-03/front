@@ -74,42 +74,32 @@ tooltipButton.addEventListener("click", (e) => {
     }
 });
 
-// 예약/쿠폰 클릭 이벤트
-const chipActionLi01 = document.querySelector("ul.chip-filter-list li.li01");
-const chipActionLi02 = document.querySelector("ul.chip-filter-list li.li02");
+// 지역
+const locations = document.querySelectorAll(
+    "div.main-pro-locations li.location-item>button"
+);
 
-const chipActionButton01 = document.querySelector("li.li01 button");
-const chipActionButton02 = document.querySelector("li.li02 button");
-const chipActionSpan01 = document.querySelector("li.li01 span");
-const chipActionSpan02 = document.querySelector("li.li02 span");
-const chipActionPath01 = document.querySelector("li.li01 path");
-const chipActionPath02 = document.querySelector("li.li02 path");
-let chipCount = 1;
-
-chipActionLi01.addEventListener("click", (e) => {
-    chipCount++;
-    if (chipCount % 2 === 0) {
-        chipActionButton01.style.backgroundColor = "#000";
-        chipActionPath01.style.fill = "#fff";
-        chipActionSpan01.style.color = "#fff";
-    } else {
-        chipActionButton01.style.backgroundColor = "#fff";
-        chipActionPath01.style.fill = "#000";
-        chipActionSpan01.style.color = "#000";
-    }
+locations.forEach((location, i) => {
+    location.addEventListener("click", (e) => {
+        if (locations[i].classList.contains("active")) {
+            locations[i].classList.remove("active");
+        } else {
+            locations[i].classList.add("active");
+        }
+    });
 });
 
-chipActionLi02.addEventListener("click", (e) => {
-    chipCount++;
-    if (chipCount % 2 === 0) {
-        chipActionButton02.style.backgroundColor = "#000";
-        chipActionPath02.style.fill = "#fff";
-        chipActionSpan02.style.color = "#fff";
-    } else {
-        chipActionButton02.style.backgroundColor = "#fff";
-        chipActionPath02.style.fill = "#000";
-        chipActionSpan02.style.color = "#000";
-    }
+// 예약/쿠폰 클릭 이벤트
+const chipActive = document.querySelectorAll("li.chip-filter-item button");
+
+chipActive.forEach((chip, i) => {
+    chip.addEventListener("click", (e) => {
+        if (chipActive[i].classList.contains("active")) {
+            chipActive[i].classList.remove("active");
+        } else {
+            chipActive[i].classList.add("active");
+        }
+    });
 });
 
 // 위로 가기 버튼 나타나기/숨기기
