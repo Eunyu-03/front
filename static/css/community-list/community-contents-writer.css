@@ -1299,24 +1299,24 @@ textarea {
     color: #aab4bf;
 }
 
-/* 추천받은 멘토 */
-.post-comment-wrapper .comment-information .user-info .send-request-button {
+/* 이 댓글 추천하기 */
+/* .post-comment-wrapper .comment-information .user-info .send-request-button {
     padding: .3125rem .5rem;
     margin-left: 2.25rem;
     color: #693bf2;
     background-color: #e3deff;
     border: 0;
     border-radius: 6px;
-}
+} */
 
-/* .post-comment-wrapper .comment-information .user-info .send-request-button {
+.post-comment-wrapper .comment-information .user-info .send-request-button {
     padding: .3125rem .5rem;
     margin-left: 2.25rem;
     color: #a69fb9;
     background-color: #ffffff;
     border: 0.5px solid #e7e6eb;
     border-radius: 6px;
-} */
+}
 
 .prisma-typography.body12\:medium {
     font-size: .75rem !important;

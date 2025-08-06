@@ -155,6 +155,7 @@ img {
 
 button {
     border-radius: 0;
+    border-style: none;
 }
 
 @media (min-width: 992px) {
@@ -487,6 +488,76 @@ ul.dropdown-menu-right {
     border: none;
 }
 
+/* 지역 */
+.main-pro-locations {
+    display: flex;
+    justify-content: space-between;
+}
+
+body .main-pro-locations .location-list {
+    width: 40.625rem;
+    padding: 0;
+}
+
+.main-pro-locations .location-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .75rem;
+    margin-bottom: 30px;
+}
+
+body .main-pro-locations .location-item {
+    width: unset;
+    padding: 0 0.84rem 1rem 0;
+}
+
+.main-pro-locations .location-item {
+    width: 20%;
+    padding: .25rem;
+}
+
+body .main-pro-locations .location-item>button {
+    width: 3.625rem;
+    padding: 0;
+}
+
+body .main-pro-locations .location-item>button.active {
+    width: 3.625rem;
+    padding: 0;
+}
+
+.main-pro-locations .location-item>button {
+    display: block;
+    width: 100%;
+    /* height: 2.25rem; */
+    font-size: .875rem;
+    line-height: 2.25rem;
+    color: #693bf2;
+    text-align: center;
+    background-color: #f6f7f9;
+    border-radius: 36px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+div.main-pro-locations li.location-item>button.active {
+    display: block;
+    font-size: .875rem;
+    line-height: 2.25rem;
+    color: #f6f7f9;
+    text-align: center;
+    background-color: #693bf2;
+    border-radius: 36px;
+}
+
+.main-pro-locations .location-item:nth-child(9n) {
+    padding-right: 0;
+}
+
+
+.container.no-mobile-padding {
+    padding: 0;
+}
+
 /* 예약/쿠폰 아이콘 */
 .search-pro-result .search-pro-result-header .filter-chip-container {
     position: relative;
@@ -528,6 +599,29 @@ button.chip {
     border-radius: 16px;
     transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
     cursor: pointer;
+}
+
+button.chip.active {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    flex: 0 0 auto;
+    height: 2rem;
+    background-color: #000;
+    padding: .5rem .75rem;
+    box-shadow: 0 0 0 .0625rem #e0e5eb inset;
+    border: 0;
+    border-radius: 16px;
+    transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+    cursor: pointer;
+}
+
+button.chip.active path {
+    fill: #fff;
+}
+
+button.chip.active span {
+    color: #fff;
 }
 
 .prisma-icon.primary {

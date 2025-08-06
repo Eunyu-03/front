@@ -34,7 +34,6 @@ html {
 
 body {
     margin: 0;
-    font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -642,7 +641,6 @@ div.review-event-title .sg-icon-v1 svg {
     padding: 0;
     margin: 0;
     letter-spacing: normal !important;
-    font-family: Pretendard, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     word-break: break-word;
     text-decoration: none;
 }
@@ -1109,7 +1107,7 @@ progress {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     background-color: #fff;
     border-bottom: .0625rem solid #EFF1F5;
 }
@@ -1397,6 +1395,12 @@ div.item-control-box svg.prisma-icon path {
 .service-info {
     display: flex;
     gap: .5rem;
+}
+
+.prisma-typography.body16\:semibold {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 600 !important;
 }
 
 /* 별점 */

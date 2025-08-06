@@ -20,35 +20,32 @@ const autoSlide = () => {
 
 setInterval(autoSlide, 3000);
 
-// 숨고픽 버튼을 나타나게 하는 영역
+// 가장 많이 본 게시글
 const hoverArea = document.querySelector("section.curation div.slick-slider");
-
-// 숨고픽 버튼(이전/다음)
 const prevButton = document.querySelector(
     "section.curation button.slick-arrow.slick-prev"
 );
 const nextButton = document.querySelector(
     "section.curation button.slick-arrow.slick-next"
 );
-
-// 숨고픽 목록 번호
 const curationSpan = document.querySelector(
     "section.curation div.curation-header span.curation-page"
 );
-
-// 숨고픽 버튼 나타내기
-hoverArea.addEventListener("mouseenter", (e) => {
-    nextButton.style.visibility = "visible";
-});
-
-hoverArea.addEventListener("mouseleave", (e) => {
-    prevButton.style.visibility = "hidden";
-    nextButton.style.visibility = "hidden";
-});
-
-// 버튼으로 숨고픽 좌우 이동
 const hotTopic = document.querySelector("div.slick-list.slick-pick");
 let topicCount = 0;
+
+hoverArea.addEventListener("mouseenter", (e) => {
+    if (topicCount < 1) {
+        prevButton.style.visibility = "hidden";
+        nextButton.style.visibility = "visible";
+    } else if (topicCount === 1) {
+        prevButton.style.visibility = "visible";
+        nextButton.style.visibility = "visible";
+    } else if (topicCount > 1) {
+        prevButton.style.visibility = "visible";
+        nextButton.style.visibility = "hidden";
+    }
+});
 
 prevButton.addEventListener("click", (e) => {
     if (topicCount > 0) {
@@ -88,6 +85,12 @@ nextButton.addEventListener("click", (e) => {
     } else {
         nextButton.style.visibility = "hidden";
     }
+    console.log(topicCount);
+});
+
+hoverArea.addEventListener("mouseleave", (e) => {
+    prevButton.style.visibility = "hidden";
+    nextButton.style.visibility = "hidden";
 });
 
 // 최신 사진 리뷰
