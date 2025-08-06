@@ -276,7 +276,7 @@
                                                                                 <!-- 체크 시 display: inline-block -->
                                                                                 <i class="mdi mdi-check" style="display: none;"></i>
                                                                             </div>
-                                                                            <div class="rebound-check-content flex-grow-1">상담예정</div>
+                                                                            <div class="rebound-check-content flex-grow-1">상담 예정</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -288,7 +288,7 @@
                                                                             <div class="rebound-check-box" tabindex="0" style="width: 20px; height: 20px;">
                                                                                 <i class="mdi mdi-check" style="display: none;"></i>
                                                                             </div>
-                                                                            <div class="rebound-check-content flex-grow-1">상담진행중</div>
+                                                                            <div class="rebound-check-content flex-grow-1">상담 진행중</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -300,7 +300,7 @@
                                                                             <div class="rebound-check-box" tabindex="0" style="width: 20px; height: 20px;">
                                                                                 <i class="mdi mdi-check" style="display: none;"></i>
                                                                             </div>
-                                                                            <div class="rebound-check-content flex-grow-1">상담완료</div>
+                                                                            <div class="rebound-check-content flex-grow-1">상담 완료</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -312,7 +312,7 @@
                                                                             <div class="rebound-check-box" tabindex="0" style="width: 20px; height: 20px;">
                                                                                 <i class="mdi mdi-check" style="display: none;"></i>
                                                                             </div>
-                                                                            <div class="rebound-check-content flex-grow-1">상담취소</div>
+                                                                            <div class="rebound-check-content flex-grow-1">상담 취소</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -383,25 +383,215 @@
                                 <table class="table grey-header-table w-100 counsel-table">
                                     <thead>
                                         <tr>
+                                            <th class="td-member">상담 신청 회원</th>
                                             <th class="td-counselor">담당 상담사</th>
-                                            <th class="td-member">회원</th>
                                             <th class="td-date">상담일</th>
                                             <th class="td-content">상담 내용</th>
+                                            <th class="td-status">상담 상태</th>
                                             <th class="td-action">상세</th>
                                         </tr>
                                     </thead>
                                     <tbody class="">
                                         <tr>
-                                            <td class="td-counselor">상담사01</td>
-                                            <td class="td-member">테스트01</td>
-                                            <td class="td-date">상담일</td>
-                                            <td class="td-content">상담 내용</td>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
                                             <td class="td-action text-center">
                                                 <div class="action-btn">
                                                     <i class="mdi mdi-chevron-right"></i>
                                                 </div>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-member">
+                                                <div class="member-name">Test01
+                                                    <span class="badge-label badge text-danger ml-2" data-for="" data-toggle="" data-custom-class="" title="" data-original-title="">일반회원</span>
+                                                </div>
+                                                <div class="member-id">TestId01</div>
+                                            </td>
+                                            <td class="td-counselor">
+                                                <div class="counselor-name">상담사01</div>
+                                                <div class="counselor-id">TestId01</div>
+                                            </td>
+                                            <td class="td-date">2025-08-05</td>
+                                            <td class="td-content">고민</td>
+                                            <td class="td-status">상담 진행중</td>
+                                            <td class="td-action text-center">
+                                                <div class="action-btn">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </div>
+                                            </td>
+                                        </tr>                             
                                     </tbody>
                                 </table>
                             </div>
@@ -438,6 +628,179 @@
                                     </div> -->
                                 </div>
                             </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade member-modal" style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-title">
+                                    <!-- (회원ID) 회원이름 -->
+                                    (TestId01) Test01 
+                                    <!-- 상담 상태 나타내기 -->
+                                    <span class="badge-label text-danger font-weight-bold ml-2">상담 진행중</span>
+                                </div>
+                                <button class="close">
+                                    <i class="mdi mdi-close"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="divider">
+                                    <div class="tab-view">
+                                        <div class="tab-view-header"></div>
+                                        <div class="tab-view-body">
+                                            <div style="display: block;">
+                                                <div class="tab-inner tab-detail">
+                                                    <div class="info-layout detail-info">
+                                                        <div class="info-title justify-content-between">
+                                                            <div class="flex-left d-flex">
+                                                                <div class="title">상담 신청 회원</div>
+                                                            </div>
+                                                            <div class="flex-right"></div>
+                                                        </div>
+                                                        <div class="d-table w-100">
+                                                            <!-- 테이블 왼쪽 -->
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>이름</th>
+                                                                            <td>Test01</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>핸드폰 번호</th>
+                                                                            <td>010-1234-5678</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>가입일</th>
+                                                                            <td>2025-06-12</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- 테이블 오른쪽 -->                                                        
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>회원ID</th>
+                                                                            <td>TestId01</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>이메일</th>
+                                                                            <td>test01@gmail.com</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>최근 접속일</th>
+                                                                            <td>2025-07-29</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-layout detail-info">
+                                                        <div class="info-title justify-content-between">
+                                                            <div class="flex-left d-flex">
+                                                                <div class="title">담당 상담사</div>
+                                                            </div>
+                                                            <div class="flex-right"></div>
+                                                        </div>
+                                                        <div class="d-table w-100">
+                                                            <!-- 테이블 왼쪽 -->
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>이름</th>
+                                                                            <td>상담사01</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>핸드폰 번호</th>
+                                                                            <td>010-1234-5678</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>가입일</th>
+                                                                            <td>2025-06-12</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>나이</th>
+                                                                            <td>20</td>
+                                                                        </tr>                                                                       
+                                                                        <tr>
+                                                                            <th>리바운드 경력</th>
+                                                                            <td>n개월</td>
+                                                                        </tr>      
+                                                                        <tr>
+                                                                            <th>총 경력</th>
+                                                                            <td>n년</td>
+                                                                        </tr>                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- 테이블 오른쪽 -->                                                        
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>상담사ID</th>
+                                                                            <td>TestId01</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>이메일</th>
+                                                                            <td>test01@gmail.com</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>최근 접속일</th>
+                                                                            <td>2025-07-29</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>성별</th>
+                                                                            <td>남</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>상담 횟수</th>
+                                                                            <td>n회</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>근무지</th>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-layout detail-info">
+                                                        <div class="info-title justify-content-between">
+                                                            <div class="flex-left d-flex">
+                                                                <div class="title">상담 내용</div>
+                                                            </div>
+                                                            <div class="flex-right"></div>
+                                                        </div>
+                                                        <div class="d-table w-100">
+                                                            <div class="d-table-cell">
+                                                                <table class="info-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>내용</th>
+                                                                            <td>고민</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn-close btn btn-outline-filter">닫기</button>
+                            </div>
                         </div>
                     </div>
                 </div>
