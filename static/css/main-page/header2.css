@@ -199,7 +199,7 @@ body #app-header, #app #app-body {
     justify-content: center;
 }
 
-.displaynone{
+body .displaynone{
     display: none;
 }
 
