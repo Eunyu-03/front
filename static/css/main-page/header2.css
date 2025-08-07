@@ -199,6 +199,10 @@ body #app-header, #app #app-body {
     justify-content: center;
 }
 
+.displaynone{
+    display: none;
+}
+
 .css-1sm6nvv {
     display: flex;
     flex-direction: column;
