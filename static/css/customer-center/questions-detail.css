@@ -308,7 +308,7 @@ input[type=search] {
 }
 
 body .search::before{
-    content: url("../../images/customer-center/image.png");
+    content: url("/images/customer-center/image.png");
 }
 
 .search::before {
