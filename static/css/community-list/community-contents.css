@@ -807,7 +807,7 @@ button {
 .post-comments-container {
     position: relative;
     width: 100%;
-    margin-bottom: 12.5rem;
+    margin-bottom: 6.5rem;
 }
 
 /* 극복 후기 */
@@ -1456,6 +1456,17 @@ textarea {
 
 .post-comments-list-item .comment-reply-list-item {
     padding-left: 2rem;
+}
+
+.post-comments-list-item.blind::after {
+    position: relative;
+    bottom: 360px;
+    left: 0;
+    width: 100%;
+    height: 12rem;
+    content: "";
+    background: linear-gradient(to bottom, #fff0, #fff);
+    display: flex;
 }
 
 .post-comment-wrapper.reply {
